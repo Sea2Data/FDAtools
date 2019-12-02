@@ -1,0 +1,11 @@
+List snapshots
+wget http://tomcat7.imr.no:8080/apis/nmdapi/landing/v2/Kommersielle%20pr%C3%B8ver/2018/Uspesifisert/1/snapshot/
+
+Get snapshot:
+wget http://tomcat7.imr.no:8080/apis/nmdapi/landing/v2/Kommersielle%20pr%C3%B8ver/2018/Uspesifisert/1/snapshot/2019-04-05T01.25.09.609Z?version=2.0 -O landings_2018.xml
+
+Search (filter), need to quote url:
+wget -O kolmule_2018.xml "http://tomcat7.imr.no:8080/apis/nmdapi/landing/v2?version=2.0&type=search&Art_kode=1038&Fangstar=2018"
+
+Fetch psv files
+ curl -H "Accept: text/psv" "http://tomcat7.imr.no:8080/apis/nmdapi/landing/v2?version=2.0&type=search&Art_kode=181,1811,1812,1815&Fangstar=2018" > tobis.psv 
