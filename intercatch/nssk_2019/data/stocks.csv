@@ -1,0 +1,40 @@
+#defining stocks by species and area, an indicate wheter coastal areas should be included in stock definition, and whether BMS should be calculated based on usage (anvendelse)
+stocckcode	FAOcode	ICESareatype	ICESarea	includecoast	BMShuc
+bll.27.3a47de	BLL	SubDiv	27.3.a.20	T	T
+bll.27.3a47de	BLL	SubArea	27.4	T	T
+bll.27.3a47de	BLL	Div	27.7.d	T	T
+gug.27.3a47d	GUG	SubDiv	27.3.a.20	T	T
+gug.27.3a47d	GUG	SubArea	27.4	T	T
+gug.27.3a47d	GUG	Div	27.7.d	T	T
+lem.27.3a47d	LEM	SubDiv	27.3.a.20	T	T
+lem.27.3a47d	LEM	SubArea	27.4	T	T
+lem.27.3a47d	LEM	Div	27.7.d	T	T	
+# mur.27.3a47d	MUR	SubDiv	27.3.a.20	T	T found no MUR
+# mur.27.3a47d	MUR	SubArea	27.4	T	T
+# mur.27.3a47d	MUR	Div	27.7.d	T	T
+ple.27.420	PLE	SubArea	27.4	T	T
+ple.27.420	PLE	SubDiv	27.3.a.20	T	T
+ple.27.420	PLE	Div	27.7.d	T	T
+pol.27.3a4	POL	SubDiv	27.3.a.20	T	T
+pol.27.3a4	POL	SubArea	27.4	T	T
+pol.27.3a4	POL	Div	27.7.d	T	T
+sol.27.4	SOL	SubArea	27.4	T	T
+sol.27.4	SOL	Div	27.7.d	T	T
+sol.27.4	SOL	SubDiv	27.3.a.20	T	T
+#merging the tur stocks
+tur.27.3a4	TUR	SubDiv	27.3.a.20	T	T
+tur.27.3a4	TUR	SubArea	27.4	T	T
+tur.27.3a4	TUR	Div	27.7.d	T	T
+#merging the whg stocks
+whg.27.3a47d	WHG	SubDiv	27.3.a.20	T	T
+whg.27.3a47d	WHG	Div	27.7.d	T	T
+whg.27.3a47d	WHG	SubArea	27.4	T	T
+wit.27.3a47d	WIT	SubDiv	27.3.a.20	T	T
+wit.27.3a47d	WIT	Div	27.7.d	T	T
+wit.27.3a47d	WIT	SubArea	27.4	T	T
+dab	DAB	SubDiv	27.3.a.20	T	T
+dab	DAB	Div	27.7.d	T	T
+dab	DAB	SubArea	27.4	T	T
+fle	FLE	SubDiv	27.3.a.20	T	T
+fle	FLE	Div	27.7.d	T	T
+fle	FLE	SubArea	27.4	T	T

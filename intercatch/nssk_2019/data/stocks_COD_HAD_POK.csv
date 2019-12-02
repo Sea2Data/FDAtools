@@ -1,0 +1,13 @@
+#defining stocks by species and area, an indicate wheter coastal areas should be included in stock definition, and whether BMS should be calculated based on usage (anvendelse)
+stocckcode	FAOcode	ICESareatype	ICESarea	includecoast	BMShuc
+cod.27.47d20	COD	SubArea	27.4	F	T
+cod.27.47d20	COD	SubDiv	27.3.a.20	F	T
+cod.27.47d20	COD	Div	27.7.d	F	T
+had.27.46a20	HAD	SubArea	27.4	T	T
+had.27.46a20	HAD	Div	27.6.a	T	T
+had.27.46a20	HAD	Div	27.7.d	T	T
+had.27.46a20	HAD	SubDiv	27.3.a.20	T	T
+pok.27.3a46	POK	SubArea	27.4	T	T
+pok.27.3a46	POK	SubDiv	27.3.a.20	T	T
+pok.27.3a46	POK	Div	27.6.a	T	T
+pok.27.3a46	POK	Div	27.7.d	T	T

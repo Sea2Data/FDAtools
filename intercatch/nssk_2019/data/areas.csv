@@ -1,0 +1,10 @@
+# maps area definitions. Some of these may be inexact matches, should be inspected by plotting catch coordinates from logbooks
+ICESareatype	ICESarea	FDIRarea
+SubArea	27.4	08
+SubArea	27.4	28
+SubArea	27.4	42
+SubArea	27.4	41
+SubArea	27.4	40
+Div	27.7.d	46
+Div	27.6.a	43
+SubDiv	27.3.a.20	09

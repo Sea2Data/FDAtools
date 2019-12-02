@@ -1,0 +1,73 @@
+assembly	HOVEDART_FAO
+#torsk
+DEF	COD
+#sei
+DEF	POK
+#hyse
+DEF	HAD
+#selttvar
+DEF	BLL
+#lysing
+DEF	HKE
+#lange
+DEF	LIN
+#breifalbb
+DEF	MON
+#rødspette
+DEF	PLE
+#gråsteinbit
+DEF	CAA
+#blåsteinbit
+DEF	CAB
+#flekksteinbit
+DEF	CAS
+#smørflyndre
+DEF	WIT
+#brosme
+DEF	USK
+#piggvar
+DEF	TUR
+#lyr
+DEF	POL
+#gapeflyndre
+DEF	PAL
+#glassvar
+DEF	MEG
+#tunge
+DEF	SOL
+#lomre
+DEF	LEM
+#kveite
+DEF	HAL
+#sandflyndre
+DEF	DAB
+#hvitting
+DEF	WHG
+#blåkveite
+DEF	GHL
+#dyphavsreke pandalus
+CRU	PAN
+#dyphavsreke
+CRU	PRA
+#sjøkreps
+CRU	NEP
+#
+# for WGNSSK
+# add MIS for that which is not DEF, CRU or FIF
+#
+#sild
+MIS	HER
+#makrell
+MIS	MAC
+#Pink cusk-eel*
+MIS	CUS
+$tobis
+MIS	SAN
+#skate og rokke
+MIS	SRX
+#annen fisk
+MIS	MZZ
+#kolmule
+MIS	WHB
+#kråkebolle
+MIS	URC
