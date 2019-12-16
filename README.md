@@ -9,3 +9,4 @@ Directory | Content
 ----------|--------
 intercatch | code for preparing data for, or analysing data from, intercatch
 landings | code for dealing with landings data (provided by Directorate of fisheries)
+stoxReca | code for fisheries dependent analysis using StoX-Reca
