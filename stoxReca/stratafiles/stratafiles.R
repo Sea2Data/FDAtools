@@ -1,6 +1,7 @@
 library(rgeos)
 library(rgdal)
 library(sp)
+library(spdep)
 
 #' Writes sp::SpatialPolygonsDataFrame as Stox-WKT files (stratafiles)
 #' @param shape sp::SpatialPolygonsDataFrame stratadefinition to convert
@@ -124,4 +125,44 @@ mergeStrata <- function(shapes, groups, namecol){
   }
   
   return(newpolygons)
+}
+
+
+#' Extract a neighbour matrix for strata
+#' @return binary matrix (0: not neighbours, 1: neighbours), with strata names as rows and columns
+#' @noRd
+extractNeighbours <- function(polygons){
+  nb <- poly2nb(polygons)
+  mat <- nb2mat(nb, style="B")
+  colnames(mat) <- rownames(mat)
+  return(mat)  
+}
+
+#' Save neighbours matrix for strata
+#' @description
+#'  Determine geographical neighbours and save the result on a format accepted by StoX
+#' @details
+#'  strata names are assumed to be in the slot 'ID'.
+#'  Neighbourhood determination depends on the quality of shape file. 
+#'  Odd geometries may cause problems.
+#' @param polygons sp::SpatialPolygons with strata defintions
+#' @param outfile file to write neighbour defintion to.
+#' @examples 
+#'  # read strata
+#'  strata <- readStoxWKT("mainarea.txt")
+#'  # save neigbhours
+#'  saveNeighbours(strata, "mainarea_neighbours.txt")
+saveNeighbours <- function(polygons, outfile){
+  
+  if (file.exists(outfile)){
+    stop(paste("File", outfile, "already exists."))
+  }
+  
+  neighbourmatrix <- extractNeighbours(polygons)
+  out <- file(outfile, open="w")
+  write("stratum\tneighbours", out)
+  for (i in 1:nrow(neighbourmatrix)){
+    write(paste(rownames(neighbourmatrix)[i], paste(colnames(neighbourmatrix)[neighbourmatrix[i,]==1], collapse=","), sep="\t"), out)
+  }
+  close(out)
 }
