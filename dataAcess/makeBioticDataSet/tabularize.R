@@ -141,7 +141,7 @@ stdview <- function(relationalBiotic){
 #' for merging with SPD-dependent scripts
 #' See pull.R for getting data files
 #' See RstoxData for parsing routines: https://github.com/StoXProject/RstoxData
-makeCapelinMissionLookup <- function(datafiles = c("biotic_year_1979.xml", "biotic_year_1980.xml")){
+makeCapelinMissionLookup <- function(datafiles = c("biotic_year_1981.xml", "biotic_year_1980.xml")){
   require("RstoxData")
   result <- NULL
   
