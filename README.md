@@ -7,6 +7,7 @@ A general package for fisheries dependent analysis is being developed in StoX/Rs
 
 Directory | Content
 ----------|--------
+dataAcess | code for fetching and converting data formats
 intercatch | code for preparing data for, or analysing data from, intercatch
 landings | code for dealing with landings data (provided by Directorate of fisheries)
 stoxReca | code for fisheries dependent analysis using StoX-Reca
