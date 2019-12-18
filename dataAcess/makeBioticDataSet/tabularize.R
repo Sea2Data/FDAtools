@@ -126,3 +126,39 @@ makeTabularView <- function(relationalBiotic, columns, prune=F){
 individualView <- function(relationalBiotic, additional=c("catchcategory", "catchpartnumber", "commonname", "scientificname", "age", "otolithtype")){
   return(makeTabularView(relationalBiotic, c(names(relationalBiotic$individual), additional), prune=T))
 }
+
+#' Custum view with all columns from mission, fishstation, catchsample, indvidual and agedetermination
+stdview <- function(relationalBiotic){
+  return(makeTabularView(relationalBiotic, c(names(relationalBiotic$agedetermination), names(relationalBiotic$individual), names(relationalBiotic$catchsample), names(relationalBiotic$fishstation), names(relationalBiotic$mission)), prune=F))
+}
+
+
+#
+# data set examples
+#
+
+#' data set for looking up mission level columns based on serialnumber and year
+#' for merging with SPD-dependent scripts
+#' See pull.R for getting data files
+#' See RstoxData for parsing routines: https://github.com/StoXProject/RstoxData
+makeCapelinMissionLookup <- function(datafiles = c("biotic_year_1979.xml", "biotic_year_1980.xml")){
+  require("RstoxData")
+  result <- NULL
+  
+  if (!all(file.exists(datafiles))){
+    stop("Some specified files does not exist: ", paste(datafiles[!file.exists(datafiles)], collapse = ", "))
+  }
+  
+  for (f in datafiles){
+    data <- RstoxData::readXmlFile(f)
+    flatdata <- makeTabularView(data, c(names(data$mission), "serialnumber", "commonname", "scientificname", "catchcategory"))
+    flatdata <- flatdata[!is.na(flatdata$catchcategory) & flatdata$catchcategory == "162035",]
+    if (is.null(result)){
+      result <- flatdata
+    }
+    else{
+      result <- rbind(result, flatdata)
+    }
+  }
+  return(result)
+}
