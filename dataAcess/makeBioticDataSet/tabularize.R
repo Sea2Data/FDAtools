@@ -78,7 +78,7 @@ makeTabularView <- function(relationalBiotic, columns, prune=F){
     ageids <- unique(relationalBiotic$agedetermination[,agedetkeys, with=F])
     ageids <- ageids[!duplicated(ageids[,individualkeys, with=F])]
     relationalBiotic$individual <- merge(relationalBiotic$individual, ageids, by=individualkeys, all.x=T)
-    relationalBiotic$individual[is.na(relationalBiotic$individual$preferredagereading),"preferredagereading"] <- as.integer(relationalBiotic$individual[is.na(relationalBiotic$individual$preferredagereading),][["agedeterminationid"]])
+    relationalBiotic$individual[is.na(relationalBiotic$individual$preferredagereading),"preferredagereading"] <- relationalBiotic$individual[is.na(relationalBiotic$individual$preferredagereading),][["agedeterminationid"]]
     relationalBiotic$individual$agedeterminationid <- NULL
   }
   
