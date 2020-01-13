@@ -2,17 +2,42 @@ library(Rstox)
 library(Reca)
 
 #' make list of gears coded with Fdir system from list fo gear coded with IMR 2-digit code
+#' Consult SPD handbook for IMR 2-digit codes
 convertGears <- function(imr2letter){
   fdir <- c()
   for (gear in imr2letter){
-    if (gear == 41){
+    if (gear == 41){ #garn
       fdir <- c(fdir, c(20,21,22))
+    }
+    else if (gear == 31){ # bunntrål
+      fdir <- c(fdir, c(50,51,52,56,57,58,59))
+    }
+    else if (gear == 32){ # reketrål
+      fdir <- c(fdir, c(55))
+    }
+    else if (gear == 35){ # flytetrål
+      fdir <- c(fdir, c(53,54))
+    }
+    else if (gear == 36){ # snurrevad
+      fdir <- c(fdir, c(61))
+    }
+    else if (gear == 37){ # not
+      fdir <- c(fdir, c(10,11,12,14,15))
+    }
+    else if (gear == 43){ # ruser
+      fdir <- c(fdir, c(40,41))
+    }
+    else if (gear == 51){ # liner
+      fdir <- c(fdir, c(30,31,32,35))
+    }
+    else if (gear == 52){ # juksa
+      fdir <- c(fdir, c(33,34))
     }
     else{
       stop(paste("Code", gear, "not defined."))
     }
   }
-  return(fdir)
+  return(unique(fdir))
 }
 
 #' Parse old ECA
@@ -167,9 +192,15 @@ plotComparison <- function(oldEca, stoxReca){
 #'  Locate report file from ECA 3.x or ECA 4.x, formatted as the included example (oldEcaReportExample.txt)
 #'  As in the example, the report file may be a report for some subset of landings (sepcific area, gear and quarter for instance)
 #'  Prepare a Stox project with the same configuration
-#'  run this funnction.
+#'  run this function.
 #'  
-#'  The resulting plot is a a prediction for the same subset of landings that the given ECA 3.x or ECA 4.x report contains.
+#'  The resulting plot compares predictions for the subset of landings reported in the given ECA 3.x or ECA 4.x reports.
+#'  
+#'  Results depend on mapping between gear codes (2-digit IMR code and Fdir code). Adjust these in the function 'convertGears'.
+#'  If IMR codes specified in report file is not defined, execution will stop with error.
+#'  If some Fdir codes in landings are not mapped to IMR codes, no error will occur, 
+#'  but corresponding landings will be left out. 
+#'  If total weight reported by Stox-Reca is much less than that reported from old ECA, the gear code mapping might need to be reconsidered.
 #' @param oldEcaOutputFile path to the ECA 3.x or ECA 4.x report file
 #' @param stoxProjectName name of stox project located in standard directory
 #' @param force logical() whether to force re-run of stox project. If false, any existing data preparations in the project will be used.
@@ -180,3 +211,4 @@ compare <- function(oldEcaOutputFile, stoxProjectName, force=F){
 }
 
 compare("oldEcaReportExample.txt", "ECA_NSSK_sei_2018")
+
