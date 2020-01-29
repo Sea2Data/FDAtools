@@ -11,6 +11,7 @@ colnames(meanLengthPrAgeGroup) <- paste("Iteration", 1:ncol(meanLengthPrAgeGroup
 
 # condense to a profile of mean length pr age group and a stadard deviation, calculated over iterations
 # SD depends primarily on the number of iterations runs
+# useful for inspecting convergence
 profileMeanLengthPrAgeGroup <- rowMeans(meanLengthPrAgeGroup)
 sdMeanLengthPrAgeGroup <- apply(meanLengthPrAgeGroup, FUN=sd, MARGIN=1)
 
@@ -22,6 +23,7 @@ colnames(meanNumberPrLengthAndAgeGroup) <- paste(format(lengths, digits=2, nsmal
 
 # condense to mean length pr age group and a stadard deviation, calculated over the length distribution
 # SD depends primarily on the number of length groups and the natural variation in length
+# useful for assessing natural length variation
 profileMeanNumberPrLengthAndAgeGroup <- apply(meanNumberPrLengthAndAgeGroup, FUN=function(x){mean(rep(lengths,x))}, MARGIN=1)
 sdMeanNumberPrLengthAndAgeGroup <- apply(meanNumberPrLengthAndAgeGroup, FUN=function(x){sd(rep(lengths,x))}, MARGIN=1)
 
