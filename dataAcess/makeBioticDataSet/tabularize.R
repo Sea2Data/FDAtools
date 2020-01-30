@@ -8,7 +8,7 @@ mergeTable <- function(flatBiotic, table, columns, keys, prune=F){
       return(table[,unique(c(keys, columns[columns %in% names(table)])), with=F])
     }
     else{
-      return(merge(table[,unique(c(keys, columns[columns %in% names(table)])), with=F], flatBiotic, by=keys, all.x=!prune))
+      return(merge(table[,unlist(unique(c(keys, columns[columns %in% names(table)]))), with=F], flatBiotic, by=keys, all.x=!prune))
     }
   }
   if (!is.null(flatBiotic)){
@@ -25,6 +25,9 @@ mergeTable <- function(flatBiotic, table, columns, keys, prune=F){
 #'  (field names are unqiue across levels in biotic 3)
 #'  Key columns are autmatically included. Do not specify these.
 #'  Only levels implied by these columns are included.
+#'  
+#'  Pruning: pruning results means to exclude higher levels when lower leves are not present.
+#'  That is, if individual level is included, should catchsamples with no individuals sampled be kept in the data set.
 #' 
 #'  relationalBiotic could be obtained by RstoxData::readXmlFile, or any other parser
 #'  that produces the following format:
@@ -41,7 +44,7 @@ mergeTable <- function(flatBiotic, table, columns, keys, prune=F){
 #'  E.g. can not include columns from both prey and tag, or from both preylengthfrequencytable and copepodedevstagefrequencytable
 #' @param relationalBiotic list() of tabular representation of the different levels in biotic
 #' @param columns name of columns to keep (in addition to key columns)
-#' @param prune logical, if TRUE, whether to prune results
+#' @param prune logical, if TRUE, whether to prune results.
 #' @return data.table with the requested columns, in addition to any key columns.
 makeTabularView <- function(relationalBiotic, columns, prune=F){
   
@@ -114,7 +117,7 @@ makeTabularView <- function(relationalBiotic, columns, prune=F){
   else{
     stop()
   }
-  
+
   flatbiotic <- mergeTable(flatbiotic, relationalBiotic$catchsample, columns, catchkeys, prune)
   flatbiotic <- mergeTable(flatbiotic, relationalBiotic$fishstation, columns, stationkeys, prune)
   flatbiotic <- mergeTable(flatbiotic, relationalBiotic$mission, columns, missionkeys, prune)
@@ -132,9 +135,15 @@ stdview <- function(relationalBiotic){
   return(makeTabularView(relationalBiotic, c(names(relationalBiotic$agedetermination), names(relationalBiotic$individual), names(relationalBiotic$catchsample), names(relationalBiotic$fishstation), names(relationalBiotic$mission)), prune=F))
 }
 
+#' Custum view with all columns from mission, fishstation, and catchsample
+catchview <- function(relationalBiotic){
+  return(makeTabularView(relationalBiotic, c(names(relationalBiotic$catchsample), names(relationalBiotic$fishstation), names(relationalBiotic$mission)), prune=F))
+}
+
 
 #
 # data set examples
+# some of these are really fisheries independent data, but derve as useful examples still.
 #
 
 #' data set for looking up mission level columns based on serialnumber and year
@@ -161,4 +170,35 @@ makeCapelinMissionLookup <- function(datafiles = paste("biotic_year_", 1970:2018
     }
   }
   return(result)
+}
+
+#' Extract catches from a cruise series
+#' See pull.R for getting data files
+#' See Rstox for routines for looking up cruise info: https://github.com/Sea2Data/Rstox
+#' See RstoxData for parsing routines: https://github.com/StoXProject/RstoxData
+makeCruiseSet <- function(cruise="Barents Sea NOR-RUS demersal fish cruise in winter", years=2013:2018, datafiles = paste("biotic_year_", years, ".xml", sep="")){
+  require("Rstox")
+  require("RstoxData")
+  require("data.table")
+  cruiselist <- getNMDinfo("cs")
+  
+  survey <- cruiselist[[cruise]][cruiselist[[cruise]]$Year %in% years,]
+  survey$Year <- as.integer(survey$Year)
+  result <- NULL
+  for (f in datafiles){
+    if (!file.exists(f)){
+      stop(paste("File",f,"does not exist."))
+    }
+    data <- RstoxData::readXmlFile(f, stream = T)
+    flatdata <- catchview(data)
+    
+    #drop data that is not in any cruise series
+    flatdata <- flatdata[!is.na(flatdata$cruise),]
+    #keep only the data from 'survey'
+    flatdata <- merge(flatdata, as.data.table(survey[,c("Cruise", "Year")]), by.x=c("cruise", "startyear"), by.y=c("Cruise", "Year"))
+    
+    result <- rbind(flatdata, result)
+  }
+  return(result)
+  
 }
