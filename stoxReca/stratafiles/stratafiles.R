@@ -98,7 +98,7 @@ readStoxWKT <- function(FilePath) {
 #'  # define merge
 #'  mergespec <- list(northsea=c("40", "41", "42", "8", "28"), skagerak=c("9"))
 #'  writeSpAsWKT(newareas, "nssk.txt")
-mergeStrata <- function(shapes, groups, namecol){
+mergeStrata <- function(shapes, groups){
   
   if (!all(unlist(groups) %in% sapply(methods::slot(shapes, "polygons"), function(x) methods::slot(x, "ID")))){
     stop("Some of the strata to be merged does not exist in argument shapes.")
