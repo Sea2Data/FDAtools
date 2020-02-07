@@ -46,7 +46,7 @@ convertGears <- function(imr2letter){
 #' @param oldEcaOutputFile filename to read data from
 #' @return list() with members for estimates and report configuration
 parseOldEca <- function(oldEcaOutputFile){
-  f <- file(oldEcaOutputFile, open="rU")
+  f <- file(oldEcaOutputFile, open="r")
   lines <- readLines(f)
   close(f)
   
