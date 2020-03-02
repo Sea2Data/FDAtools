@@ -23,6 +23,13 @@ projectname <- "ECA_NSSK_sei_2018"
 #runRScripts(projectname)
 
 #
+# rapport på hovedområde og kvartal.
+# Merk at kolonnenavn er med små bokstaver, selv om de står som CamelCase i Stox (view output)
+#
+Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
+
+
+#
 #save default decomposition (mainarea and quarter)
 #
 Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6)
