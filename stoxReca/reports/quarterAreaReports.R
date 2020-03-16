@@ -28,11 +28,17 @@ projectname <- "ECA_NSSK_sei_2018"
 #
 Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
 
+#
+# Tilsvarende funksjon finnes for å rapportere gjennomsnittslengde og vekt for hver aldersgruppe
+#
+Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
+
 
 #
 #save default decomposition (mainarea and quarter)
 #
 Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6)
+Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6)
 
 #
 #save custom decomposition based on grouping of main areas and quarter
@@ -43,6 +49,7 @@ customArea <- list(area1=c("08","09", "28"), area2=c("41","42","43"), area4="47"
 
 # run with parameter customMainAreaGrouping, note that the default decomposition is set to NULL
 Rstox:::saveDecomposedCatchMatrix(projectname, "testMainAreaGrouping.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
+Rstox:::saveDecomposedAgeGroupParameters(projectname, "testMainAreaGroupingLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
 
 
 #
