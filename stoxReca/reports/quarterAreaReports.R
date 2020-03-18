@@ -33,6 +33,16 @@ Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuart
 #
 Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
 
+#
+# Og for å rapportere fangst fordelt på lengdegrupper
+#
+Rstox:::saveDecomposedCatchAtLength(projectname, "testDefaultReportCatchAtLength.csv", addQuarterToDecomp = T, decomposition = c("hovedområdekode"))
+# rapporter vekt i stedet for antall, støttes også av Rstox:::saveDecomposedCatchMatrix
+Rstox:::saveDecomposedCatchAtLength(projectname, "testGearReportCatchAtLength.csv", addQuarterToDecomp = F, decomposition = c("gearfactor"), var="Weight", unit="tonnes")
+
+
+
+
 
 #
 #save default decomposition (mainarea and quarter)
