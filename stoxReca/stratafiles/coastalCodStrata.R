@@ -1,0 +1,54 @@
+# shapefiles for terretorial line (12-mil) is downloaded from:
+# https://kart.fiskeridir.no/fiskeri
+# and for main ares from
+# https://kart.fiskeridir.no/nedlasting
+# 
+library(rgdal)
+library(rgeos)
+library(maptools)
+mainArea <- readOGR("~/shapefiles/fdir/fdir_annotated/Hovedområder_fom_2018/","Homr_2018", stringsAsFactors = F)
+
+#extend territorial line southwards so that it extends below sourthern border of area 3.
+terretorialLine <- readOGR("~/shapefiles/fdir/terretorialgrense", "Territorialgrense", stringsAsFactors = F)
+newcoords <- rbind(coordinates(terretorialLine)[[1]][[1]], matrix(c(31.58550, 69.0), nrow = 1))
+S1 <- Lines(list(sp::Line(newcoords)), ID = "territorialline")
+modifiedTerretorialLine <- SpatialLines(list(S1))
+proj4string(modifiedTerretorialLine) <- CRS(projargs = proj4string(terretorialLine))
+
+coastalCodAreas <- mainArea[mainArea$HAVOMR %in% c("00","03","04","05","06","07"),]
+plot(coastalCodAreas)
+originalProjection <- proj4string(coastalCodAreas)
+
+coastalCodAreas <- sp::spTransform(coastalCodAreas, CRSobj = sp::CRS("+init=epsg:3395"))
+modifiedTerretorialLine <- sp::spTransform(modifiedTerretorialLine, CRSobj = sp::CRS("+init=epsg:3395"))
+
+intersection <- gIntersection(coastalCodAreas, modifiedTerretorialLine, )
+blpi <- gBuffer(intersection, width = 0.000001)
+dpi <- gDifference(coastalCodAreas, blpi, byid = T) 
+
+coastalCodAreas <- spTransform(coastalCodAreas, CRSobj = sp::CRS(originalProjection))
+dpi <- spTransform(dpi, CRSobj = sp::CRS(originalProjection))
+
+
+pols <- list()
+pols$a000 <- Polygons(list(coastalCodAreas@polygons[[1]]@Polygons[[1]]),"000")
+pols$a300 <- Polygons(list(dpi@polygons[[2]]@Polygons[[1]]), "300")
+pols$a301 <- Polygons(list(dpi@polygons[[2]]@Polygons[[2]]), "301")
+pols$a400 <- Polygons(list(dpi@polygons[[3]]@Polygons[[2]]), "400")
+pols$a401 <- Polygons(list(dpi@polygons[[3]]@Polygons[[1]]), "401")
+pols$a500 <- Polygons(list(dpi@polygons[[4]]@Polygons[[1]]), "500")
+pols$a501 <- Polygons(list(dpi@polygons[[4]]@Polygons[[2]]), "501")
+pols$a600 <- Polygons(list(dpi@polygons[[5]]@Polygons[[2]]), "600")
+pols$a601 <- Polygons(list(dpi@polygons[[5]]@Polygons[[1]]), "601")
+pols$a700 <- Polygons(list(dpi@polygons[[6]]@Polygons[[2]]), "700")
+pols$a701 <- Polygons(list(dpi@polygons[[6]]@Polygons[[1]]), "701")
+
+stratasystem <- SpatialPolygons(pols)
+sp::proj4string(stratasystem) <- originalProjection
+
+plot(stratasystem, add=T, col="red")
+pointLabel(coordinates(stratasystem),labels=names(stratasystem))
+
+source("stratafiles.R")
+writeSpAsWKT(stratasystem, "CoastalCodRecaStrata.txt")
+saveNeighbours(stratasystem, "CoastalCodRecaStrataNeigbours.txt")
