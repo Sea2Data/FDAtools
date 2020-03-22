@@ -43,6 +43,14 @@ assignSpatialLandingsCoastalCod <- function(x, covariate="spatial"){
 }
 
 projectname <- "Kysttorsk_AFWG_2019"
+# check that sample composition is OK
+Rstox::makeSampleHomogeneityReportRECA(projectname)
+
+#
+# run coastal cod analysis
+# need to specify function for setting spatial strata on landings.
+#
+
 # chosen landingsAdjuster must correspond to namings in the stratafile in the StoX-Reca project
 Rstox::prepareRECA(projectname, minage = 1, maxage = 20, maxlength = 240, landingAdjuster = assignSpatialLandingsCoastalCod)
 saveProjectData(projectname)
