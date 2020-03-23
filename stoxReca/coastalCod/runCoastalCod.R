@@ -56,3 +56,8 @@ Rstox::prepareRECA(projectname, minage = 1, maxage = 20, maxlength = 240, landin
 saveProjectData(projectname)
 Rstox::runRECA(projectname, burnin = 1000, thin=5, nSamples = 500, CC = T)
 saveProjectData(projectname)
+
+# plots and reports can now be generated in StoX, or with the following lines of code:
+Rstox::plotRECA(projectname)
+Rstox::reportRECA(projectname)
+

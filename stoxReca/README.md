@@ -9,3 +9,4 @@ reports | code for running configured Stox-Reca projects and producing custom re
 ecaReproduction | code for comparing Stox-Reca projects with output from previous ECA versions
 lengthDistributions | example for extracting length distributions from ECA.
 coastalCod | example for running Reca with stock-splitting from Rstox.
+stoxFilters | example for solving some tricky filtering needs.

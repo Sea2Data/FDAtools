@@ -1,0 +1,6 @@
+# filtering of characther codes does not work as expected in StoX 2.7. 
+# lengthmeasurement != 'D' filters out no data.
+# In order to filter out all codes that are not either null ("-") or 'E', use:
+lengthmeasurement == null || lengthmeasurement.matches("(?i:.*E.*)")
+# && preceeds over || the same way * preceeds over + in arithmatic expressions. So if you want to add more filters to the sampleExpr, you must use parenthesis:
+(lengthmeasurement == null || lengthmeasurement.matches("(?i:.*E.*)")) && lengthsamplecount>9
