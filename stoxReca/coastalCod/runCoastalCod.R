@@ -20,6 +20,7 @@ library(Rstox)
 #' ...
 #' hovedområdekode==7 & kysthavkode==0 --> 700
 #' hovedområdekode==7 & kysthavkode==1 --> 701
+#' 
 #' @param x data.frame with landings
 #' @param covariate identifies a column in x
 assignSpatialLandingsCoastalCod <- function(x, covariate="spatial"){
@@ -42,7 +43,19 @@ assignSpatialLandingsCoastalCod <- function(x, covariate="spatial"){
   return(x)
 }
 
-projectname <- "Kysttorsk_AFWG_2019"
+makeLogbookAdjuster <- function(projectname, logbookfile){
+  bl <- getBaseline(projectname)
+  logbook <- Rstox::readErsFile(logbookfile)
+  landingsAdjuster <- function(landings){
+    return(Rstox::adjustRecaSpatialTemporal(landings, logbook, processDataGear = bl$processData$gearfactor, processDataTemporal = bl$processData$temporal, processDataSpatial = bl$processData$stratumpolygon, gearSelection = "Trawl"))
+  }
+  return(landingsAdjuster)
+}
+
+
+
+projectname <- "Kysttorsk_AFWG_2018"
+logbookfile <- "~/logbooks/FDIR_HI_ERS_2018_PR_2019-03-04.psv"
 # check that sample composition is OK
 Rstox::makeSampleHomogeneityReportRECA(projectname)
 
@@ -51,10 +64,18 @@ Rstox::makeSampleHomogeneityReportRECA(projectname)
 # need to specify function for setting spatial strata on landings.
 #
 
+#' applies both the assignSpatialLandingsCoastalCod and the logbook-adjustment
+adjuster <- function(landings){
+  logbookAdjuster <- makeLogbookAdjuster(projectname, logbookfile)
+  landings <- assignSpatialLandingsCoastalCod(landings)
+  landings <- logbookAdjuster(landings)
+  return(landings)
+}
+
 # chosen landingsAdjuster must correspond to namings in the stratafile in the StoX-Reca project
-Rstox::prepareRECA(projectname, minage = 1, maxage = 20, maxlength = 240, landingAdjuster = assignSpatialLandingsCoastalCod)
+Rstox::prepareRECA(projectname, minage = 1, maxage = 20, maxlength = 240, landingAdjuster = adjuster)
 saveProjectData(projectname)
-Rstox::runRECA(projectname, burnin = 1000, thin=5, nSamples = 500, CC = T)
+Rstox::runRECA(projectname, burnin = 500, thin=1, nSamples = 500, CC = T)
 saveProjectData(projectname)
 
 # plots and reports can now be generated in StoX, or with the following lines of code:
