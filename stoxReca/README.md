@@ -10,3 +10,4 @@ ecaReproduction | code for comparing Stox-Reca projects with output from previou
 lengthDistributions | example for extracting length distributions from ECA.
 coastalCod | example for running Reca with stock-splitting from Rstox.
 stoxFilters | example for solving some tricky filtering needs.
+logbookAdjustedLandings | examples for running Reca with logbook-adjusted landings
