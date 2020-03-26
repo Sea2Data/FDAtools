@@ -75,7 +75,7 @@ adjuster <- function(landings){
 # chosen landingsAdjuster must correspond to namings in the stratafile in the StoX-Reca project
 Rstox::prepareRECA(projectname, minage = 1, maxage = 20, maxlength = 240, landingAdjuster = adjuster)
 saveProjectData(projectname)
-Rstox::runRECA(projectname, burnin = 500, thin=1, nSamples = 500, CC = T)
+Rstox::runRECA(projectname, burnin = 5000, thin=1, nSamples = 500, CC = T)
 saveProjectData(projectname)
 
 # plots and reports can now be generated in StoX, or with the following lines of code:
