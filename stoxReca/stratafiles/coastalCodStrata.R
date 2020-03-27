@@ -49,6 +49,53 @@ sp::proj4string(stratasystem) <- originalProjection
 plot(stratasystem, add=T, col="red")
 pointLabel(coordinates(stratasystem),labels=names(stratasystem))
 
+#
+# grouped for AFWG
+#
+
+groupedStrata <- unionSpatialPolygons(SpatialPolygons(list(pols$a301, 
+                                                      pols$a401, 
+                                                      
+                                                      pols$a300,
+                                                      pols$a400,
+                                                      
+                                                      pols$a501,
+                                                      pols$a000,
+                                                      
+                                                      pols$a500,
+                                                      
+                                                      pols$a601,
+                                                      pols$a701,
+                                                      
+                                                      pols$a600,
+                                                      pols$a700
+                                                      )), c("s301-401",
+                                                            "s301-401",
+                                                            
+                                                            "s300-400",
+                                                            "s300-400",
+                                                            
+                                                            "s000-s501",
+                                                            "s000-s501",
+                                                            
+                                                            "s500",
+                                                            
+                                                            "s601-s701",
+                                                            "s601-s701",
+                                                            
+                                                            "s600-s700",
+                                                            "s600-s700"
+                                                            ))
+
+sp::proj4string(groupedStrata) <- originalProjection
+
+plot(groupedStrata)
+pointLabel(coordinates(groupedStrata),labels=names(groupedStrata))
+
+
 source("stratafiles.R")
 writeSpAsWKT(stratasystem, "CoastalCodRecaStrata.txt")
 saveNeighbours(stratasystem, "CoastalCodRecaStrataNeigbours.txt")
+
+writeSpAsWKT(stratasystem, "CoastalCodRecaStrataAFWG.txt")
+saveNeighbours(stratasystem, "CoastalCodRecaStrataNeigboursAFWG.txt")
