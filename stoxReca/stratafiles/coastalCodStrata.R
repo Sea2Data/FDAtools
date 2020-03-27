@@ -75,16 +75,16 @@ groupedStrata <- unionSpatialPolygons(SpatialPolygons(list(pols$a301,
                                                             "s300-400",
                                                             "s300-400",
                                                             
-                                                            "s000-s501",
-                                                            "s000-s501",
+                                                            "s000-501",
+                                                            "s000-501",
                                                             
                                                             "s500",
                                                             
-                                                            "s601-s701",
-                                                            "s601-s701",
+                                                            "s601-701",
+                                                            "s601-701",
                                                             
-                                                            "s600-s700",
-                                                            "s600-s700"
+                                                            "s600-700",
+                                                            "s600-700"
                                                             ))
 
 sp::proj4string(groupedStrata) <- originalProjection
@@ -97,5 +97,5 @@ source("stratafiles.R")
 writeSpAsWKT(stratasystem, "CoastalCodRecaStrata.txt")
 saveNeighbours(stratasystem, "CoastalCodRecaStrataNeigbours.txt")
 
-writeSpAsWKT(stratasystem, "CoastalCodRecaStrataAFWG.txt")
-saveNeighbours(stratasystem, "CoastalCodRecaStrataNeigboursAFWG.txt")
+writeSpAsWKT(groupedStrata, "CoastalCodRecaStrataAFWG.txt")
+saveNeighbours(groupedStrata, "CoastalCodRecaStrataNeigboursAFWG.txt")
