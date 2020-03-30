@@ -40,8 +40,8 @@ makeLogbookAdjuster <- function(projectname, logbookfile){
 }
 
 
-projectname <- "Kysttorsk_AFWG_2018"
-logbookfile <- "~/logbooks/FDIR_HI_ERS_2018_PR_2019-03-04.psv"
+projectname <- "Kysttorsk_AFWG_2019"
+logbookfile <- "~/logbooks/FDIR_HI_ERS_2019_PR_2020-03-04.psv"
 # check that sample composition is OK
 Rstox::makeSampleHomogeneityReportRECA(projectname)
 
