@@ -221,7 +221,11 @@ distribute_by_landings <- function(species, landings, huc="consumption", nocoast
       return(data.frame(weightKG=numeric(), ICESarea=character(), ICESareatype=character(), quarter=character(), metier=character()))
   }
   
-  landingsagg <- aggregate(list(weightKG=landings$weight),list(ICESarea=landings$ICESarea, ICESareatype=landings$ICESareatype, quarter=landings$quarter, metier=landings$metier), sum)
+  if (nrow(landings)==0){
+    stop(paste("No landings found for", species))
+  }
+  
+  landingsagg <- aggregate(list(weightKG=landings$Rundvekt),list(ICESarea=landings$ICESarea, ICESareatype=landings$ICESareatype, quarter=landings$quarter, metier=landings$metier), function(x){sum(x,na.rm=T)})
   
   if (any(is.na(landingsagg$weightKG))){
     stop("NA in weights")
@@ -236,11 +240,11 @@ Year="2019"
 ReportingCategory="R"
 SamplesOrigin="NA"
 write_intercatch <-function(species, data){
-  print(species)
-  print(paste("eksporting: ", sum(data$weightKG)))
-  print(paste("frac areas: ", sum(data$weightKG)/sum(land_all_areas[land_all_areas$`Art FAO (kode)`==species, "Rundvekt"])))
-  print(paste("frac NO: ", sum(data$weightKG)/sum(landings[landings$`Art FAO (kode)`==species, "Rundvekt"])))
-  if (sum(landings[landings$`Art FAO (kode)`==species, "Rundvekt"])<sum(data$weightKG)){
+  message(species)
+  message(paste("eksporting: ", sum(data$weightKG)))
+  message(paste("frac areas: ", sum(data$weightKG)/sum(land_all_areas[land_all_areas$`Art FAO (kode)`==species, "Rundvekt"], na.rm=T)))
+  message(paste("frac NO: ", sum(data$weightKG)/sum(landings[landings$`Art FAO (kode)`==species, "Rundvekt"], na.rm=T)))
+  if (sum(landings[landings$`Art FAO (kode)`==species, "Rundvekt"], na.rm=T)<sum(data$weightKG)){
     stop("Problems with aggregation")
   }
   stream <- file(paste(output, paste(species, Year, "nor_intercatch_wgnssk.csv", sep="_"), sep="/"), open="w")
@@ -292,10 +296,16 @@ runstock <- function(stock){
     all_land <- all_land[all_land$ICESarea %in% stockareas,]
     
     alld <- rbind(all_land, all_log)
-    alld <- aggregate(list(weightKG=alld$weightKG), list(ICESarea=alld$ICESarea, ICESareatype=alld$ICESareatype, quarter=alld$quarter, metier=alld$metier), sum)
-    alld$CatchCategory <- "L"
     
-    write_intercatch(species, alld)
+    if (nrow(alld) == 0){
+      message(paste("No landing found for", species))
+    }
+    else{
+      alld <- aggregate(list(weightKG=alld$weightKG), list(ICESarea=alld$ICESarea, ICESareatype=alld$ICESareatype, quarter=alld$quarter, metier=alld$metier), sum)
+      alld$CatchCategory <- "L"
+      
+      write_intercatch(species, alld)
+    }
     
   }
   else{

@@ -64,7 +64,7 @@ saveProjectData(projectname)
 
 
 #sett feillesingsmatrise for kysttorsk-skrei
-#CCerrorList <- list(ptype1.CC=1, ptype2.CC=0.7, ptype4.CC=0.3, ptype5.CC=0, ptype1.S=0, ptype2.S=0.3, ptype4.S=0.7, ptype5.S=1)
+CCerrorList <- list(ptype1.CC=1, ptype2.CC=0.7, ptype4.CC=0.3, ptype5.CC=0, ptype1.S=0, ptype2.S=0.3, ptype4.S=0.7, ptype5.S=1)
 
 l<-loadProjectData(projectname)
 var <- l$prepareRECA
