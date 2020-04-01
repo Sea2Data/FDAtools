@@ -82,3 +82,16 @@ Rstox:::saveDecomposedCatchMatrix(projectname, "testLocationGroupingWgear.csv", 
 
 # One can also run for only gear
 Rstox:::saveDecomposedCatchMatrix(projectname, "testGear.csv", addQuarterToDecomp = F, plusgr=6, decomposition = c("gearfactor"))
+
+
+#
+# Example for NNSK:
+# report gear as configured in ECA
+# area by ICES area
+# season by quarter
+#
+
+customArea <- list(a27.4=c("08","28", "40", "41", "42"), a.27.3.a.20="09", a27.7.d="46", a27.6.a=c("43","47"))
+
+# run with parameter customMainAreaGrouping, note that the default decomposition is set to NULL
+Rstox:::saveDecomposedCatchMatrix(projectname, "testNSSKreport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"))
