@@ -5,6 +5,7 @@ OTB_DEF_>=120_0_0_all	52	27.4	SubArea
 OTB_DEF_>=120_0_0_all	55	27.4	SubArea
 OTB_DEF_>=120_0_0_all	56	27.4	SubArea
 OTB_DEF_>=120_0_0_all	58	27.4	SubArea
+OTB_DEF_>=120_0_0_all	57	27.4	SubArea
 GNS_DEF_all_0_0_all	22	27.4	SubArea
 GNS_DEF_all_0_0_all	20	27.4	SubArea
 SDN_DEF_>=120_0_0_all	61	27.4	SubArea
@@ -24,6 +25,8 @@ MIS_MIS_0_0_0_HC	83	27.4	SubArea
 #
 LLS_FIF_0_0_0_all	35	27.6.a	Div
 OTB_DEF_>=120_0_0_all	51	27.6.a	Div
+#
+LLS_FIF_0_0_0_all	35	27.6.b	Div
 #
 GNS_DEF_all_0_0_all	22	27.3.a	Div
 GNS_DEF_all_0_0_all	20	27.3.a	Div
@@ -58,3 +61,4 @@ OTB_DEF_>=120_0_0_all	52	27.3.a.20	SubDiv
 OTB_DEF_>=120_0_0_all	55	27.3.a.20	SubDiv
 OTB_DEF_>=120_0_0_all	57	27.3.a.20	SubDiv
 SDN_DEF_>=120_0_0_all	61	27.3.a.20	SubDiv
+OTB_DEF_>=120_0_0_all	53	27.3.a.20	SubDiv
