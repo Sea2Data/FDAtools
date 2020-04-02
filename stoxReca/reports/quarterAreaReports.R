@@ -93,5 +93,6 @@ Rstox:::saveDecomposedCatchMatrix(projectname, "testGear.csv", addQuarterToDecom
 
 customArea <- list(a27.4=c("08","28", "40", "41", "42"), a.27.3.a.20="09", a27.7.d="46", a27.6.a=c("43","47"))
 
-# run with parameter customMainAreaGrouping, note that the default decomposition is set to NULL
-Rstox:::saveDecomposedCatchMatrix(projectname, "testNSSKreport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"))
+# run with parameter customMainAreaGrouping
+Rstox:::saveDecomposedCatchMatrix(projectname, "testNSSKcaaReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"), unit = "thousands")
+Rstox:::saveDecomposedAgeGroupParameters(projectname, "testNSSKagparamReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"))
