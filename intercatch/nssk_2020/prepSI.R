@@ -2,9 +2,9 @@ source("landings_overview.R")
 #stocks <- read.csv("data/stocks_COD_HAD_POK.csv", sep="\t", header = T, comment.char = "#", stringsAsFactors = F)
 #metier <- read.csv("data/fleet_COD_HAD_POK.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
 #metierlandings <- read.csv("data/fleet_wo_logbook_COD_HAD_POK.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
-stocks <- read.csv("data/stocks.csv", sep="\t", header = T, comment.char = "#", stringsAsFactors = F)
-metier <- read.csv("data/fleet.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
-metierlandings <- read.csv("data/fleet_wo_logbook.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
+stocks <- read.csv("data/stocks_COD_HAD_POK.csv", sep="\t", header = T, comment.char = "#", stringsAsFactors = F)
+metier <- read.csv("data/fleet_COD_HAD_POK.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
+metierlandings <- read.csv("data/fleet_wo_logbook_COD_HAD_POK.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
 areas <- read.csv("data/areas.csv", sep="\t", header = T, comment.char = "#", colClasses = c("character", "character", "character"), stringsAsFactors = F)
 
 if (!all(stocks$ICESarea %in% areas$ICESarea)){
