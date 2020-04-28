@@ -1,6 +1,7 @@
 source("landings_overview.R")
 stocks <- read.csv("data/stocks.csv", sep="\t", header = T, comment.char = "#", stringsAsFactors = F)
 metier <- read.csv("data/fleet.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
+metier$MASKEVIDDE <- as.character(metier$MASKEVIDDE)
 metierlandings <- read.csv("data/fleet_wo_logbook.csv", sep="\t", header=T, comment.char = "#", stringsAsFactors = F)
 areas <- read.csv("data/areas.csv", sep="\t", header = T, comment.char = "#", colClasses = c("character", "character", "character"), stringsAsFactors = F)
 
@@ -39,7 +40,7 @@ annotate_logbooks <- function(stock, logb){
   nr <- nrow(logb)
   # annotate area on logbooks
   logb$FDIRarea <- substr(logb$LOKASJON_START,1,2)
-
+  
   logb <- merge(logb, areas, all.x=T)
   if (any(is.na(logb$ICESarea))){
     print(unique(logb[is.na(logb$ICESarea),c("FDIRarea")]))
@@ -260,6 +261,7 @@ write_intercatch <-function(species, data){
 runstock <- function(stock){
   species <- stocks[stocks$stocckcode==stock,"FAOcode"][1]
   stockareas <- unique(stocks[stocks$stocckcode==stock,"ICESarea"])
+
   logb <- annotate_logbooks(stock, log_all_areas)
   land_w_logbook <- land_all_areas_w_logbook
   land_wo_logbook <- annotate_landings(stock, land_all_areas_wo_logbook)
