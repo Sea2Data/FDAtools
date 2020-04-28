@@ -1,6 +1,6 @@
 # Intercatch submission for WGCSE
 
-Contains scripts used for produsing SI lines for intercatch submission for WGCSE in 2020. 
+Contains scripts used for produsing SI lines for intercatch submission for WGCSE and WGBFAS in 2020. 
 Fleet decompositions (metiers) are merged in from logooks when available. For both logbooks and landing necessary fleet configurations are made in csv files in data/
 
 other configuration of area codes, stocks and metiers are in data/*.csv

@@ -50,5 +50,5 @@ sum(landings$`Art FAO (kode)` == "ANF")
 # reduserer logbøker og landinger til arter det skal rapporteres for
 #
 warning("Removing COD and HAD. Arved takes care of that")
-landings <- landings[landings$`Art FAO (kode)` %in% c("ANF", "LEZ"),]
-log <- log[log$FANGSTART_FAO %in% c("ANF", "LEZ"),]
+landings <- landings[landings$`Art FAO (kode)` %in% c("ANF", "LEZ", "SOL"),]
+log <- log[log$FANGSTART_FAO %in% c("ANF", "LEZ", "SOL"),]
