@@ -212,12 +212,16 @@ makesampleCountTable <- function(samplefiles, landingsfiles, speciesSamples, spe
 
 saveAFWGtable <- function(outfile="sampleCount.xlsx"){
   samplefiles <- list()
+  samplefiles[["2014"]] <- "~/bioticsets/v3/biotic_year_2014.xml"
+  samplefiles[["2015"]] <- "~/bioticsets/v3/biotic_year_2015.xml"
   samplefiles[["2016"]] <- "~/bioticsets/v3/biotic_year_2016.xml"
   samplefiles[["2017"]] <- "~/bioticsets/v3/biotic_year_2017.xml"
   samplefiles[["2018"]] <- "~/bioticsets/v3/biotic_year_2018.xml"
   samplefiles[["2019"]] <- "~/bioticsets/v3/biotic_year_2019.xml"
   
   landingfiles <- list()
+  landingfiles[["2014"]] <- "~/landingsets/LSS/FDIR_HI_LSS_FANGST_2014_PR_2016-12-08.psv"
+  landingfiles[["2015"]] <- "~/landingsets/LSS/FDIR_HI_LSS_FANGST_2015_PR_2016-12-08.psv"
   landingfiles[["2016"]] <- "~/landingsets/LSS/FDIR_HI_LSS_FANGST_2016_PR_2017-10-31.psv"
   landingfiles[["2017"]] <- "~/landingsets/LSS/FDIR_HI_LSS_FANGST_2017_PR_2018-10-05.psv"
   landingfiles[["2018"]] <- "~/landingsets/LSS/FDIR_HI_LSS_FANGST_2018_PR_2019-10-03.psv"
@@ -235,11 +239,28 @@ saveAFWGtable <- function(outfile="sampleCount.xlsx"){
   
   tab <- NULL
 
-  #CAP
+  #lodde
   tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("162035"), speciesLanding = c("CAP"), areas = capelinareas, missiontypes = missiontypes), tab)
-    
-  print(tab)
-  #COD
+
+  #Breiflabb
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("126555","164498","164497"), speciesLanding = c("MON", "ANF"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #blåkveite
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("172930"), speciesLanding = c("GHL"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #snabeluer
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("166756"), speciesLanding = c("REB"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #Vanlig uer
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("166781"), speciesLanding = c("REG"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #sei
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("164727"), speciesLanding = c("POK"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #hyse
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("164744"), speciesLanding = c("HAD"), areas = defaultareas, missiontypes = missiontypes), tab)
+  
+  #torsk
   tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("164712"), speciesLanding = c("COD"), areas = defaultareas, missiontypes = missiontypes), tab)
   
   print(tab)
