@@ -243,7 +243,7 @@ saveAFWGtable <- function(outfile="sampleCount.xlsx"){
   tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("162035"), speciesLanding = c("CAP"), areas = capelinareas, missiontypes = missiontypes), tab)
 
   #Breiflabb
-  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("126555","164498","164497"), speciesLanding = c("MON", "ANF"), areas = defaultareas, missiontypes = missiontypes), tab)
+  tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("164501","164498","164497"), speciesLanding = c("MON", "ANF"), areas = defaultareas, missiontypes = missiontypes), tab)
   
   #blåkveite
   tab <- rbind(makesampleCountTable(samplefiles, landingfiles, speciesSamples = c("172930"), speciesLanding = c("GHL"), areas = defaultareas, missiontypes = missiontypes), tab)
