@@ -41,3 +41,9 @@ par(mfrow=c(1,1))
 plot(1:length(profileMeanNumberPrLengthAndAgeGroup), sdMeanNumberPrLengthAndAgeGroup, xlab="age", ylab="sd", ylim=c(0,max(sdMeanNumberPrLengthAndAgeGroup)), col="black")
 points(1:length(profileMeanLengthPrAgeGroup), sdMeanLengthPrAgeGroup, col="red")
 legend("bottomright", fill=c("black", "red"), legend=c("length (length distributions)", "mean length (iterations)"))
+
+
+# save mean number pr age and length group
+rownames(meanNumberPrLengthAndAgeGroup) <- l$runRECA$pred$AgeCategories
+colnames(meanNumberPrLengthAndAgeGroup) <- round(exp(l$runRECA$pre$LengthIntervalsLog))
+write.table(meanNumberPrLengthAndAgeGroup, file = "~/temp/numberPrLengthAndAgeGroup.txt")
