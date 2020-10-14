@@ -3,6 +3,11 @@ projectname <- "ECA_NSSK_sei_2018"
 runRScripts(projectname)
 l<-loadProjectData(projectname, var="prepareRECA")
 
+# save mean weight at age
+mwa <- l$runRECA$pred$MeanWeight
+rownames(mwa) <- paste("Age", l$runRECA$pred$AgeCategories)
+colnames(mwa) <- paste("Iterations", 1:ncol(mwa))
+write.table(mwa, "weightAtAge.txt")
 
 # get distribution of mean length pr age group
 meanLengthPrAgeGroup <- l$runRECA$pred$MeanLength
