@@ -11,7 +11,7 @@ checkParam <- function(paramname, value, options){
 #' checks if a value is unique
 checkUnique <- function(paramname, values){
   if (length(unique(values))>1){
-    stop(paste("paramname must be unique. Got:", paste(unqiue(values)), collapse=","))
+    stop(paste("paramname must be unique. Got:", paste(unique(values)), collapse=","))
   }
 }
 
@@ -143,6 +143,13 @@ annotateArea <- function(stoxLandings){
   return(stoxLandings)
 }
 
+#' write HI line
+writeHI <- function(stream,
+                    Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea,
+                    DepthRange="NA", UnitEffort="NA", Effort="-9", AreaQualifier="NA"){
+  writeLines(con=stream, paste("HI", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, UnitEffort, Effort, AreaQualifier, sep=","))
+}
+
 #' write SI line
 writeSI <- function(stream,
                     Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, UnitCATON, CATON, OffLandings, 
@@ -150,16 +157,11 @@ writeSI <- function(stream,
   writeLines(con=stream, paste("SI", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, Species, Stock, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, QualityFlag, UnitCATON, format(CATON, digits=2), format(OffLandings, digits=2), varCATON, InfoFleet, InfoStockCoordinator, InfoGeneral, sep=","))
 }
 
-#' write HI line
-writeHI <- function(stream,
-                    Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea,
-                    DepthRange="NA", UnitEffort="NA", Effort="-9", AreaQualifier="NA"){
-  writeLines(con=stream, paste("SI", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, UnitEffort, Effort, AreaQualifier, sep=","))
-}
-
 #' write SD line
-writeSD <- function(stream){
-  warning("Not implemented")
+writeSD <- function(stream,
+                    Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, Sex, CANUMtype, AgeLength, PlusGroup, unitMeanWeight, unitCANUM, UnitAgeOrLength, UnitMeanLength, Maturity, NumberCaught, MeanWeight, MeanLength, 
+                    DepthRange="NA", Stock="NA",SampledCatch="-9", NumSamplesLngt="-9", NumLngtMeas="-9", NumSamplesAge="-9", NumAgeMeas="-9", varNumLanded="-9", varWgtLanded="-9", varLgtLanded="-9"){
+  writeLines(con=stream, paste("SD", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, Species, Stock, CatchCategory, ReportingCategory, Sex, CANUMtype, AgeLength, PlusGroup, SampledCatch, NumSamplesLngt, NumSamplesAge, NumAgeMeas, unitMeanWeight, unitCANUM, UnitAgeOrLength, UnitMeanLength, Maturity, format(NumberCaught, digits=4), format(MeanWeight,digits=2), format(MeanLength, digits=2), varNumLanded, varWgtLanded, varLgtLanded, sep=","))
 }
 
 
@@ -170,8 +172,10 @@ writeSD <- function(stream){
 #' @param exportfile file to write intercatch exchange format
 #' @param samplesOrigin information of origin of samples for SI line. See intercatch exchange format SampleOrigin.
 #' @param SDfleets fleets / metier that SD lines should be exported for. NULL means all fleets, NA no fleets.
+#' @param plusGroup plus group for the SD lines (NULL means no plus group)
+#' @param unitCANUM unit for catch at age in numbers, may be k,m or n for thosuands, millions or unit (ones) respectively
 #' @param force force re-run of stox project before exporting
-exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile, samplesOrigin="U", SDfleets=NULL, force=F){
+exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile, samplesOrigin="U", SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
 
   neededColumns <- c("Year", "Season", "Fleet", "Area","Country", "Species", "SeasonType", "AreaType", "CatchCategory",
                       "ReportingCategory", "DataToFrom", "Usage", "UnitCATON", "CATON", "OffLandings")
@@ -189,12 +193,15 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
     stop(paste("Not all specified fleets / metiers found in landings. Missing:", paste(missingFleets, collaps=",")))
   }
 
+  checkParam("unitCANUM", unitCANUM, c("k", "m", "n"))
+  
   if (force){
     Rstox::runRScripts(stoxprojectname)
   }
   
   # load eca configuration and parameterization
   prepdata <- Rstox::loadProjectData(stoxprojectname, var = "prepareRECA")
+  projecttempres <- prepdata$prepareRECA$StoxExport$temporalresolution
   rundata <- Rstox::loadProjectData(stoxprojectname, var = "runRECA")
   
   if (is.null(prepdata$prepareRECA)){
@@ -241,13 +248,52 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
                     data <- data[data$Species == species,]
                     checkUnique("UnitCATON", data$UnitCATON)
                     
-                    if (!(fleet %in% SDfleets)){
+                    if (!(fleet %in% SDfleets) | nrow(data)==0){
                       writeSI(stream, Country = data$Country[1], Year = year, SeasonType = data$SeasonType[1], Season = season, Fleet = fleet, AreaType = data$AreaType[1], FishingArea = area, Species = species, CatchCategory = catchCategory, ReportingCategory = reportingCategory, DataToFrom = dataToFrom, Usage = usage, SamplesOrigin = "NA", UnitCATON = data$UnitCATON[1], CATON = sum(data$CATON), OffLandings = sum(data$OffLandings))
                     }
-                    else if (fleet %in% SDfleets){
+                    else if ((fleet %in% SDfleets) & nrow(data)>0){
+                      
+                      #
+                      # run prediction for cell
+                      #
+                      AgeLength <- prepdata$prepareRECA$AgeLength
+                      WeightLength <- prepdata$prepareRECA$WeightLength
+                      GlobalParameters <- rundata$runRECA$GlobalParameters
+          
+                      decompLandings <- Rstox:::getLandings(data, AgeLength, WeightLength, projecttempres)
+                      pred <- Reca::eca.predict(AgeLength, WeightLength, decompLandings, GlobalParameters)
+                      
+                      if (unitCANUM == "k"){
+                        unit <- "thousands"
+                      } 
+                      else if (unitCANUM == "m"){
+                        unit <- "millions"
+                      }
+                      else if (unitCANUM == "n"){
+                        unit <- "ones"
+                      }
+                      else{
+                        stop("Error: unitCANUM")
+                      }
+                      
+                      ageMat <- Rstox:::getCatchMatrix(pred, plusgr = plusGroup, var = "Abundance", unit = unit)
+                      ageGroupPar <- Rstox:::getAgeGroupParamaters(pred, plusgr = plusGroup)
+                      
+                      #format plusgroup for report
+                      plg <- "-9"
+                      if (!is.null(plusGroup)){
+                        plg <- plusGroup
+                      }
+                      
                       writeSI(stream, Country = data$Country[1], Year = year, SeasonType = data$SeasonType[1], Season = season, Fleet = fleet, AreaType = data$AreaType[1], FishingArea = area, Species = species, CatchCategory = catchCategory, ReportingCategory = reportingCategory, DataToFrom = dataToFrom, Usage = usage, SamplesOrigin = samplesOrigin, UnitCATON = data$UnitCATON[1], CATON = sum(data$CATON), OffLandings = sum(data$OffLandings))
-                      writeSD(stream)
-                      stop("predict and write SD lines")
+                      for (age in ageMat$means$age){
+                        lowerage <- gsub("\\+", "", age) #remove plus sign from plus group
+                        caa <- ageMat$means$mean[ageMat$means$age==age]
+                        meanW <- ageGroupPar$meanWeightG[ageGroupPar$age==age]
+                        meanL <- ageGroupPar$meanLengthCm[ageGroupPar$age==age]
+                        writeSD(stream, Country = data$Country[1], Year = year, SeasonType = data$SeasonType[1], Season = season, Fleet = fleet, AreaType = data$AreaType[1], FishingArea = area, Species = species, CatchCategory = catchCategory, ReportingCategory = reportingCategory, 
+                                Sex = "", CANUMtype="Age", AgeLength = lowerage, PlusGroup=plg, unitMeanWeight="g", unitCANUM=unitCANUM, UnitAgeOrLength="year", UnitMeanLength="cm", Maturity="NA", NumberCaught=caa, MeanWeight=meanW, MeanLength=meanL)
+                      }
                     }            
                   }
                 }
@@ -260,11 +306,11 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   close(stream)
 }
 
-run <- function(stoxprojectname, exportfile, SDfleets=NULL){
+run <- function(stoxprojectname, exportfile, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
   landings <- extractLandings(stoxprojectname)
   landings <- annotateFromLandings(landings)
   landings <- annotateArea(landings)
   landings <- annotateMetier(landings)
-  exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets)
+  exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
 
