@@ -1,4 +1,5 @@
 library(RstoxFDA)
+library(data.table)
 library(Rstox)
 
 #' checks if an value is among a set of options.
@@ -129,21 +130,70 @@ annotateFromLandings <- function(stoxLandings, seasonType="Quarter", country="NO
 }
 
 #'
-annotateMetier <- function(stoxLandings){
+annotateMetierFromLandings <- function(stoxLandings){
   warning("Dummy metier annotation")
   stoxLandings$Fleet <- "Fleet"
   return(stoxLandings)
 }
 
-#'
-annotateArea <- function(stoxLandings){
-  warning("Dummy area annotation")
-  stoxLandings$Area <- "Area"
-  stoxLandings$AreaType <- "AreaType"
+#' annotate ICES areas
+#' @description 
+#'  Annotates ICES areas based on mainarea (as defined by Norwegian Directorate of Fisheries).
+#'  Supports annotation of area types: SubAreas, Divisions, or SubDivisions, but not statistical rectangles.
+#' @details 
+#'  Positions for each landing is imputed based on proved main areas and corresponding ICES areas are annotated based on that position.
+#'  The maximal available resolution is used, and the corresponding area types are deduced.
+#'  If other area types than the maximal available resolution is desired, all SubAreas, Divisions, or SubDivisions to use must be noted in full area name notation in the parameter 'areas'.
+#'  full area names has the form 27.3 for SubArea, 27.3.a for Division, or 27.3.a.20 for SubDivision.
+#' @param stoxLandings data frame with landings as extracted from stox 2.7 (see 'extractLandings')
+#' @param areas character vector specifying the which SubAreas, Divisions, or SubDivisions to use. If NULL areas are encoded at the maximal available resolution.
+#' @param mainareaPolygons polygons (\code{\link[sp]{SpatialPolygonsDataFrame}}) for main areas.
+#' @param mainareaCol name of column in 'mainareaPolygons' that contain the main areas in standard notation (area 01-09 prefixed with 0).
+#' @param ICESpolygons polygons (\code{\link[sp]{SpatialPolygonsDataFrame}}) for ICES areas.
+#' @param ICESareaCol name of column in 'ICESpolygons' that contain the name of the polygons in full area name notation.
+annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=RstoxFDA::mainareaFdir2018, mainareaCol="polygonName", ICESpolygons=RstoxFDA::ICESareas, ICESareaCol="Area_Full"){
+  stoxLandings$areaCode <- sprintf("%02d", stoxLandings$hovedområdekode)
+  stoxLandings <- RstoxFDA::appendPosition(stoxLandings, mainareaPolygons, "areaCode", latColName = "lat", lonColName = "lon", polygonName = mainareaCol)
+  
+  #POSIXct needed for data.table conversion
+  stoxLandings$sistefangstdato <- as.POSIXct.POSIXlt(stoxLandings$sistefangstdato)
+  stoxLandings <- RstoxFDA::appendAreaCode(data.table::as.data.table(stoxLandings), areaPolygons = ICESpolygons, latName = "lat", lonName = "lon", colName = "Area", polygonName = "Area_Full")
+  stoxLandings <- as.data.frame(stoxLandings)
+  
+  if (!is.null(areas)){
+    for (a in areas){
+      if (length(grep(a, areas))>1){
+        stop("Overlapping areas specifed (parameter 'areas')")
+      }
+      stoxLandings$Area[grep(a, stoxLandings$Area)] <- a
+    }
+    
+    if (!all(stoxLandings$Area %in% areas)){
+      missing <- unique(stoxLandings$Area[!(stoxLandings$Area %in% areas)])
+      stop(paste("The data contains more areas than those specified in parametere 'areas':", paste(missing, collapse=",")))
+    }
+  }
+  
+  #deduce AreaType
+  stoxLandings$AreaType <- as.character(NA)
+  stoxLandings$AreaType[sapply(strsplit(stoxLandings$Area, "\\."), FUN=function(x){length(x)})==1] <- "AreaTop"
+  stoxLandings$AreaType[sapply(strsplit(stoxLandings$Area, "\\."), FUN=function(x){length(x)})==2] <- "SubArea"
+  stoxLandings$AreaType[sapply(strsplit(stoxLandings$Area, "\\."), FUN=function(x){length(x)})==3] <- "Div"
+  stoxLandings$AreaType[sapply(strsplit(stoxLandings$Area, "\\."), FUN=function(x){length(x)})==4] <- "SubDiv"
+  if (any(is.na(stoxLandings$AreaType))){
+    stop("AreaType could not be deduced for all Areas.")
+  }
+  
+  #remove temp columns
+  stoxLandings$lon <- NULL
+  stoxLandings$lat <- NULL
+  stoxLandings$areaCode <- NULL
+  
   return(stoxLandings)
 }
 
 #' write HI line
+#' @noRd
 writeHI <- function(stream,
                     Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea,
                     DepthRange="NA", UnitEffort="NA", Effort="-9", AreaQualifier="NA"){
@@ -151,6 +201,7 @@ writeHI <- function(stream,
 }
 
 #' write SI line
+#' @noRd
 writeSI <- function(stream,
                     Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, UnitCATON, CATON, OffLandings, 
                     varCATON="-9", DepthRange="NA", Stock="NA", QualityFlag="NA", InfoFleet="", InfoStockCoordinator="", InfoGeneral=""){
@@ -158,6 +209,7 @@ writeSI <- function(stream,
 }
 
 #' write SD line
+#' @noRd
 writeSD <- function(stream,
                     Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, Sex, CANUMtype, AgeLength, PlusGroup, unitMeanWeight, unitCANUM, UnitAgeOrLength, UnitMeanLength, Maturity, NumberCaught, MeanWeight, MeanLength, 
                     DepthRange="NA", Stock="NA",SampledCatch="-9", NumSamplesLngt="-9", NumLngtMeas="-9", NumSamplesAge="-9", NumAgeMeas="-9", varNumLanded="-9", varWgtLanded="-9", varLgtLanded="-9"){
@@ -165,6 +217,17 @@ writeSD <- function(stream,
 }
 
 
+#' Intercatch export
+#' @description 
+#'  Exports Catch at age estimate from StoX-Reca to intercatch (StoX 2.7).
+#'  
+#'  Requires some annotation of additional information. The function 'annotateFromLandings' takes care
+#'  of annotations that can be directly extracted from the sales notes
+#'  
+#'  Area and metierannotation (fleet-annotation) may require additional resources depending on the requested detail.
+#'  A minimal approach can be realised with the functions 'annotateAreaFromLandings' and 'annotateMetierFromLandings'.
+#'  
+#'  The function 'runExample' illustrates how annotation functions may be combined to produce an intercatch export.
 #' @details
 #'  Only single species export is supported.
 #' @param stoxprojectname name of, or path to stox projected
@@ -306,11 +369,11 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   close(stream)
 }
 
-run <- function(stoxprojectname, exportfile, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
+runExample <- function(stoxprojectname, exportfile, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
   landings <- extractLandings(stoxprojectname)
   landings <- annotateFromLandings(landings)
-  landings <- annotateArea(landings)
-  landings <- annotateMetier(landings)
+  landings <- annotateAreaFromLandings(landings)
+  landings <- annotateMetierFromLandings(landings)
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
 
