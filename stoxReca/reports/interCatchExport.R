@@ -129,11 +129,17 @@ annotateFromLandings <- function(stoxLandings, seasonType="Quarter", country="NO
   return(stoxLandings)
 }
 
-#'
-annotateMetierFromLandings <- function(stoxLandings){
-  warning("Dummy metier annotation")
-  stoxLandings$Fleet <- "Fleet"
-  return(stoxLandings)
+#' annotate metier
+#' @description 
+#'  annotate fleet / metier based on landings (gear code). 
+#'  Appropriate conversion tables must be constructed.
+#'  Consider parsing with \code{\link[RstoxFDA]{readMetierTable}}.
+#' @param stoxLandings data frame with landings as extracted from stox 2.7 (see 'extractLandings')
+#' @param metiertable \code{\link[RstoxFDA]{MetierTable}} mapping gear to metier.
+#' @return 'stoxLandings' with columns 'Fleet' appended.
+annotateMetierFromLandings <- function(stoxLandings, metiertable=RstoxFDA::metier4table){
+  stoxLandings <- RstoxFDA::appendMetier(data.table::data.table(stoxLandings), metiertable, gearColumn = "redskapkode", metierColName = "Fleet")
+  return(as.data.frame(stoxLandings))
 }
 
 #' annotate ICES areas
@@ -151,6 +157,7 @@ annotateMetierFromLandings <- function(stoxLandings){
 #' @param mainareaCol name of column in 'mainareaPolygons' that contain the main areas in standard notation (area 01-09 prefixed with 0).
 #' @param ICESpolygons polygons (\code{\link[sp]{SpatialPolygonsDataFrame}}) for ICES areas.
 #' @param ICESareaCol name of column in 'ICESpolygons' that contain the name of the polygons in full area name notation.
+#' @return 'stoxLandings' with columns 'Area' and 'AreaType' appended.
 annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=RstoxFDA::mainareaFdir2018, mainareaCol="polygonName", ICESpolygons=RstoxFDA::ICESareas, ICESareaCol="Area_Full"){
   stoxLandings$areaCode <- sprintf("%02d", stoxLandings$hovedområdekode)
   stoxLandings <- RstoxFDA::appendPosition(stoxLandings, mainareaPolygons, "areaCode", latColName = "lat", lonColName = "lon", polygonName = mainareaCol)
