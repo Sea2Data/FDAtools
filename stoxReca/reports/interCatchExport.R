@@ -210,9 +210,16 @@ writeHI <- function(stream,
 #' write SI line
 #' @noRd
 writeSI <- function(stream,
-                    Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, UnitCATON, CATON, OffLandings, 
-                    varCATON="-9", DepthRange="NA", Stock="NA", QualityFlag="NA", InfoFleet="", InfoStockCoordinator="", InfoGeneral=""){
-  writeLines(con=stream, paste("SI", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, Species, Stock, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, QualityFlag, UnitCATON, format(CATON, digits=2), format(OffLandings, digits=2), varCATON, InfoFleet, InfoStockCoordinator, InfoGeneral, sep=","))
+                    Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, Species, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, UnitCATON, CATON, 
+                    OffLandings=NA, varCATON="-9", DepthRange="NA", Stock="NA", QualityFlag="NA", InfoFleet="", InfoStockCoordinator="", InfoGeneral=""){
+  
+  if (is.na(OffLandings)){
+    OffLandings <- "-9"
+  }
+  else{
+    OffLandings <- format(OffLandings, digits=2)    
+  }
+  writeLines(con=stream, paste("SI", Country, Year, SeasonType, Season, Fleet, AreaType, FishingArea, DepthRange, Species, Stock, CatchCategory, ReportingCategory, DataToFrom, Usage, SamplesOrigin, QualityFlag, UnitCATON, format(CATON, digits=2), OffLandings, varCATON, InfoFleet, InfoStockCoordinator, InfoGeneral, sep=","))
 }
 
 #' write SD line
