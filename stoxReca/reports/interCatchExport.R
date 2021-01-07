@@ -199,6 +199,20 @@ annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=
   return(stoxLandings)
 }
 
+#' Expand to fishing operations
+#' @description 
+#'  Expands landings to fishing operations, based on logbooks.
+#'  Expansion is by catch date and species and is only done for landings where logbook records are available.
+#'  Logbook records are not available if the vessel does not report logbooks or if inconsistent recording makes it impossible to locate trip or species within trip. 
+#' @param
+expandToOperations <- function(){
+  
+  # need: logbook expansion: expand to catches by trip and species. Handle missing species
+  # - overwrite: catchweight, mainarea, location
+  # - append: mesh size, fao gear code
+  
+}
+
 #' write HI line
 #' @noRd
 writeHI <- function(stream,
@@ -381,8 +395,10 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
                         caa <- ageMat$means$mean[ageMat$means$age==age]
                         meanW <- ageGroupPar$meanWeightG[ageGroupPar$age==age]
                         meanL <- ageGroupPar$meanLengthCm[ageGroupPar$age==age]
+                        
+                        #Sex is mandatory in the sense that the field must be filled (but accepts N=indetermined). Intercatch doc says its not mandatory
                         writeSD(stream, Country = data$Country[1], Year = year, SeasonType = data$SeasonType[1], Season = season, Fleet = fleet, AreaType = data$AreaType[1], FishingArea = area, Species = species, CatchCategory = catchCategory, ReportingCategory = reportingCategory, 
-                                Sex = "", CANUMtype="Age", AgeLength = lowerage, PlusGroup=plg, unitMeanWeight="g", unitCANUM=unitCANUM, UnitAgeOrLength="year", UnitMeanLength="cm", Maturity="NA", NumberCaught=caa, MeanWeight=meanW, MeanLength=meanL)
+                                Sex = "N", CANUMtype="Age", AgeLength = lowerage, PlusGroup=plg, unitMeanWeight="g", unitCANUM=unitCANUM, UnitAgeOrLength="year", UnitMeanLength="cm", Maturity="NA", NumberCaught=caa, MeanWeight=meanW, MeanLength=meanL)
                       }
                     }
                   }            
@@ -405,3 +421,9 @@ runExample <- function(stoxprojectname, exportfile, SDfleets=NULL, plusGroup=NUL
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
 
+# need: logbook expansion: expand to catches by trip and species. Handle missing species
+# - overwrite: catchweight, mainarea, location
+# - append: mesh size
+# revised metierannotation: dependent on gear, mesh size and ICES area.
+warning("Implement logbookexpansion")
+warning("implement revised metierannotation")
