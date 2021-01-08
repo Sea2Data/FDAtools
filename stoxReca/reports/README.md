@@ -6,4 +6,4 @@ File / Directory | Content
 ----------|--------
 quarterAreaReportsR | various examples of how to use the function Rstox::saveDecomposedCatchMatrix to extract reports for quarters and areas
 exportReportsGear.R | examples of how to extract raw Reca output for each gear group
-intercatchExport | code for generating intercatch export from StoX-projects
+intercatchExport | code for generating intercatch export from StoX-projects.

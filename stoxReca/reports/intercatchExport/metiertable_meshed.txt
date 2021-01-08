@@ -1,0 +1,58 @@
+# Example metier configuration for annotating metier lvl 6 based on
+# gear and mesh size
+metier	gearcode	meshedGear	lowerMeshSize	upperMeshSize
+
+SSC_DEF_>=120_0_0_all	61	T	120	380
+SSC_DEF_90-119_0_0_all	61	T	90	119
+SSC_DEF_16-31_0_0_all	61	T	16	31
+SSC_DEF_32-69_0_0_all	61	T	32	69
+
+# putting undefined trawls with OTB
+OTB_DEF_>=120_0_0_all	50	T	120	380
+
+# putting pair trawls with OTB
+OTB_DEF_>=120_0_0_all	52	T	120	380
+
+# putting all double trawls with OTB
+OTB_DEF_>=120_0_0_all	58	T	120	380
+
+OTB_DEF_>=120_0_0_all	51	T	120	380
+OTB_DEF_>=120_0_0_all	55	T	120	380
+OTB_DEF_>=120_0_0_all	57	T	120	380
+OTB_CRU_16-31_0_0_all	50	T	16	31
+OTB_CRU_16-31_0_0_all	51	T	16	31
+OTB_CRU_16-31_0_0_all	55	T	16	31
+OTB_CRU_32-69_0_0_all	50	T	32	69
+OTB_CRU_32-69_0_0_all	51	T	32	69
+OTB_CRU_32-69_0_0_all	52	T	32	69
+OTB_CRU_32-69_0_0_all	55	T	32	69
+OTB_CRU_90-119_0_0_all	57	T	70	89
+OTB_CRU_90-119_0_0_all	51	T	70	89
+OTB_CRU_90-119_0_0_all	57	T	90	119
+OTB_CRU_90-119_0_0_all	51	T	90	119
+OTB_SPF_32-69_0_0_all	57	T	32	69
+
+
+
+# large mesh sizes indicates error in data
+MIS_MIS_0_0_0_HC	61	T	500	10000
+
+# small meshed trawls and dem seines
+MIS_MIS_0_0_0_HC	50	T	0	15
+MIS_MIS_0_0_0_HC	51	T	0	15
+MIS_MIS_0_0_0_HC	55	T	0	15
+MIS_MIS_0_0_0_HC	57	T	0	15
+MIS_MIS_0_0_0_HC	61	T	0	15
+
+
+#ignoring mesh size for purse seines, gillnet and pelagic trawl
+# pelagic traw
+MIS_MIS_0_0_0_HC	54	F		
+MIS_MIS_0_0_0_HC	53	F		
+
+#purse seine
+MIS_MIS_0_0_0_HC	11	F		
+#gillnet
+GNS_DEF_all_0_0_all	22	F		
+GNS_DEF_all_0_0_all	20	F		
+

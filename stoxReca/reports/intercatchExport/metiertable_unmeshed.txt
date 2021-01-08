@@ -1,0 +1,43 @@
+# Example metier configuration for annotating metier lvl 6 based on gear
+metier	gearcode	meshedGear	lowerMeshSize	upperMeshSize
+LLS_FIF_0_0_0_all	32	F		
+GNS_DEF_all_0_0_all	22	F		
+GNS_DEF_all_0_0_all	20	F		
+#putting floating lines with LLS
+LLS_FIF_0_0_0_all	31	F		
+#putting jig with LLS
+LLS_FIF_0_0_0_all	33	F		
+LLS_FIF_0_0_0_all	34	F		
+LLS_FIF_0_0_0_all	35	F		
+
+#SSC without mesh size assumed to be >120
+SSC_DEF_>=120_0_0_all	61	F
+
+#OTB without mesh size is assumed to be > 120
+OTB_DEF_>=120_0_0_all	51	F
+OTB_DEF_>=120_0_0_all	52	F
+OTB_DEF_>=120_0_0_all	55	F
+OTB_DEF_>=120_0_0_all	57	F
+
+
+MIS_MIS_0_0_0_HC				
+
+#pelagic trawl
+MIS_MIS_0_0_0_HC	53	F		
+
+# purse seines and undefined seines
+MIS_MIS_0_0_0_HC	10	F		
+MIS_MIS_0_0_0_HC	11	F		
+MIS_MIS_0_0_0_HC	14	F		
+
+#driftnets
+MIS_MIS_0_0_0_HC	21	F		
+
+# pots / traps
+MIS_MIS_0_0_0_HC	41	F		
+MIS_MIS_0_0_0_HC	42	F		
+
+#other
+MIS_MIS_0_0_0_HC	80	F		
+MIS_MIS_0_0_0_HC	83	F		
+MIS_MIS_0_0_0_HC	90	F		
