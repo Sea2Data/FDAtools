@@ -137,15 +137,34 @@ annotateFromLandings <- function(stoxLandings, seasonType="Quarter", country="NO
 #' @description 
 #'  annotate fleet / metier based on landings (gear code). 
 #'  Appropriate conversion tables must be constructed.
-#'  Consider parsing with \code{\link[RstoxFDA]{readMetierTable}}.
 #' @param stoxLandings data frame with landings as extracted from stox 2.7 (see 'extractLandings')
-#' @param metiertable \code{\link[RstoxFDA]{MetierTable}} mapping gear to metier.
+#' @param metierfile File mapping gear to metier. See \code{\link[RstoxFDA]{readMetierTable}} for format.
 #' @return 'stoxLandings' with columns 'Fleet' appended.
-annotateMetierFromLandings <- function(stoxLandings, metiertable=RstoxFDA::metier4table){
+annotateMetierFromLandings <- function(stoxLandings, metierfile){
+  metiertable=RstoxFDA::readMetierTable(metierfile)
   stoxLandings <- RstoxFDA::appendMetier(data.table::data.table(stoxLandings), metiertable, gearColumn = "redskapkode", metierColName = "Fleet")
   return(as.data.frame(stoxLandings))
 }
 
+#' annotate metier
+#' @description 
+#'  annotate fleet / metier based on gear code and mesh size. 
+#'  Appropriate conversion tables must be constructed.
+#' @details 
+#' stoxLandings is data frame with landings as extracted from stox 2.7 (see 'extractLandings')
+#' with the mesh-size column appended (MASKEVIDDE). Mesh sizes can be appended from logbooks using
+#' 'annotateMeshSize'.
+#'  
+#' The configuration in 'metierfileMeshed' will be used for all gears where mesh-size is available (MASKEVIDDE is provided).
+#' The configuration may still spesify the gear as unmeshed (and hence ignore mesh-size)
+#' 
+#' The configuration in 'metierfileUnmeshed' will be used for all gears where mesh-size is not available. 
+#' This includes meshed gear with missing mesh-size information.
+#'  
+#' @param stoxLandings data frame with landings as extracted from stox 2.7 (see 'extractLandings')
+#' @param metierfileMeshed File mapping gear and mesh size to metier. See \code{\link[RstoxFDA]{readMetierTable}} for format.
+#' @param metierfileUnmeshed File mapping gear to metier. See \code{\link[RstoxFDA]{readMetierTable}} for format.
+#' @return 'stoxLandings' with columns 'Fleet' appended.
 annotateMetierMeshSize <- function(stoxLandings, metierfileMeshed, metierfileUnmeshed){
   if (!("MASKEVIDDE" %in% names(stoxLandings))){
     stop("The column MASKEVIDDE must be provided in 'stoxLandings'")
@@ -459,12 +478,30 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   close(stream)
 }
 
-runExample <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed="metiertable_meshed.txt", metierconfigUnmeshed="metiertable_unmeshed.txt", SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
+#' Example of intercatch workflow
+#' @param stoxprojectname name of or path to StoX-Reca project
+#' @param logbook path to PSV-formatted logbook file.
+#' @param exportfile file to write intercatch export to
+#' @param metierconfigMeshed path to file with metierconfiguration when mesh-size is available
+#' @param metierconfigUnmeshed path to file with metierconfiguration when mesh-size is not available
+#' @param SDfleets fleets / metier that SD lines should be exported for. NULL means all fleets, NA no fleets.
+#' @param plusGroup plus group for the SD lines (NULL means no plus group)
+#' @param unitCANUM unit for catch at age in numbers, may be k,m or n for thosuands, millions or unit (ones) respectively
+#' @param force force re-run of stox project before exporting
+#' @examples 
+#'  runExample("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", 
+#'             "intercatchExport/metiertable_meshed.txt", 
+#'             "intercatchExport/metiertable_unmeshed.txt", 
+#'             logbook = "~/logbooks/FDIR_HI_ERS_2019_PR_2020-03-04.psv", 
+#'             exportfile = "test.csv", 
+#'             plusGroup = 10, 
+#'             SDfleets = c("OTB_DEF_>=120_0_0_all", "GNS_DEF_all_0_0_all"))
+runExample <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed, metierconfigUnmeshed, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
   landings <- extractLandings(stoxprojectname)
   landings <- annotateFromLandings(landings)
   landings <- annotateMeshSize(landings, logbook)
   landings <- annotateAreaFromLandings(landings)
   landings <- annotateMetierMeshSize(landings, metierconfigMeshed, metierconfigUnmeshed)
-  sleep(5) #give some time to notice warnings and messages
+  Sys.sleep(5) #give some time to notice warnings and messages
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
