@@ -1,4 +1,5 @@
 library(RstoxFDA)
+library(RstoxData)
 library(data.table)
 library(Rstox)
 
@@ -34,7 +35,10 @@ extractLandings <- function(stoxprojectname, force=F){
     stop("Results from Reca data preparation not found. Run with force=T to force re-running of stox project")
   }
   
-  return(prepdata$prepareRECA$StoxExport$landing)
+  #POSIXct needed for data.table conversion
+  stoxLandings <- prepdata$prepareRECA$StoxExport$landing
+  stoxLandings$sistefangstdato <- as.POSIXct.POSIXlt(stoxLandings$sistefangstdato)
+  return(stoxLandings)
 }
 
 #' annotate landings
@@ -142,6 +146,28 @@ annotateMetierFromLandings <- function(stoxLandings, metiertable=RstoxFDA::metie
   return(as.data.frame(stoxLandings))
 }
 
+annotateMetierMeshSize <- function(stoxLandings, metierfileMeshed, metierfileUnmeshed){
+  if (!("MASKEVIDDE" %in% names(stoxLandings))){
+    stop("The column MASKEVIDDE must be provided in 'stoxLandings'")
+  }
+  
+  stoxLandings <- data.table::data.table(stoxLandings)
+  
+  meshed <- stoxLandings[!is.na(stoxLandings$MASKEVIDDE),]
+  unMeshed <- stoxLandings[is.na(stoxLandings$MASKEVIDDE),]
+  
+  metiertableMeshed <- RstoxFDA::readMetierTable(metierfileMeshed)
+  metiertableUnmeshed <- RstoxFDA::readMetierTable(metierfileUnmeshed)
+  
+  meshed <- appendMetier(meshed, metiertableMeshed, gearColumn = "redskapkode", meshSizeColumn = "MASKEVIDDE", metierColName = "Fleet")
+  unMeshed <- appendMetier(unMeshed, metiertableUnmeshed, gearColumn = "redskapkode", metierColName = "Fleet")
+  
+  stoxLandings <- rbind(meshed, unMeshed)
+  
+  stoxLandings <- as.data.frame(stoxLandings)
+  return(stoxLandings)
+}
+
 #' annotate ICES areas
 #' @description 
 #'  Annotates ICES areas based on mainarea (as defined by Norwegian Directorate of Fisheries).
@@ -162,8 +188,6 @@ annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=
   stoxLandings$areaCode <- sprintf("%02d", stoxLandings$hovedområdekode)
   stoxLandings <- RstoxFDA::appendPosition(stoxLandings, mainareaPolygons, "areaCode", latColName = "lat", lonColName = "lon", polygonName = mainareaCol)
   
-  #POSIXct needed for data.table conversion
-  stoxLandings$sistefangstdato <- as.POSIXct.POSIXlt(stoxLandings$sistefangstdato)
   stoxLandings <- RstoxFDA::appendAreaCode(data.table::as.data.table(stoxLandings), areaPolygons = ICESpolygons, latName = "lat", lonName = "lon", colName = "Area", polygonName = "Area_Full")
   stoxLandings <- as.data.frame(stoxLandings)
   
@@ -177,7 +201,7 @@ annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=
     
     if (!all(stoxLandings$Area %in% areas)){
       missing <- unique(stoxLandings$Area[!(stoxLandings$Area %in% areas)])
-      stop(paste("The data contains more areas than those specified in parametere 'areas':", paste(missing, collapse=",")))
+      stop(paste("The data contains more areas than those specified in parameter 'areas':", paste(missing, collapse=","), ". These have been removed. They may have been introduced by logbook adjustments, even if they are filtered in the stox project."))
     }
   }
   
@@ -199,18 +223,41 @@ annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=
   return(stoxLandings)
 }
 
-#' Expand to fishing operations
+#' Annotate mesh size
 #' @description 
-#'  Expands landings to fishing operations, based on logbooks.
-#'  Expansion is by catch date and species and is only done for landings where logbook records are available.
-#'  Logbook records are not available if the vessel does not report logbooks or if inconsistent recording makes it impossible to locate trip or species within trip. 
-#' @param
-expandToOperations <- function(){
+#'  Assigns trip ids and mesh sizes (MASKEVIDDE) from logbooks
+#'  Only landings with corresponding trips in logbooks are annotated with mesh size. The other will have NA for this parameter.
+#'  Only one mesh size is extracted for each trip (even when more mesh sizes have been used.)
+#' @param stoxLandings data frame with landings as extracted from stox 2.7 (see 'extractLandings')
+#' @param logbooks
+#' @return stoxLandings with the columns 'tripd' and 'MASKVEIDDE' added
+annotateMeshSize <- function(stoxLandings, logbooks){
+  logb <- RstoxData::readErsFile(logbooks)
+  logb <- logb[!is.na(logb$FANGSTART_FAO) & (logb$FANGSTART_FAO %in% unique(stoxLandings$artfaokode)),]
+  logb <- logb[logb$RC %in% unique(stoxLandings$radiokallesignalseddel),]
+  logb <- logb[as.integer(substring(logb$LOKASJON_START,1,2)) %in% as.integer(stoxLandings$hovedområdekode),]
   
-  # need: logbook expansion: expand to catches by trip and species. Handle missing species
-  # - overwrite: catchweight, mainarea, location
-  # - append: mesh size, fao gear code
+  stoxLandings <- data.table::data.table(stoxLandings)
+  message("Annotating mesh size")
+  tripIds <- RstoxFDA::makeTripIds(stoxLandings, vesselIdCol="radiokallesignalseddel", lastCatchCol = "sistefangstdato")
+  stoxLandings <- RstoxFDA::appendTripIdLandings(stoxLandings, tripIds = tripIds, vesselIdCol="radiokallesignalseddel", lastCatchCol = "sistefangstdato")
+  suppressWarnings(logb <- RstoxFDA::appendTripIdLogbooks(logb, tripIds, vesselIdCol = "RC", timeCol = "STARTTIDSPUNKT"))
   
+  if (any(is.na(logb$tripid))){
+    vessels <- length(unique(logb$RC[is.na(logb$tripid)]))
+    message(paste(sum(is.na(logb$tripid)), " logbook catches (out of ", nrow(logb), ") from ", vessels, " vessels (out of ", length(unique(logb$RC)), ") could not be matched to landings.", sep=""))
+  }
+  
+  #extract one mesh size pr gear and trip
+  meshsizes <- logb[,c("tripid", "REDSKAP_NS", "MASKEVIDDE")]
+  meshsizes <- meshsizes[!duplicated(paste(meshsizes$tripid, meshsizes$REDSKAP_NS)),]
+  meshsizes$REDSKAP_NS <- as.integer(meshsizes$REDSKAP_NS)
+  
+  stoxLandings <- merge(stoxLandings, meshsizes, by.x=c("tripid", "redskapkode"), by.y=c("tripid", "REDSKAP_NS"), all.x=T)
+  stoxLandings <- as.data.frame(stoxLandings)
+  
+  return(stoxLandings)
+
 }
 
 #' write HI line
@@ -343,7 +390,6 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
                                                     annotatedStoxLandings$Fleet == fleet &
                                                     annotatedStoxLandings$Area == area &
                                                     annotatedStoxLandings$Species == species,,]
-                    
                     checkUnique("UnitCATON", data$UnitCATON)
                     
                     #intercatch does not allow multiple usages within the variables filtered for above.
@@ -356,7 +402,7 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
                       writeSI(stream, Country = data$Country[1], Year = year, SeasonType = data$SeasonType[1], Season = season, Fleet = fleet, AreaType = data$AreaType[1], FishingArea = area, Species = species, CatchCategory = catchCategory, ReportingCategory = reportingCategory, DataToFrom = dataToFrom, Usage = usage, SamplesOrigin = "NA", UnitCATON = data$UnitCATON[1], CATON = sum(data$CATON, na.rm=T), OffLandings = sum(data$OffLandings))
                     }
                     else if ((fleet %in% SDfleets) & nrow(data)>0){
-                      
+                      message(paste("Predicting catch at age for", paste(data$Year[1], data$Season[1], data$Fleet[1], data$Area[1], collapse=",")))
                       #
                       # run prediction for cell
                       #
@@ -366,7 +412,7 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
                       
                       decompLandings <- Rstox:::getLandings(data, AgeLength, WeightLength, projecttempres)
                       pred <- Reca::eca.predict(AgeLength, WeightLength, decompLandings, GlobalParameters)
-                      
+
                       if (unitCANUM == "k"){
                         unit <- "thousands"
                       } 
@@ -413,17 +459,12 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   close(stream)
 }
 
-runExample <- function(stoxprojectname, exportfile, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
+runExample <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed="metiertable_meshed.txt", metierconfigUnmeshed="metiertable_unmeshed.txt", SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
   landings <- extractLandings(stoxprojectname)
   landings <- annotateFromLandings(landings)
+  landings <- annotateMeshSize(landings, logbook)
   landings <- annotateAreaFromLandings(landings)
-  landings <- annotateMetierFromLandings(landings)
+  landings <- annotateMetierMeshSize(landings, metierconfigMeshed, metierconfigUnmeshed)
+  sleep(5) #give some time to notice warnings and messages
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
-
-# need: logbook expansion: expand to catches by trip and species. Handle missing species
-# - overwrite: catchweight, mainarea, location
-# - append: mesh size
-# revised metierannotation: dependent on gear, mesh size and ICES area.
-warning("Implement logbookexpansion")
-warning("implement revised metierannotation")
