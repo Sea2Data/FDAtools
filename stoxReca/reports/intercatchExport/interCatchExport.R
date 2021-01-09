@@ -478,6 +478,53 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   close(stream)
 }
 
+#' Compare StoX and intercatch
+#' @description 
+#'  Reads data from stox project and compare it with data exported for intercatch
+#' @param stoxprojectname name of or path to StoX-Reca project
+#' @param intercatchfile path to file with data in intercatch exchange format
+checks <- function(stoxprojectname, intercatchfile){
+  landings <- extractLandings(stoxprojectname)
+  intercatchdata <- RstoxData::parseInterCatch(intercatchfile)
+  
+  #compare species
+  cat(paste("Species StoX-Reca:", paste(unique(landings$artfaokode), collapse=","), "\n"))
+  cat(paste("Species intercatch (IC):", paste(unique(intercatchdata$SI$Species), collapse=","), "\n"))
+  
+  #compare total weights
+  sis <- intercatchdata$SI
+  sis$CATON[sis$UnitCATON=="kg"] <- sis$CATON[sis$UnitCATON=="kg"]/1000
+  
+  totstox <- sum(landings$rundvekt)/1000
+  totIC <- sum(sis$CATON)
+  cat("\n")
+  cat(paste("Totalvekt StoX-Reca (t):", totstox, "\n"))
+  cat(paste("Totalvekt IC (t):", totIC, "\n"))
+  diff <- totstox - totIC
+  reldiff <- diff / totstox
+  cat(paste("Difference: ", format(diff, digits=2), " t (", format(reldiff*100, digits=1), "%)\n", sep=""))
+  
+  #compare sum of products
+  SISD <- merge(intercatchdata$SI, intercatchdata$SD)
+  SISD$SIid <- paste(SISD$Country, SISD$Year, SISD$SeasonType, SISD$Season, SISD$Fleet, SISD$AreaType, SISD$FishingArea, SISD$DepthRange, SISD$Species, SISD$Stock, SISD$CatchCategory, SISD$ReportingCategory, SISD$DataToFrom, sep="-")
+  
+  SISD$NumberCaught[SISD$unitCANUM=="k"] <- SISD$NumberCaught[SISD$unitCANUM=="k"]*1000
+  SISD$NumberCaught[SISD$unitCANUM=="m"] <- SISD$NumberCaught[SISD$unitCANUM=="m"]*1000*1000
+  
+  SISD$MeanWeight[SISD$unitMeanWeight=="g"] <- SISD$MeanWeight[SISD$unitMeanWeight=="g"]/1000
+  SOP <- sum(SISD$NumberCaught*SISD$MeanWeight)
+  SOPt <- SOP/1000
+  total <- sum(SISD$CATON[!duplicated(SISD$SIid)])
+  
+  diffSOP <- total - SOPt
+  reldiffSOP <- diff / total
+  
+  cat("\n")
+  cat(paste("Total weight IC (t):", format(total, digits=2),"\n"))
+  cat(paste("Total SOP IC (t):", format(SOPt, digits=2),"\n"))
+  cat(paste("Difference: ", format(diffSOP, digits=2), " t (", format(reldiffSOP*100, digits=1), "%)\n", sep=""))
+}
+
 #' Example of intercatch workflow
 #' @param stoxprojectname name of or path to StoX-Reca project
 #' @param logbook path to PSV-formatted logbook file.
@@ -496,6 +543,7 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
 #'             exportfile = "test.csv", 
 #'             plusGroup = 10, 
 #'             SDfleets = c("OTB_DEF_>=120_0_0_all", "GNS_DEF_all_0_0_all"))
+#'  checks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", "test.csv")
 runExample <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed, metierconfigUnmeshed, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
   landings <- extractLandings(stoxprojectname)
   landings <- annotateFromLandings(landings)
