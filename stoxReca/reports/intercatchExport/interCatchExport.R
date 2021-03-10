@@ -21,24 +21,35 @@ checkUnique <- function(paramname, values){
 #' @description  
 #'  Extract landings from StoX project. Format internal to StoX 2.7
 #' @param stoxprojectname name of, or path to stox projected
+#' @param process process that landings should be extracted from, typicalle 'prepareReca' or 'FilterLandings'
 #' @param force force re-run of stox project before exporting
 #' @return data.frame with landings
-extractLandings <- function(stoxprojectname, force=F){
+extractLandings <- function(stoxprojectname, process="prepareRECA", force=F){
   if (force){
     Rstox::runRScripts(stoxprojectname)
   }
   
-  # load eca configuration and parameterization
-  prepdata <- Rstox::loadProjectData(stoxprojectname, var = "prepareRECA")
-  
-  if (is.null(prepdata$prepareRECA)){
-    stop("Results from Reca data preparation not found. Run with force=T to force re-running of stox project")
+  if (process == "prepareRECA"){
+    # load eca configuration and parameterization
+    prepdata <- Rstox::loadProjectData(stoxprojectname, var = "prepareRECA")
+    
+    if (is.null(prepdata$prepareRECA)){
+      stop("Results from Reca data preparation not found. Run with force=T to force re-running of stox project")
+    }
+    
+    #POSIXct needed for data.table conversion
+    stoxLandings <- prepdata$prepareRECA$StoxExport$landing
+    stoxLandings$sistefangstdato <- as.POSIXct(stoxLandings$sistefangstdato)
+    return(stoxLandings)
   }
   
-  #POSIXct needed for data.table conversion
-  stoxLandings <- prepdata$prepareRECA$StoxExport$landing
-  stoxLandings$sistefangstdato <- as.POSIXct.POSIXlt(stoxLandings$sistefangstdato)
+  bl<-Rstox::getBaseline(stoxprojectname, proc=process)
+  stoxLandings <- bl$outputData$FilterLanding
+  names(stoxLandings) <- tolower(names(stoxLandings))
+  stoxLandings$sistefangstdato <- as.POSIXct(stoxLandings$sistefangstdato)
+  
   return(stoxLandings)
+  
 }
 
 #' annotate landings
@@ -361,16 +372,17 @@ exportIntercatch <- function(stoxprojectname, annotatedStoxLandings, exportfile,
   projecttempres <- prepdata$prepareRECA$StoxExport$temporalresolution
   rundata <- Rstox::loadProjectData(stoxprojectname, var = "runRECA")
   
-  if (is.null(prepdata$prepareRECA)){
-    stop("Results from Reca data preparation not found. Run with force=T to force re-running of stox project")
+  if (is.null(prepdata$prepareRECA) & length(SDfleets) > 1){
+    stop("Results from Reca data preparation not found. Cannot produce SD lines. Run with force=T to force re-running of stox project")
   }
   if (is.null(rundata$runRECA) & length(SDfleets) > 1){
-    stop("Results from Reca parameterisation not found. Run with force=T to force re-running of stox project")
+    stop("Results from Reca parameterisation not found. Cannot produce SD lines. Run with force=T to force re-running of stox project")
   }
-  if (!is.null(rundata$runRECA) & rundata$runRECA$GlobalParameters$CC & length(SDfleets) > 1){
-    stop("Intercatch export not implemented for stock splitting (coastal cod analysis)")
-  }
-  
+  if (!is.null(rundata$runRECA) & !is.null(rundata$runRECA$GlobalParameters)){
+    if (rundata$runRECA$GlobalParameters$CC & length(SDfleets) > 1){
+      stop("Intercatch export not implemented for stock splitting (coastal cod analysis)")
+    }
+  }  
   if (length(unique(annotatedStoxLandings$SeasonType)) != 1){
     stop("Intercatch export is only supported for data with unique season types.")
   }
@@ -552,4 +564,29 @@ runExample <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed,
   landings <- annotateMetierMeshSize(landings, metierconfigMeshed, metierconfigUnmeshed)
   Sys.sleep(5) #give some time to notice warnings and messages
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
+}
+
+#' Example of intercatch workflow for exporting only SI and SL lines
+#' @param stoxprojectname name of or path to StoX-Reca project
+#' @param logbook path to PSV-formatted logbook file.
+#' @param exportfile file to write intercatch export to
+#' @param metierconfigMeshed path to file with metierconfiguration when mesh-size is available
+#' @param metierconfigUnmeshed path to file with metierconfiguration when mesh-size is not available
+#' @param unitCANUM unit for catch at age in numbers, may be k,m or n for thosuands, millions or unit (ones) respectively
+#' @param force force re-run of stox project before exporting
+#' @examples 
+#'  runExample("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", 
+#'             "intercatchExport/metiertable_meshed.txt", 
+#'             "intercatchExport/metiertable_unmeshed.txt", 
+#'             logbook = "~/logbooks/FDIR_HI_ERS_2019_PR_2020-03-04.psv", 
+#'             exportfile = "test.csv")
+#'  checks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", "test.csv")
+runExampleHIandSL <- function(stoxprojectname, logbook, exportfile, metierconfigMeshed, metierconfigUnmeshed, unitCANUM="k", force=F){
+  landings <- extractLandings(stoxprojectname, process = "FilterLanding")
+  landings <- annotateFromLandings(landings)
+  landings <- annotateMeshSize(landings, logbook)
+  landings <- annotateAreaFromLandings(landings)
+  landings <- annotateMetierMeshSize(landings, metierconfigMeshed, metierconfigUnmeshed)
+  Sys.sleep(5) #give some time to notice warnings and messages
+  exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = NA, plusGroup=NULL, unitCANUM=unitCANUM, force=force)
 }
