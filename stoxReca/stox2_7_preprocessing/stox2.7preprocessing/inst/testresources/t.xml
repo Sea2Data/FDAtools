@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Landingsdata xmlns="http://www.imr.no/formats/landinger/v2">
+	<Seddellinje Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>1</DokumentVersjonsnummer><DokumentFormulardato>09.04.2018</DokumentFormulardato><DokumentElektroniskDato>09.04.2018 14:05:19</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<SalgslagID>938469148</SalgslagID><Salgslag>Norges Råfisklag</Salgslag><Salgslag_kode>7</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>N1036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Landingsdato>2018-04-09</Landingsdato><Landingsklokkeslett>1340</Landingsklokkeslett><Landingskommune_kode>1835</Landingskommune_kode><Landingskommune>TRÆNA</Landingskommune><Landingsfylke_kode>18</Landingsfylke_kode><Landingsfylke>Nordland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg>N1036</Produksjonsanlegg><Produksjonskommune_kode>1835</Produksjonskommune_kode><Produksjonskommune>TRÆNA</Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fangstfelt_kode>3709</Fangstfelt_kode><Hovedområde_bokmål>Østlige Norskehav</Hovedområde_bokmål><Sone_kode>NOR</Sone_kode><Sone_bokmål>Norges økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt IIa2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Nord for 62°N</NordSørFor62GraderNord>
+		</Fangstdata>
+		<Fisker Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fartøynavn>INGRID MAJALA</Fartøynavn><FartøyID>1999003323</FartøyID><Radiokallesignal_seddel>LJZO</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>1192</Bruttotonnasje1969><Byggeår>1999</Byggeår><Motorkraft>3750</Motorkraft><Motorbyggeår>1999</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>2018</Fartøykommune_kode><Fartøykommune>MÅSØY</Fartøykommune><Fartøyfylke_kode>20</Fartøyfylke_kode><Fartøyfylke>Finnmark</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<KvotefartøyRegMerke></KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>2</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Fersk/ukonservert</Konserveringsmåte_bokmål><Landingsmåte_kode>99</Landingsmåte_kode><Landingsmåte_bokmål>Uspesifisert</Landingsmåte_bokmål><Kvalitet_kode>20</Kvalitet_kode><Kvalitet_bokmål>A</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>100</Anvendelse_kode><Anvendelse_bokmål>Fersk (konsum)</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>1</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Konsum</HovedgruppeAnvendelse_bokmål><Bruttovekt>22165</Bruttovekt><Produktvekt>22165</Produktvekt><Rundvekt>22165</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="700010843977" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-08" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>2</DokumentVersjonsnummer><DokumentFormulardato>11.04.2018</DokumentFormulardato><DokumentElektroniskDato>12.04.2018 06:13:32</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<SalgslagID>938469148</SalgslagID><Salgslag>Norges Råfisklag</Salgslag><Salgslag_kode>7</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>N1036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Landingsdato>2018-04-11</Landingsdato><Landingsklokkeslett>1149</Landingsklokkeslett><Landingskommune_kode>1835</Landingskommune_kode><Landingskommune>TRÆNA</Landingskommune><Landingsfylke_kode>18</Landingsfylke_kode><Landingsfylke>Nordland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg>N1036</Produksjonsanlegg><Produksjonskommune_kode>1835</Produksjonskommune_kode><Produksjonskommune>TRÆNA</Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fangstfelt_kode>3709</Fangstfelt_kode><Hovedområde_bokmål>Østlige Norskehav</Hovedområde_bokmål><Sone_kode>NOR</Sone_kode><Sone_bokmål>Norges økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt IIa2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Nord for 62°N</NordSørFor62GraderNord>
+		</Fangstdata>
+		<Fisker Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fiskerkommune_kode>2018</Fiskerkommune_kode><Fiskerkommune>MÅSØY</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Fartøynavn>INGRID MAJALA</Fartøynavn><FartøyID>1999003323</FartøyID><Radiokallesignal_seddel>LJZO</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>1192</Bruttotonnasje1969><Byggeår>1999</Byggeår><Motorkraft>3750</Motorkraft><Motorbyggeår>1999</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>2018</Fartøykommune_kode><Fartøykommune>MÅSØY</Fartøykommune><Fartøyfylke_kode>20</Fartøyfylke_kode><Fartøyfylke>Finnmark</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<KvotefartøyRegMerke></KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>2</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Fersk/ukonservert</Konserveringsmåte_bokmål><Landingsmåte_kode>99</Landingsmåte_kode><Landingsmåte_bokmål>Uspesifisert</Landingsmåte_bokmål><Kvalitet_kode>20</Kvalitet_kode><Kvalitet_bokmål>A</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>100</Anvendelse_kode><Anvendelse_bokmål>Fersk (konsum)</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>1</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Konsum</HovedgruppeAnvendelse_bokmål><Bruttovekt>3836</Bruttovekt><Produktvekt>3836</Produktvekt><Rundvekt>3836</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="700010845588" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-10" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="9" StørsteLengde="61.75" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>2</DokumentVersjonsnummer><DokumentFormulardato>16.04.2018</DokumentFormulardato><DokumentElektroniskDato>17.04.2018 06:24:54</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<SalgslagID>938469148</SalgslagID><Salgslag>Norges Råfisklag</Salgslag><Salgslag_kode>7</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>N1036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Landingsdato>2018-04-16</Landingsdato><Landingsklokkeslett>1713</Landingsklokkeslett><Landingskommune_kode>1835</Landingskommune_kode><Landingskommune>TRÆNA</Landingskommune><Landingsfylke_kode>18</Landingsfylke_kode><Landingsfylke>Nordland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg>N1036</Produksjonsanlegg><Produksjonskommune_kode>1835</Produksjonskommune_kode><Produksjonskommune>TRÆNA</Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Fangstfelt_kode>3703</Fangstfelt_kode><Hovedområde_bokmål>Østlige Norskehav</Hovedområde_bokmål><Sone_kode>NOR</Sone_kode><Sone_bokmål>Norges økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt IIa2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Nord for 62°N</NordSørFor62GraderNord>
+		</Fangstdata>
+		<Fisker Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Fiskerkommune_kode>2018</Fiskerkommune_kode><Fiskerkommune>MÅSØY</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Fartøynavn>INGRID MAJALA</Fartøynavn><FartøyID>1999003323</FartøyID><Radiokallesignal_seddel>LJZO</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>1192</Bruttotonnasje1969><Byggeår>1999</Byggeår><Motorkraft>3750</Motorkraft><Motorbyggeår>1999</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>2018</Fartøykommune_kode><Fartøykommune>MÅSØY</Fartøykommune><Fartøyfylke_kode>20</Fartøyfylke_kode><Fartøyfylke>Finnmark</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<KvotefartøyRegMerke></KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>2</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Fersk/ukonservert</Konserveringsmåte_bokmål><Landingsmåte_kode>99</Landingsmåte_kode><Landingsmåte_bokmål>Uspesifisert</Landingsmåte_bokmål><Kvalitet_kode>20</Kvalitet_kode><Kvalitet_bokmål>A</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>100</Anvendelse_kode><Anvendelse_bokmål>Fersk (konsum)</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>1</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Konsum</HovedgruppeAnvendelse_bokmål><Bruttovekt>23538</Bruttovekt><Produktvekt>23538</Produktvekt><Rundvekt>23538</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="700010850856" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="F 0184M" Fangstår="2018" SisteFangstdato="2018-04-14" Redskap_kode="53" Hovedområde_kode="37" Lokasjon_kode="3" StørsteLengde="61.75" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>22.01.2018</DokumentFormulardato><DokumentElektroniskDato>24.01.2018 14:08:25</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>ST131</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Landingsdato>2018-01-22</Landingsdato><Landingsklokkeslett>1344</Landingsklokkeslett><Landingskommune_kode>5015</Landingskommune_kode><Landingskommune>ØRLAND</Landingskommune><Landingsfylke_kode>50</Landingsfylke_kode><Landingsfylke>Trøndelag</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Fangstfelt_kode>3605</Fangstfelt_kode><Hovedområde_bokmål>Vestlige Norskehav</Hovedområde_bokmål><Sone_kode>XNS</Sone_kode><Sone_bokmål>Internasjonalt område (NEAFC) - Norskehavet ("Smutthavet")</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt IIa1</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Nord for 62°N</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Fiskerkommune_kode>1201</Fiskerkommune_kode><Fiskerkommune>BERGEN</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Fartøynavn>BRENNHOLM</Fartøynavn><FartøyID>2007037869</FartøyID><Radiokallesignal_seddel>LIWG</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2715</Bruttotonnasje1969><Byggeår>2004</Byggeår><Motorkraft>6870</Motorkraft><Motorbyggeår>2007</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1201</Fartøykommune_kode><Fartøykommune>BERGEN</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001BN</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Redskap_bokmål>Snurpenot/ringnot</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>11</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rsw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>110</Anvendelse_kode><Anvendelse_bokmål>Fersk eksport (også ising)</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>1</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Konsum</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1877</Bruttovekt><Produktvekt>1839</Produktvekt><Rundvekt>1839</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001546650" Linjenummer="5" Art_kode="1038" Registreringsmerke_seddel="FD125" Fangstår="2018" SisteFangstdato="2018-05-17" Redskap_kode="11" Hovedområde_kode="36" Lokasjon_kode="5" StørsteLengde="75.4" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>09.03.2018</DokumentFormulardato><DokumentElektroniskDato>20.03.2018 09:20:18</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>600106</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Landingsdato>2018-03-09</Landingsdato><Landingsklokkeslett>2122</Landingsklokkeslett><Landingskommune_kode>1101</Landingskommune_kode><Landingskommune>EIGERSUND</Landingskommune><Landingsfylke_kode>11</Landingsfylke_kode><Landingsfylke>Rogaland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Fangstfelt_kode>4811</Fangstfelt_kode><Hovedområde_bokmål>Vest av Irland</Hovedområde_bokmål><Sone_kode>XRR</Sone_kode><Sone_bokmål>Internasjonalt område (NEAFC)- Irmingerhavet/Reykjanesryggen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIIc1</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Fiskerkommune_kode>1201</Fiskerkommune_kode><Fiskerkommune>BERGEN</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Fartøynavn>BRENNHOLM</Fartøynavn><FartøyID>2007037869</FartøyID><Radiokallesignal_seddel>LIWG</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2715</Bruttotonnasje1969><Byggeår>2004</Byggeår><Motorkraft>6870</Motorkraft><Motorbyggeår>2007</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1201</Fartøykommune_kode><Fartøykommune>BERGEN</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001BN</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1811685</Bruttovekt><Produktvekt>1811685</Produktvekt><Rundvekt>1811685</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547653" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-20" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="11" StørsteLengde="75.4" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>18.03.2018</DokumentFormulardato><DokumentElektroniskDato>23.03.2018 15:06:22</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>DNK</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>DANMARK</Mottakernasjonalitet_bokmål><Mottaksstasjon>DNK</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Landingsdato>2018-03-18</Landingsdato><Landingsklokkeslett>2210</Landingsklokkeslett><Landingskommune></Landingskommune><Landingsfylke></Landingsfylke><Landingsnasjon_kode>DNK</Landingsnasjon_kode><Landingsnasjon_bokmål>DANMARK</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Fangstfelt_kode>4819</Fangstfelt_kode><Hovedområde_bokmål>Vest av Irland</Hovedområde_bokmål><Sone_kode>XRR</Sone_kode><Sone_bokmål>Internasjonalt område (NEAFC)- Irmingerhavet/Reykjanesryggen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIIc1</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Fiskerkommune_kode>1244</Fiskerkommune_kode><Fiskerkommune>AUSTEVOLL</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Fartøynavn>HARVEST</Fartøynavn><FartøyID>2014065794</FartøyID><Radiokallesignal_seddel>LDKY</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2342</Bruttotonnasje1969><Byggeår>2014</Byggeår><Motorkraft>5400</Motorkraft><Motorbyggeår>2013</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1244</Fartøykommune_kode><Fartøykommune>AUSTEVOLL</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001AV</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Dellanding_signal>1</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1161034</Bruttovekt><Produktvekt>1161034</Produktvekt><Rundvekt>1161034</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547796" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" StørsteLengde="67" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>18.03.2018</DokumentFormulardato><DokumentElektroniskDato>23.03.2018 15:06:26</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>DNK</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>DANMARK</Mottakernasjonalitet_bokmål><Mottaksstasjon>DNK</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Landingsdato>2018-03-18</Landingsdato><Landingsklokkeslett>2204</Landingsklokkeslett><Landingskommune></Landingskommune><Landingsfylke></Landingsfylke><Landingsnasjon_kode>DNK</Landingsnasjon_kode><Landingsnasjon_bokmål>DANMARK</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Fangstfelt_kode>4710</Fangstfelt_kode><Hovedområde_bokmål>Rockall</Hovedområde_bokmål><Sone_kode>XEU</Sone_kode><Sone_bokmål>EU-sonen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIb2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Fiskerkommune_kode>1244</Fiskerkommune_kode><Fiskerkommune>AUSTEVOLL</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Fartøynavn>HARVEST</Fartøynavn><FartøyID>2014065794</FartøyID><Radiokallesignal_seddel>LDKY</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2342</Bruttotonnasje1969><Byggeår>2014</Byggeår><Motorkraft>5400</Motorkraft><Motorbyggeår>2013</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1244</Fartøykommune_kode><Fartøykommune>AUSTEVOLL</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001AV</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Dellanding_signal>1</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>610000</Bruttovekt><Produktvekt>610000</Produktvekt><Rundvekt>610000</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547797" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-14" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="10" StørsteLengde="67" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>19.03.2018</DokumentFormulardato><DokumentElektroniskDato>27.03.2018 12:44:17</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>400036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Landingsdato></Landingsdato><Landingsklokkeslett>914</Landingsklokkeslett><Landingskommune_kode>1439</Landingskommune_kode><Landingskommune>VÅGSØY</Landingskommune><Landingsfylke_kode>14</Landingsfylke_kode><Landingsfylke>Sogn og Fjordane</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Fangstfelt_kode>4819</Fangstfelt_kode><Hovedområde_bokmål>Vest av Irland</Hovedområde_bokmål><Sone_kode>XRR</Sone_kode><Sone_bokmål>Internasjonalt område (NEAFC)- Irmingerhavet/Reykjanesryggen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIIc1</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>243351</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXP</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD86</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>10</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2515998</Bruttovekt><Produktvekt>2515998</Produktvekt><Rundvekt>2515998</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547817" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD42" Fangstår="2018" SisteFangstdato="2018-06-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="19" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>29.03.2018</DokumentFormulardato><DokumentElektroniskDato>09.04.2018 09:20:37</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>DNK</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>DANMARK</Mottakernasjonalitet_bokmål><Mottaksstasjon>DNK</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Landingsdato>2018-03-29</Landingsdato><Landingsklokkeslett>956</Landingsklokkeslett><Landingskommune></Landingskommune><Landingsfylke></Landingsfylke><Landingsnasjon_kode>DNK</Landingsnasjon_kode><Landingsnasjon_bokmål>DANMARK</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Fangstfelt_kode>4706</Fangstfelt_kode><Hovedområde_bokmål>Rockall</Hovedområde_bokmål><Sone_kode>XEU</Sone_kode><Sone_bokmål>EU-sonen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIb2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Fiskerkommune_kode>1244</Fiskerkommune_kode><Fiskerkommune>AUSTEVOLL</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Fartøynavn>HARVEST</Fartøynavn><FartøyID>2014065794</FartøyID><Radiokallesignal_seddel>LDKY</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2342</Bruttotonnasje1969><Byggeår>2014</Byggeår><Motorkraft>5400</Motorkraft><Motorbyggeår>2013</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1244</Fartøykommune_kode><Fartøykommune>AUSTEVOLL</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001AV</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>27</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw + "Soft Eddik"</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1760108</Bruttovekt><Produktvekt>1760108</Produktvekt><Rundvekt>1760108</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547894" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-03-15" Redskap_kode="53" Hovedområde_kode="47" Lokasjon_kode="6" StørsteLengde="67" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>31.03.2018</DokumentFormulardato><DokumentElektroniskDato>06.04.2018 09:10:18</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>600106</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Landingsdato>2018-03-31</Landingsdato><Landingsklokkeslett>607</Landingsklokkeslett><Landingskommune_kode>1101</Landingskommune_kode><Landingskommune>EIGERSUND</Landingskommune><Landingsfylke_kode>11</Landingsfylke_kode><Landingsfylke>Rogaland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Fangstfelt_kode>4830</Fangstfelt_kode><Hovedområde_bokmål>Vest av Irland</Hovedområde_bokmål><Sone_kode>XEU</Sone_kode><Sone_bokmål>EU-sonen</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt VIIc2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Fiskerkommune_kode>1201</Fiskerkommune_kode><Fiskerkommune>BERGEN</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Fartøynavn>BRENNHOLM</Fartøynavn><FartøyID>2007037869</FartøyID><Radiokallesignal_seddel>LIWG</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2715</Bruttotonnasje1969><Byggeår>2004</Byggeår><Motorkraft>6870</Motorkraft><Motorbyggeår>2007</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1201</Fartøykommune_kode><Fartøykommune>BERGEN</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001BN</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>27</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw + "Soft Eddik"</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1872999</Bruttovekt><Produktvekt>1872999</Produktvekt><Rundvekt>1872999</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547911" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-05-12" Redskap_kode="53" Hovedområde_kode="48" Lokasjon_kode="30" StørsteLengde="75.4" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>5</DokumentVersjonsnummer><DokumentFormulardato>06.04.2018</DokumentFormulardato><DokumentElektroniskDato>16.04.2018 10:56:20</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>DNK</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>DANMARK</Mottakernasjonalitet_bokmål><Mottaksstasjon>DNK</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Landingsdato>2018-04-06</Landingsdato><Landingsklokkeslett>1124</Landingsklokkeslett><Landingskommune></Landingskommune><Landingsfylke></Landingsfylke><Landingsnasjon_kode>DNK</Landingsnasjon_kode><Landingsnasjon_bokmål>DANMARK</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Fangstfelt_kode>4339</Fangstfelt_kode><Hovedområde_bokmål>Vest av Skottland (Hebridene)</Hovedområde_bokmål><Sone_kode>XEU</Sone_kode><Sone_bokmål>EU-sonen</Sone_bokmål><Områdegruppering_bokmål>ICES-avsnitt VIa</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Fiskerkommune_kode>1244</Fiskerkommune_kode><Fiskerkommune>AUSTEVOLL</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Fartøynavn>HARVEST</Fartøynavn><FartøyID>2014065794</FartøyID><Radiokallesignal_seddel>LDKY</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2342</Bruttotonnasje1969><Byggeår>2014</Byggeår><Motorkraft>5400</Motorkraft><Motorbyggeår>2013</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1244</Fartøykommune_kode><Fartøykommune>AUSTEVOLL</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001AV</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1755140</Bruttovekt><Produktvekt>1755140</Produktvekt><Rundvekt>1755140</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547958" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD86" Fangstår="2018" SisteFangstdato="2018-04-27" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="39" StørsteLengde="67" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>05.04.2018</DokumentFormulardato><DokumentElektroniskDato>17.04.2018 13:42:20</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>600106</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Landingsdato>2018-04-05</Landingsdato><Landingsklokkeslett>1818</Landingsklokkeslett><Landingskommune_kode>1101</Landingskommune_kode><Landingskommune>EIGERSUND</Landingskommune><Landingsfylke_kode>11</Landingsfylke_kode><Landingsfylke>Rogaland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Fangstfelt_kode>4346</Fangstfelt_kode><Hovedområde_bokmål>Vest av Skottland (Hebridene)</Hovedområde_bokmål><Sone_kode>XEU</Sone_kode><Sone_bokmål>EU-sonen</Sone_bokmål><Områdegruppering_bokmål>ICES-avsnitt VIa</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Fiskerkommune_kode>1201</Fiskerkommune_kode><Fiskerkommune>BERGEN</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Fartøynavn>BRENNHOLM</Fartøynavn><FartøyID>2007037869</FartøyID><Radiokallesignal_seddel>LIWG</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2715</Bruttotonnasje1969><Byggeår>2004</Byggeår><Motorkraft>6870</Motorkraft><Motorbyggeår>2007</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1201</Fartøykommune_kode><Fartøykommune>BERGEN</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001BN</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1771414</Bruttovekt><Produktvekt>1771414</Produktvekt><Rundvekt>1771414</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001547965" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-06-28" Redskap_kode="53" Hovedområde_kode="43" Lokasjon_kode="46" StørsteLengde="75.4" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>30.04.2018</DokumentFormulardato><DokumentElektroniskDato>08.05.2018 10:42:17</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>600106</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Landingsdato>2018-04-30</Landingsdato><Landingsklokkeslett>58</Landingsklokkeslett><Landingskommune_kode>1101</Landingskommune_kode><Landingskommune>EIGERSUND</Landingskommune><Landingsfylke_kode>11</Landingsfylke_kode><Landingsfylke>Rogaland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Fangstfelt_kode>3101</Fangstfelt_kode><Hovedområde_bokmål>Øst av Færøyene</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb1b</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>243351</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXP</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD86</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>10</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2463540</Bruttovekt><Produktvekt>2463540</Produktvekt><Rundvekt>2463540</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548127" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-03-25" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="1" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>06.05.2018</DokumentFormulardato><DokumentElektroniskDato>15.05.2018 07:28:17</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>600106</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Landingsdato>2018-05-06</Landingsdato><Landingsklokkeslett>414</Landingsklokkeslett><Landingskommune_kode>1101</Landingskommune_kode><Landingskommune>EIGERSUND</Landingskommune><Landingsfylke_kode>11</Landingsfylke_kode><Landingsfylke>Rogaland</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Fangstfelt_kode>3102</Fangstfelt_kode><Hovedområde_bokmål>Øst av Færøyene</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb1b</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>18066</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXM</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD175</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>10</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2347969</Bruttovekt><Produktvekt>2347969</Produktvekt><Rundvekt>2347969</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548169" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-03" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="2" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>13.05.2018</DokumentFormulardato><DokumentElektroniskDato>25.05.2018 08:22:18</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>400036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Landingsdato>2018-05-13</Landingsdato><Landingsklokkeslett>1045</Landingsklokkeslett><Landingskommune_kode>1439</Landingskommune_kode><Landingskommune>VÅGSØY</Landingskommune><Landingsfylke_kode>14</Landingsfylke_kode><Landingsfylke>Sogn og Fjordane</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fangstfelt_kode>5718</Fangstfelt_kode><Hovedområde_bokmål>Vest av Færøyene</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb1b</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>18066</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXM</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD175</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2466939</Bruttovekt><Produktvekt>2466939</Produktvekt><Rundvekt>2466939</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548224" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="FD175" Fangstår="2018" SisteFangstdato="2018-05-10" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>4</DokumentVersjonsnummer><DokumentFormulardato>14.05.2018</DokumentFormulardato><DokumentElektroniskDato>25.05.2018 09:30:18</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>M43</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Landingsdato>2018-05-14</Landingsdato><Landingsklokkeslett>905</Landingsklokkeslett><Landingskommune_kode>1504</Landingskommune_kode><Landingskommune>ÅLESUND</Landingskommune><Landingsfylke_kode>15</Landingsfylke_kode><Landingsfylke>Møre og Romsdal</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fangstfelt_kode>5718</Fangstfelt_kode><Hovedområde_bokmål>Vest av Færøyene</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb1b</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>243351</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXP</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD86</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>10</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2498465</Bruttovekt><Produktvekt>2498465</Produktvekt><Rundvekt>2498465</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548231" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001AV" Fangstår="2018" SisteFangstdato="2018-04-01" Redskap_kode="53" Hovedområde_kode="57" Lokasjon_kode="18" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>21.05.2018</DokumentFormulardato><DokumentElektroniskDato>29.05.2018 11:10:23</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>400036</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Landingsdato>2018-05-21</Landingsdato><Landingsklokkeslett>45</Landingsklokkeslett><Landingskommune_kode>1439</Landingskommune_kode><Landingskommune>VÅGSØY</Landingskommune><Landingsfylke_kode>14</Landingsfylke_kode><Landingsfylke>Sogn og Fjordane</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Fangstfelt_kode>5806</Fangstfelt_kode><Hovedområde_bokmål>Færøybanken</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>0</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPKF</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD125</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1595302</Bruttovekt><Produktvekt>1595302</Produktvekt><Rundvekt>1595302</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548286" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-26" Redskap_kode="53" Hovedområde_kode="58" Lokasjon_kode="6" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>22.05.2018</DokumentFormulardato><DokumentElektroniskDato>04.06.2018 08:50:25</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>M43</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Landingsdato>2018-05-22</Landingsdato><Landingsklokkeslett>720</Landingsklokkeslett><Landingskommune_kode>1504</Landingskommune_kode><Landingskommune>ÅLESUND</Landingskommune><Landingsfylke_kode>15</Landingsfylke_kode><Landingsfylke>Møre og Romsdal</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Fangstfelt_kode>3107</Fangstfelt_kode><Hovedområde_bokmål>Øst av Færøyene</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt Vb1b</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Annet</NordSørFor62GraderNord><Fangstdagbok_nummer>18066</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPXM</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD175</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>2633336</Bruttovekt><Produktvekt>2633336</Produktvekt><Rundvekt>2633336</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001548307" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-01-19" Redskap_kode="53" Hovedområde_kode="31" Lokasjon_kode="7" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>13.06.2018</DokumentFormulardato><DokumentElektroniskDato>25.06.2018 08:04:17</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>M43</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Landingsdato>2018-06-13</Landingsdato><Landingsklokkeslett>927</Landingsklokkeslett><Landingskommune_kode>1504</Landingskommune_kode><Landingskommune>ÅLESUND</Landingskommune><Landingsfylke_kode>15</Landingsfylke_kode><Landingsfylke>Møre og Romsdal</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Fangstfelt_kode>3012</Fangstfelt_kode><Hovedområde_bokmål>Sørlige Norskehav</Hovedområde_bokmål><Sone_kode>FRO</Sone_kode><Sone_bokmål>Færøyenes økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-underavsnitt IIa2</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Nord for 62°N</NordSørFor62GraderNord><Fangstdagbok_nummer>0</Fangstdagbok_nummer><Fangstdagbok_turnummer>0</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Fiskerkommune></Fiskerkommune><Fiskernasjonalitet_kode>FRO</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>FÆRØYENE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Fartøynavn></Fartøynavn><Radiokallesignal_seddel>XPRG</Radiokallesignal_seddel><Lengdegruppe_bokmål></Lengdegruppe_bokmål><FartøyGjelderFraDato></FartøyGjelderFraDato><FartøyGjelderTilDato></FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune></Fartøykommune><Fartøyfylke></Fartøyfylke><Fartøynasjonalitet_bokmål>FÆRØYENE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<KvotefartøyRegMerke>FD42</KvotefartøyRegMerke><Kvotetype_kode>4</Kvotetype_kode><Kvotetype_bokmål>Annet lands kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Redskap_bokmål>Flytetrål</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>22</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rfw og syre</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>800</Anvendelse_kode><Anvendelse_bokmål>Mel og olje</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>2</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Mel og olje</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1991306</Bruttovekt><Produktvekt>1991306</Produktvekt><Rundvekt>1991306</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001549193" Linjenummer="1" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-04-03" Redskap_kode="53" Hovedområde_kode="30" Lokasjon_kode="12" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+	<Seddellinje Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+		<Dokumenttype_Kode>0</Dokumenttype_Kode><Dokumenttype_Bokmål>Sluttseddeldokument</Dokumenttype_Bokmål><DokumentVersjonsnummer>3</DokumentVersjonsnummer><DokumentFormulardato>30.06.2018</DokumentFormulardato><DokumentElektroniskDato>03.07.2018 09:26:27</DokumentElektroniskDato>
+		<Salgslagdata Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<SalgslagID>951206091</SalgslagID><Salgslag>Norges Sildesalgslag</Salgslag><Salgslag_kode>8</Salgslag_kode>
+		</Salgslagdata>
+		<Mottaker Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Mottakernasjonalitet_kode>NOR</Mottakernasjonalitet_kode><Mottakernasjonalitet_bokmål>NORGE</Mottakernasjonalitet_bokmål><Mottaksstasjon>SF189</Mottaksstasjon>
+		</Mottaker>
+		<Produksjon Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Landingsdato>2018-06-30</Landingsdato><Landingsklokkeslett>1357</Landingsklokkeslett><Landingskommune_kode>1438</Landingskommune_kode><Landingskommune>BREMANGER</Landingskommune><Landingsfylke_kode>14</Landingsfylke_kode><Landingsfylke>Sogn og Fjordane</Landingsfylke><Landingsnasjon_kode>NOR</Landingsnasjon_kode><Landingsnasjon_bokmål>NORGE</Landingsnasjon_bokmål><Produksjonsanlegg></Produksjonsanlegg><Produksjonskommune></Produksjonskommune>
+		</Produksjon>
+		<Fangstdata Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Fangstfelt_kode>855</Fangstfelt_kode><Hovedområde_bokmål>Eigersundbanken</Hovedområde_bokmål><Sone_kode>NOR</Sone_kode><Sone_bokmål>Norges økonomiske sone</Sone_bokmål><Områdegruppering_bokmål>ICES-avsnitt IVa</Områdegruppering_bokmål><HovedområdeFAO_kode>27</HovedområdeFAO_kode><HovedområdeFAO_bokmål>Nordøstlige Atlanterhav</HovedområdeFAO_bokmål><NordSørFor62GraderNord>Sør for 62°N</NordSørFor62GraderNord><Fangstdagbok_nummer>201099</Fangstdagbok_nummer><Fangstdagbok_turnummer>999</Fangstdagbok_turnummer>
+		</Fangstdata>
+		<Fisker Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Fiskerkommune_kode>1244</Fiskerkommune_kode><Fiskerkommune>AUSTEVOLL</Fiskerkommune><Fiskernasjonalitet_kode>NOR</Fiskernasjonalitet_kode><Fiskernasjonalitet_bokmål>NORGE</Fiskernasjonalitet_bokmål>
+		</Fisker>
+		<Fartøy Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Fartøynavn>HARVEST</Fartøynavn><FartøyID>2014065794</FartøyID><Radiokallesignal_seddel>LDKY</Radiokallesignal_seddel><Lengdegruppe_kode>5</Lengdegruppe_kode><Lengdegruppe_bokmål>28 m og over</Lengdegruppe_bokmål><Bruttotonnasje1969>2342</Bruttotonnasje1969><Byggeår>2014</Byggeår><Motorkraft>5400</Motorkraft><Motorbyggeår>2013</Motorbyggeår><FartøyGjelderFraDato>01.01.2018</FartøyGjelderFraDato><FartøyGjelderTilDato>05.10.2018 01:00:21</FartøyGjelderTilDato><Fartøytype_kode>1</Fartøytype_kode><Fartøytype_bokmål>Fiskefartøy</Fartøytype_bokmål><Fartøykommune_kode>1244</Fartøykommune_kode><Fartøykommune>AUSTEVOLL</Fartøykommune><Fartøyfylke_kode>12</Fartøyfylke_kode><Fartøyfylke>Hordaland</Fartøyfylke><Fartøynasjonalitet_bokmål>NORGE</Fartøynasjonalitet_bokmål>
+		</Fartøy>
+		<Mottakendefartøy Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			
+		</Mottakendefartøy>
+		<Kvote Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<KvotefartøyRegMerke>H 0001AV</KvotefartøyRegMerke><Kvotetype_kode>1</Kvotetype_kode><Kvotetype_bokmål>Vanlig kvote</Kvotetype_bokmål>
+		</Kvote>
+		<Redskap Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Redskap_bokmål>Snurpenot/ringnot</Redskap_bokmål>
+		</Redskap>
+		<Dellanding Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Dellanding_signal>0</Dellanding_signal>
+		</Dellanding>
+		<Produkt Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Produkttilstand_kode>110</Produkttilstand_kode><Produkttilstand_bokmål>Rund</Produkttilstand_bokmål><Konserveringsmåte_kode>11</Konserveringsmåte_kode><Konserveringsmåte_bokmål>Rsw</Konserveringsmåte_bokmål><Landingsmåte_kode>3</Landingsmåte_kode><Landingsmåte_bokmål>tank / båt</Landingsmåte_bokmål><Kvalitet_kode>99</Kvalitet_kode><Kvalitet_bokmål>Uspesifisert</Kvalitet_bokmål><Størrelsesgruppering_kode>3000000</Størrelsesgruppering_kode><Anvendelse_kode>110</Anvendelse_kode><Anvendelse_bokmål>Fersk eksport (også ising)</Anvendelse_bokmål><HovedgruppeAnvendelse_kode>1</HovedgruppeAnvendelse_kode><HovedgruppeAnvendelse_bokmål>Konsum</HovedgruppeAnvendelse_bokmål><AntallStykk>0</AntallStykk><Bruttovekt>1962</Bruttovekt><Produktvekt>1923</Produktvekt><Rundvekt>1923</Rundvekt>
+		</Produkt>
+		<Art Dokumentnummer="800001549917" Linjenummer="2" Art_kode="1038" Registreringsmerke_seddel="H 0001BN" Fangstår="2018" SisteFangstdato="2018-03-04" Redskap_kode="11" Hovedområde_kode="8" Lokasjon_kode="55" StørsteLengde="67" KystHav_kode="0">
+			<Art_bokmål>Kolmule</Art_bokmål><ArtFAO_kode>WHB</ArtFAO_kode><ArtFAO_bokmål>Kolmule</ArtFAO_bokmål>
+		</Art>
+	</Seddellinje>
+</Landingsdata>
