@@ -1,3 +1,5 @@
+context("Test xml read landings")
+
 landingsfile <- system.file("testresources", "landing.xml", package="stox2.7preprocessing")
 landings <- readLandings(landingsfile)
 
@@ -10,6 +12,8 @@ writeStox27LandingXML(tmp, example)
 backIn <- readLandings(tmp)
 unlink(tmp)
 
+example <- example[order(example$Dokumentnummer, example$Linjenummer),]
+backIn <- backIn[order(backIn$Dokumentnummer, backIn$Linjenummer),]
 
 expect_equal(example, backIn)
 

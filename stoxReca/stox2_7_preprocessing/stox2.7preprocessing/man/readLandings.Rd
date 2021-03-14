@@ -4,6 +4,7 @@
 \alias{readLandings}
 \title{Read landings as Stox 2.7 does it
 Rename variables to Stox 3.0 conventions
+Reformat sistefangstdato and landingsdato to StoX 3.0 convention
 Keep flat format}
 \usage{
 readLandings(landingsXML)
@@ -14,5 +15,6 @@ readLandings(landingsXML)
 \description{
 Read landings as Stox 2.7 does it
 Rename variables to Stox 3.0 conventions
+Reformat sistefangstdato and landingsdato to StoX 3.0 convention
 Keep flat format
 }

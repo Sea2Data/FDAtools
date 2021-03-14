@@ -2,3 +2,5 @@
 
 export(readLandings)
 export(writeStox27LandingXML)
+import(Rstox)
+import(data.table)

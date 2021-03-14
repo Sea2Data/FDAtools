@@ -1,0 +1,7 @@
+library(RstoxData)
+ts0 <- Sys.time()
+landings <- readLandings("~/landingsets/xml/filtered/2015_torsk.xml")
+ts1 <- Sys.time()
+writeStox27LandingXML("~/temp/testland.xml", landings)
+ts2 <- Sys.time()
+print(ts2-ts1)

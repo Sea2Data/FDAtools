@@ -3,6 +3,8 @@
 #' Reformat sistefangstdato and landingsdato to StoX 3.0 convention
 #' Keep flat format
 #' @param filename for xml-formatted landings
+#' @import Rstox
+#' @import data.table
 #' @export
 readLandings <- function(landingsXML){
   landings <- data.table::data.table(Rstox::readXMLfiles(files=list(landing=landingsXML)))
@@ -138,8 +140,9 @@ writeLevel <- function(stream, data, level, parentKeys, xsdObject, indent="", na
   leveldata <- data[[level]]
   if (!is.null(parentKeys)){
     #stopifnot(all(names(parentKeys) %in% names(leveldata)))
-    filter <- apply(leveldata[names(leveldata) %in% names(parentKeys)], 1, function(x){paste(x, collapse=" ")}) == apply(parentKeys, 1, function(x){paste(x, collapse=" ")})
-    leveldata <- leveldata[filter, ]
+    #filter <- apply(leveldata[names(leveldata) %in% names(parentKeys)], 1, function(x){paste(x, collapse=" ")}) == apply(parentKeys, 1, function(x){paste(x, collapse=" ")})
+    #leveldata <- leveldata[filter, ]
+    leveldata <- leveldata[as.list(parentKeys), nomatch = NULL]
 
   }
   if (nrow(leveldata) == 0){
@@ -291,7 +294,7 @@ writeXmlFile <- function(fileName, dataTables, xsdObject, namespace, encoding="U
   # consider adding information about key structure in xsdObjects
 
   dataTables <- typeConvert(dataTables, xsdObject)
-  #dataTables <- setKeysDataTables(dataTables, xsdObject)
+  dataTables <- setKeysDataTables(dataTables, xsdObject)
 
   stream = file(fileName, open="w", encoding=encoding)
   writeXmlDeclaration(stream, version=xmlStandard, encoding=encoding, standalone=T)

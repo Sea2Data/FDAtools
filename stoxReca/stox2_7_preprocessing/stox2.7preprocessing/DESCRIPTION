@@ -9,10 +9,11 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    data.table,
+    Rstox
+Imports: 
+    RstoxData
 Suggests: 
     testthat (>= 2.1.0)
-Imports: 
-    data.table,
-    Rstox,
-    RstoxData
 RoxygenNote: 7.1.1
