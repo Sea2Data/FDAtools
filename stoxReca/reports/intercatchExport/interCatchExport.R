@@ -21,7 +21,7 @@ checkUnique <- function(paramname, values){
 #' @description  
 #'  Extract landings from StoX project. Format internal to StoX 2.7
 #' @param stoxprojectname name of, or path to stox projected
-#' @param process process that landings should be extracted from, typicalle 'prepareReca' or 'FilterLandings'
+#' @param process StoX-process that landings should be extracted from, typically 'prepareReca' or 'FilterLandings'
 #' @param force force re-run of stox project before exporting
 #' @return data.frame with landings
 extractLandings <- function(stoxprojectname, process="prepareRECA", force=F){
