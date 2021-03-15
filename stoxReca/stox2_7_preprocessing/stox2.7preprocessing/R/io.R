@@ -328,6 +328,8 @@ convert2Stox3 <- function(landings){
 }
 
 #' save landings as XML (namespace: "http://www.imr.no/formats/landinger/v2")
+#' @details
+#'  This is a temprary solution for writing landings XML-files. It needs considerable time.
 #' @param fileName filename to save to
 #' @param landings landings as read by readLandings
 #' @export

@@ -1,17 +1,19 @@
 Package: stox2.7preprocessing
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Preprosessing for AFWG using Reca with Stox 2.7
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Edvin Fuglebakk
+Maintainer: Edvin Fuglebakk <Edvin.Fuglebakk@hi.no>
+Description: Supports preprosessing of landings data for use with StoX-Reca
+    correction of conversion factors based on season and fleet parameteres (to be implemented)
+    adding catch information from ers logbooks (to be implemented)
+    changig area codes to area system used for coastal code (to be implemented)
+License: LGPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: 
-    data.table,
-    Rstox
+    data.table (>= 1.9.0),
+    Rstox (>= 1.11.0)
 Imports: 
     RstoxData
 Suggests: 
