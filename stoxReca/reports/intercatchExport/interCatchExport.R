@@ -263,9 +263,19 @@ annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=
 #' @return stoxLandings with the columns 'tripd' and 'MASKVEIDDE' added
 annotateMeshSize <- function(stoxLandings, logbooks){
   logb <- RstoxData::readErsFile(logbooks)
+  if (!any(!is.na(logb$FANGSTART_FAO) & (logb$FANGSTART_FAO %in% unique(stoxLandings$artfaokode)))){
+    stop(paste("Species not found in logbooks:", paste(unique(stoxLandings$artfaokode), collapse=",")))
+  }
   logb <- logb[!is.na(logb$FANGSTART_FAO) & (logb$FANGSTART_FAO %in% unique(stoxLandings$artfaokode)),]
+  if (!any(logb$RC %in% unique(stoxLandings$radiokallesignalseddel))){
+    stop(paste("Vessels not found in logbooks:", paste(unique(logb$RC), collapse=",")))
+  }
   logb <- logb[logb$RC %in% unique(stoxLandings$radiokallesignalseddel),]
   logb <- logb[as.integer(substring(logb$LOKASJON_START,1,2)) %in% as.integer(stoxLandings$hovedområdekode),]
+  
+  if (nrow(logb)==0){
+    stop("No logbook entries matched criteria")
+  }
   
   stoxLandings <- data.table::data.table(stoxLandings)
   message("Annotating mesh size")
