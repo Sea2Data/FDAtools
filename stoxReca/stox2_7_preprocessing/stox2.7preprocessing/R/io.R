@@ -206,8 +206,20 @@ typeConvert <- function(dataTables, xsdObject){
         else if (is.logical(dataTables[[n]][[name]]) & xsdType == "xs:integer"){
           dataTables[[n]][[name]] <- as.character(as.integer(dataTables[[n]][[name]]))
         }
+        else if (is.character(dataTables[[n]][[name]]) & xsdType == "xs:integer"){
+          dataTables[[n]][[name]] <- as.character(as.integer(dataTables[[n]][[name]]))
+        }
+        else if (is.character(dataTables[[n]][[name]]) & xsdType == "xs:long"){
+          dataTables[[n]][[name]] <- as.character(as.integer(dataTables[[n]][[name]]))
+        }
+        else if (is.character(dataTables[[n]][[name]]) & xsdType == "xs:integer"){
+          dataTables[[n]][[name]] <- as.character(as.integer(dataTables[[n]][[name]]))
+        }
         else if (is.integer(dataTables[[n]][[name]]) & xsdType == "xs:integer"){
           dataTables[[n]][[name]] <- as.character(dataTables[[n]][[name]])
+        }
+        else if (is.numeric(dataTables[[n]][[name]]) & xsdType == "xs:integer"){
+          dataTables[[n]][[name]] <- as.character(as.integer(dataTables[[n]][[name]]))
         }
         else if (is.numeric(dataTables[[n]][[name]]) & xsdType == "xs:decimal"){
           dataTables[[n]][[name]] <- as.character(dataTables[[n]][[name]])

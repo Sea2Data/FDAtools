@@ -15,7 +15,8 @@ Depends:
     data.table (>= 1.9.0),
     Rstox (>= 1.11.0)
 Imports: 
-    RstoxData
+    RstoxData,
+    RstoxFDA
 Suggests: 
     testthat (>= 2.1.0)
 RoxygenNote: 7.1.1

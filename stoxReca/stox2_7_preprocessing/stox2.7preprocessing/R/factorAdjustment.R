@@ -7,7 +7,7 @@
 #' @param conversionfactor conversion factor to apply.
 #' @param FAOspecies specification of the species to apply factor to. FAO 3-alpha species code
 #' @param vesselRange vector of two numeric values denoting the lower range (inclusive) and the upper range (exclusive) of vessel lengths that factor should be applied for. If NULL the factor is applied to all vessel lengths
-#' @param months vecotr of month indecies (1 for january) that the conversion factor should be applied for. If NULL the factor is applied to all months
+#' @param months vector of month indecies (1 for january) that the conversion factor should be applied for. If NULL the factor is applied to all months
 #' @export
 adjustConversionFactor <- function(landings, conversionfactor, FAOspecies="COD", vesselRange=c(0,28), months=c(1,2,3,4)){
 
