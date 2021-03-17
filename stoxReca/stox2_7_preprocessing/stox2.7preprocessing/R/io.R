@@ -1,6 +1,7 @@
 #' Read landings as Stox 2.7 does it
 #' Rename variables to Stox 3.0 conventions
 #' Reformat sistefangstdato and landingsdato to StoX 3.0 convention
+#' Reformat area and location codes to StoX 3.0 convention
 #' Keep flat format
 #' @param filename for xml-formatted landings
 #' @import Rstox
@@ -15,6 +16,10 @@ readLandings <- function(landingsXML){
   landings$fartøynasjonalitetKode.1 <- NULL
   landings$sisteFangstdato <- strftime(landings$sisteFangstdato, format="%d.%m.%Y")
   landings$landingsdato[landings$landingsdato!=""] <- strftime(landings$landingsdato[landings$landingsdato!=""], format="%d.%m.%Y")
+
+  landings$hovedområdeKode <- sprintf("%02d", landings$hovedområdeKode)
+  landings$lokasjonKode <- sprintf("%02d", landings$lokasjonKode)
+
   names(landings) <- c("Dokumentnummer", "Linjenummer",
                        "Art_kode", "Registreringsmerke_seddel",
                        "Fangstår", "SisteFangstdato",
@@ -239,7 +244,6 @@ typeConvert <- function(dataTables, xsdObject){
           }
         }
         else{
-          browser()
           stop(paste("Data type conversion from", class(dataTables[[n]][[name]]), "to", xsdType, "is not configured"))
         }
       }

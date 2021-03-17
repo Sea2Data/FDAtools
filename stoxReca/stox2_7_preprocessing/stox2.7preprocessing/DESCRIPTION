@@ -6,8 +6,8 @@ Author: Edvin Fuglebakk
 Maintainer: Edvin Fuglebakk <Edvin.Fuglebakk@hi.no>
 Description: Supports preprosessing of landings data for use with StoX-Reca
     correction of conversion factors based on season and fleet parameteres (to be implemented)
-    adding catch information from ers logbooks (to be implemented)
-    changig area codes to area system used for coastal code (to be implemented)
+    adding catch information from ers logbooks
+    changig area codes to area system used for coastal cod
 License: LGPL-3
 Encoding: UTF-8
 LazyData: true
