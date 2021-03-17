@@ -14,3 +14,6 @@ writeStox27LandingXML(fileName, landings)
 \description{
 save landings as XML (namespace: "http://www.imr.no/formats/landinger/v2")
 }
+\details{
+This is a temprary solution for writing landings XML-files. It needs considerable time.
+}

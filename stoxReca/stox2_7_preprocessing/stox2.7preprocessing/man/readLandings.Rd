@@ -5,6 +5,7 @@
 \title{Read landings as Stox 2.7 does it
 Rename variables to Stox 3.0 conventions
 Reformat sistefangstdato and landingsdato to StoX 3.0 convention
+Reformat area and location codes to StoX 3.0 convention
 Keep flat format}
 \usage{
 readLandings(landingsXML)
@@ -16,5 +17,6 @@ readLandings(landingsXML)
 Read landings as Stox 2.7 does it
 Rename variables to Stox 3.0 conventions
 Reformat sistefangstdato and landingsdato to StoX 3.0 convention
+Reformat area and location codes to StoX 3.0 convention
 Keep flat format
 }
