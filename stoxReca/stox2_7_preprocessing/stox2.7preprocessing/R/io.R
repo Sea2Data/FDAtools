@@ -3,7 +3,7 @@
 #' Reformat sistefangstdato and landingsdato to StoX 3.0 convention
 #' Reformat area and location codes to StoX 3.0 convention
 #' Keep flat format
-#' @param filename for xml-formatted landings
+#' @param landingsXML for xml-formatted landings
 #' @import Rstox
 #' @import data.table
 #' @export
@@ -358,7 +358,6 @@ writeStox27LandingXML <- function(fileName, landings){
 #' Writes \code{\link[RstoxBase]{StratumPolygon}} as Stox-WKT files (stratafiles)
 #' @param shape \code{\link[RstoxBase]{StratumPolygon}} stratadefinition to convert
 #' @param output filename to save output to
-#' @param namecol column in shape that contains strata names
 #' @export
 writeSpDataFrameAsWKT <- function(shape, output){
   namecol="polygonName"
@@ -388,11 +387,11 @@ writeSpDataFrameAsWKT <- function(shape, output){
 #' @param output filename to save output to
 #' @export
 writePolygonPositions <- function(shape, output){
-  dd<-RstoxFDA::DefineAreaPosition(DefinitionMethod = "StratumPolygon", StratumPolygon = coastalCodAreas)
+  dd <- RstoxFDA::DefineAreaPosition(processData = NULL, DefinitionMethod = "StratumPolygon", StratumPolygon = stox2.7preprocessing::coastalCodAreas)
   names(dd) <- c("lon", "lat", "omr", "lok")
   dd <- dd[,c("omr","lok","lat","lon")]
   dd$lat <- format(dd$lat, digits=6)
   dd$lon <- format(dd$lon, digits=6)
-  write.table(dd, output, row.names = F, quote = F, sep = "\t")
+  utils::write.table(dd, output, row.names = F, quote = F, sep = "\t")
 }
 

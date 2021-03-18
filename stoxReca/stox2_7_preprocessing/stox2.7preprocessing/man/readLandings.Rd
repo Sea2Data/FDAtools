@@ -11,7 +11,7 @@ Keep flat format}
 readLandings(landingsXML)
 }
 \arguments{
-\item{filename}{for xml-formatted landings}
+\item{landingsXML}{for xml-formatted landings}
 }
 \description{
 Read landings as Stox 2.7 does it

@@ -11,7 +11,7 @@ compareLandings(original, modified, includeGear = T)
 
 \item{modified}{sales notes to be treated as modifed}
 
-\item{incldueGear}{if True, comparisons are done by gear as well as area}
+\item{includeGear}{if True, comparisons are done by gear as well as area}
 }
 \value{
 table

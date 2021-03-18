@@ -14,3 +14,8 @@ The coastal-cod estimate has been using a custom area-definition. These area def
 
 ## File writing
 This package offers a function (writeStox27LandingXML) that writes landings data to the XML-format accepted by StoX. For NEA cod and coastal cod, this is a large volume and writeStox27LandingXML performs poorly. A full year of adjusted landings may need several hours to complete and produce files that are several gigabytes large.
+
+## Installing and dependencies
+The package may be installed with: devtools::install_github("https://github.com/Sea2Data/FDAtools", subdir = "stoxReca/stox2_7_preprocessing")
+
+

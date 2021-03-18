@@ -10,8 +10,6 @@ writeSpDataFrameAsWKT(shape, output)
 \item{shape}{\code{\link[RstoxBase]{StratumPolygon}} stratadefinition to convert}
 
 \item{output}{filename to save output to}
-
-\item{namecol}{column in shape that contains strata names}
 }
 \description{
 Writes \code{\link[RstoxBase]{StratumPolygon}} as Stox-WKT files (stratafiles)

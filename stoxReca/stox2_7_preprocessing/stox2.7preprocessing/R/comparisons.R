@@ -4,7 +4,7 @@
 #'  Make table comparing two sets of sales notes by gear and area
 #' @param original sales notes to be treatad as original
 #' @param modified sales notes to be treated as modifed
-#' @param incldueGear if True, comparisons are done by gear as well as area
+#' @param includeGear if True, comparisons are done by gear as well as area
 #' @return table
 #' @export
 compareLandings <- function(original, modified, includeGear=T){

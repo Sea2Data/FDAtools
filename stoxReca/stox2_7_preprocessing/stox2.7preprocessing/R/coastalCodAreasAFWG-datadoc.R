@@ -20,4 +20,4 @@
 #'  # plot coastal cod areas AFWG
 #'  data(coastalCodAreasAFWG)
 #'  RstoxFDA::plotArea(areaDef=coastalCodAreasAFWG, title = "Coastal Cod areas")
-"coastalCodAreas"
+"coastalCodAreasAFWG"
