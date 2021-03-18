@@ -4,12 +4,14 @@
 \alias{compareLandings}
 \title{compare landings}
 \usage{
-compareLandings(original, modified)
+compareLandings(original, modified, includeGear = T)
 }
 \arguments{
 \item{original}{sales notes to be treatad as original}
 
 \item{modified}{sales notes to be treated as modifed}
+
+\item{incldueGear}{if True, comparisons are done by gear as well as area}
 }
 \value{
 table

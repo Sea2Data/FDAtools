@@ -18,5 +18,8 @@ Imports:
     RstoxData,
     RstoxFDA
 Suggests: 
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    RstoxBase,
+    rgeos,
+    sp
 RoxygenNote: 7.1.1

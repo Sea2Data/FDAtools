@@ -7,6 +7,9 @@
 #'
 #' Polygons are defined in WGS84 coordinates (unprojected).
 #'
+#' Area positions for use with applyPosToData in Stox 2.7 can be saved with \code{\link[stox2.7preprocessing]{writePolygonPositions}}
+#' Areas may be plotted for inspection with \code{\link[RstoxFDA]{plotArea}} (see example).
+#'
 #' @docType data
 #'
 #' @usage data(coastalCodAreas)

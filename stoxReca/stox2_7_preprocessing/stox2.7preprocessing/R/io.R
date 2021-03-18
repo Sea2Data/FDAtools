@@ -353,3 +353,46 @@ writeStox27LandingXML <- function(fileName, landings){
   landings <- convert2Stox3(landings)
   writeLandingXml(fileName, landings)
 }
+
+
+#' Writes \code{\link[RstoxBase]{StratumPolygon}} as Stox-WKT files (stratafiles)
+#' @param shape \code{\link[RstoxBase]{StratumPolygon}} stratadefinition to convert
+#' @param output filename to save output to
+#' @param namecol column in shape that contains strata names
+#' @export
+writeSpDataFrameAsWKT <- function(shape, output){
+  namecol="polygonName"
+  requireNamespace("rgeos", quietly = TRUE)
+  requireNamespace("sp", quietly = TRUE)
+  if (file.exists(output)){
+    stop(paste("File", output, "exists already."))
+  }
+
+  projection="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs +towgs84=0,0,0"
+  shp <- sp::spTransform(shape, sp::CRS(projection))
+
+  f<-file(output, open="w")
+
+  for (i in 1:nrow(shp)){
+    poly <- shp[i,]
+    write(paste(as.character(poly[[namecol]]), rgeos::writeWKT(poly, byid = F),sep="\t"), f)
+  }
+  close(f)
+
+}
+
+#' Write polygon positions
+#' @description
+#'  Write polygon positions for use with ApplyPosToData in Stox 2.7
+#' @param shape \code{\link[RstoxBase]{StratumPolygon}} polygons to save positions for
+#' @param output filename to save output to
+#' @export
+writePolygonPositions <- function(shape, output){
+  dd<-RstoxFDA::DefineAreaPosition(DefinitionMethod = "StratumPolygon", StratumPolygon = coastalCodAreas)
+  names(dd) <- c("lon", "lat", "omr", "lok")
+  dd <- dd[,c("omr","lok","lat","lon")]
+  dd$lat <- format(dd$lat, digits=6)
+  dd$lon <- format(dd$lon, digits=6)
+  write.table(dd, output, row.names = F, quote = F, sep = "\t")
+}
+

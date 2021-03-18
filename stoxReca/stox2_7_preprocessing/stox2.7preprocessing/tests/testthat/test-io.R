@@ -27,3 +27,13 @@ unlink(tmp)
 
 backIn$metadata <- example$metadata
 expect_equal(example, backIn)
+
+
+context("Test writing of stratafile")
+data("coastalCodAreas")
+tmp <- tempfile(fileext = ".txt")
+requireNamespace("RstoxBase", quietly = TRUE)
+writeSpDataFrameAsWKT(coastalCodAreas, tmp)
+backIn <- RstoxBase::DefineStratumPolygon(FileName=tmp)
+unlink(tmp)
+expect_equal(backIn$polygonName, coastalCodAreas$polygonName)

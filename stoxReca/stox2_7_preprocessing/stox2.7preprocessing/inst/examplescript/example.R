@@ -29,3 +29,10 @@ message(paste("Change in coastal cod aras within 12 nm:",
 message(paste("Change in coastal cod aras outside 12 nm:",
               format(sum(comparisonArea$difference[comparisonArea$Hovedområde_kode %in% c("s300", "s400", "s500", "s600", "s700")]), digits=1), "kg"))
 
+message("NB: Keeping only coastal cod areas.")
+coastalCodAdjustedLandings <- adjustedLandings[adjustedLandings$Hovedområde_kode %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701"),]
+
+message("Write adjusted landings. May take some hours.")
+writeStox27LandingXML("~/temp/coastalCodAdjustedLandings2018.xml", coastalCodAdjustedLandings)
+
+
