@@ -70,7 +70,7 @@ adjustWithLogbook <- function(landings, logbooks, speciesFAO, gearCodes=NULL, ve
     }
   }
   if (!is.null(vesselSize)){
-    logbooks <- logbooks[logbooks$STØRSTE_LENGDE >= vesselSize,]
+    logbooks <- logbooks[logbooks[["ST\u00D8RSTE_LENGDE"]] >= vesselSize,]
     if (nrow(logbooks)==0){
       stop(paste("No logbook records found that match criteria."))
     }
@@ -121,7 +121,7 @@ adjustWithLogbook <- function(landings, logbooks, speciesFAO, gearCodes=NULL, ve
   hasLogb$Rundvekt <- hasLogb$Rundvekt*hasLogb$fraction
   hasLogb$Bruttovekt <- hasLogb$Bruttovekt*hasLogb$fraction
   hasLogb$Produktvekt <- hasLogb$Produktvekt*hasLogb$fraction
-  hasLogb$Hovedområde_kode <- hasLogb$FOarea
+  hasLogb[["Hovedomr\u00E5de_kode"]] <- hasLogb$FOarea
   hasLogb$Lokasjon_kode <- hasLogb$FOloc
   hasLogb$SisteFangstdato <- strftime(hasLogb$FOtime, format="%d.%m.%Y")
   hasLogb <- hasLogb[,names(hasLogb) %in% names(rest), with=F]

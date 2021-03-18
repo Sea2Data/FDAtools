@@ -22,22 +22,22 @@ encodeCostalCodArea <- function(landings){
   }
 
   #set area based on KystHav_kode when position is not available
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="00"] <- "s000"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="03" & landings$KystHav_kode == 8] <- "s301"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="03" & landings$KystHav_kode == 0] <- "s300"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="04" & landings$KystHav_kode == 8] <- "s401"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="04" & landings$KystHav_kode == 0] <- "s400"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="05" & landings$KystHav_kode == 8] <- "s501"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="05" & landings$KystHav_kode == 0] <- "s500"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="06" & landings$KystHav_kode == 8] <- "s601"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="06" & landings$KystHav_kode == 0] <- "s600"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="07" & landings$KystHav_kode == 8] <- "s701"
-  landings$Hovedområde_kode[landings$Hovedområde_kode=="07" & landings$KystHav_kode == 0] <- "s700"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="00","Hovedomr\u00E5de_kode"] <- "s000"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="03" & landings$KystHav_kode == 8,"Hovedomr\u00E5de_kode"] <- "s301"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="03" & landings$KystHav_kode == 0,"Hovedomr\u00E5de_kode"] <- "s300"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="04" & landings$KystHav_kode == 8,"Hovedomr\u00E5de_kode"] <- "s401"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="04" & landings$KystHav_kode == 0,"Hovedomr\u00E5de_kode"] <- "s400"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="05" & landings$KystHav_kode == 8,"Hovedomr\u00E5de_kode"] <- "s501"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="05" & landings$KystHav_kode == 0,"Hovedomr\u00E5de_kode"] <- "s500"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="06" & landings$KystHav_kode == 8,"Hovedomr\u00E5de_kode"] <- "s601"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="06" & landings$KystHav_kode == 0,"Hovedomr\u00E5de_kode"] <- "s600"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="07" & landings$KystHav_kode == 8,"Hovedomr\u00E5de_kode"] <- "s701"
+  landings[landings[["Hovedomr\u00E5de_kode"]]=="07" & landings$KystHav_kode == 0,"Hovedomr\u00E5de_kode"] <- "s700"
 
   if (!is.null(landings$FOlat)){
     # set area from position when available
     landingsWpos <- RstoxFDA::appendAreaCode(landingsWpos, stox2.7preprocessing::coastalCodAreas, "FOlat", "FOlon", "areaFromPos", polygonName = "polygonName")
-    landingsWpos$Hovedområde_kode <- landingsWpos$areaFromPos
+    landingsWpos[["Hovedomr\u00E5de_kode"]] <- landingsWpos$areaFromPos
     landingsWpos$areaFromPos <- NULL
 
     landings <- rbind(landings, landingsWpos)
