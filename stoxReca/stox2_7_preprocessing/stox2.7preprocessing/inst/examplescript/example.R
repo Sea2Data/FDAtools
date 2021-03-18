@@ -34,5 +34,3 @@ coastalCodAdjustedLandings <- adjustedLandings[adjustedLandings$Hovedområde_kod
 
 message("Write adjusted landings. May take some hours.")
 writeStox27LandingXML("~/temp/coastalCodAdjustedLandings2018.xml", coastalCodAdjustedLandings)
-
-
