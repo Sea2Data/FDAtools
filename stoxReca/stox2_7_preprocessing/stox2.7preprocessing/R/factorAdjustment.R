@@ -34,22 +34,22 @@ adjustConversionFactor <- function(landings, conversionfactor, productTypes, FAO
 
   filter <- rep(T, nrow(landings))
   if (!missingLengths){
-    filter <- filter & !is.na(landings$StørsteLengde)
+    filter <- filter & !is.na(landings[["St\u00F8rsteLengde"]])
   }
   if (!is.null(vesselRange)){
-    filter[!is.na(landings$StørsteLengde)] <- filter[!is.na(landings$StørsteLengde)] &
-                              landings$StørsteLengde[!is.na(landings$StørsteLengde)] >= min(vesselRange) &
-                              landings$StørsteLengde[!is.na(landings$StørsteLengde)] < max(vesselRange)
+    filter[!is.na(landings[["St\u00F8rsteLengde"]])] <- filter[!is.na(landings[["St\u00F8rsteLengde"]])] &
+                              landings[["St\u00F8rsteLengde"]][!is.na(landings[["St\u00F8rsteLengde"]])] >= min(vesselRange) &
+                              landings[["St\u00F8rsteLengde"]][!is.na(landings[["St\u00F8rsteLengde"]])] < max(vesselRange)
   }
   if (!is.null(months)){
     dates <- as.POSIXct(landings$SisteFangstdato, format="%d.%m.%Y")
     filter <- filter & month(dates) %in% months
   }
   if (!is.null(vesselNationalities)){
-    filter <- filter & landings$Fartøynasjonalitet_kode %in% vesselNationalities
+    filter <- filter & landings[["Fart\u00F8ynasjonalitet_kode"]] %in% vesselNationalities
   }
   if (onlyNorth62){
-    filter <- filter & landings$NordSørFor62GraderNord == "Nord for 62°N"
+    filter <- filter & landings[["NordS\u00F8rFor62GraderNord"]] == "Nord for 62\u00B0N"
   }
   if (is.null(productTypes)){
     stop("ProductTypes must be provided")

@@ -56,22 +56,22 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
   message(paste("Sum of absolute differences for gear/area combinations for trawls (gear 50-59):", format(sum(abs(comparison$difference[comparison$Redskap_kode %in% 50:59])), digits=2)))
   message(paste("Sum of absolute differences for gear/area combinations for non-trawls (gear not 50-59):", format(sum(abs(comparison$difference[!(comparison$Redskap_kode %in% 50:59)])), digits = 2)))
 
-  message(paste("Relative difference in coastal-cod region after adjustment:", format(sum(comparison$difference[startsWith(comparison$Hovedområde_kode, "s")])/sum(comparison$original.weight[startsWith(comparison$Hovedområde_kode, "s")]),digits=2)))
+  message(paste("Relative difference in coastal-cod region after adjustment:", format(sum(comparison$difference[startsWith(comparison[["Hovedomr\u00E5de_kode"]], "s")])/sum(comparison$original.weight[startsWith(comparison[["Hovedomr\u00E5de_kode"]], "s")]),digits=2)))
 
 
   comparisonArea <- compareLandings(areaEncodedLandings, adjustedLandings, includeGear=F)
   message(paste("Change in coastal cod aras within 12 nm:",
-                format(sum(comparisonArea$difference[comparisonArea$Hovedområde_kode %in% c("s000", "s301", "s401", "s501", "s601", "s701")]), digits=1), "kg"))
+                format(sum(comparisonArea$difference[comparisonArea[["Hovedomr\u00E5de_kode"]] %in% c("s000", "s301", "s401", "s501", "s601", "s701")]), digits=1), "kg"))
   message(paste("Change in coastal cod aras outside 12 nm:",
-                format(sum(comparisonArea$difference[comparisonArea$Hovedområde_kode %in% c("s300", "s400", "s500", "s600", "s700")]), digits=1), "kg"))
+                format(sum(comparisonArea$difference[comparisonArea[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700")]), digits=1), "kg"))
 
   if (coastalCod){
     message("NB: Keeping only coastal cod areas.")
-    coastalCodAdjustedLandings <- adjustedLandings[adjustedLandings$Hovedområde_kode %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701"),]
+    coastalCodAdjustedLandings <- adjustedLandings[adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701"),]
   }
   else{
     message("NB: Removing coastal cod areas.")
-    coastalCodAdjustedLandings <- adjustedLandings[!(adjustedLandings$Hovedområde_kode %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")),]
+    coastalCodAdjustedLandings <- adjustedLandings[!(adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")),]
   }
 
   message("Write adjusted landings. May take some hours.")
