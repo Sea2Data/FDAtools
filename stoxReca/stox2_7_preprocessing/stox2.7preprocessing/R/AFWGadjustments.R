@@ -29,9 +29,9 @@
 #' @export
 processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seasonalConversionFactor=T, coastalCod=T){
   message("Read landings ...")
-  originalLandings <- readLandings("~/workspace/stox/ECA_prosjekter/Kysttorsk_AFWG_2018/input/landing/torsk_2018_2020_03_23.xml")
+  originalLandings <- readLandings(landings)
   message("Read logbooks ...")
-  logbooks <- RstoxData::readErsFile("~/logbooks/FDIR_HI_ERS_2018_PR_2019-03-04.psv")
+  logbooks <- RstoxData::readErsFile(logbooks)
 
   if (seasonalConversionFactor){
     factorSLUH=1.671

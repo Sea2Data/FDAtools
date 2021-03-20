@@ -31,7 +31,6 @@
 #'  adjustedLandingsSL <- adjustConversionFactor(adjustedLandingsSLUH, 1.311, 210)
 #' @export
 adjustConversionFactor <- function(landings, conversionfactor, productTypes, FAOspecies="COD", vesselRange=c(0,28), missingLengths=T, months=c(1,2,3,4), onlyNorth62=T, vesselNationalities=c("NOR")){
-
   filter <- rep(T, nrow(landings))
   if (!missingLengths){
     filter <- filter & !is.na(landings[["St\u00F8rsteLengde"]])
