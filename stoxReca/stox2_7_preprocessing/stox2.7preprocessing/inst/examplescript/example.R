@@ -6,7 +6,7 @@ processLandingsAllAdjustmentsAFWG("~/temp/coastalAreasCodSeasonalCF2018.xml",
                                   "~/logbooks/FDIR_HI_ERS_2018_PR_2019-03-04.psv")
 
 # prepare data for NEA cod estimate in coastal region (without seasonal conversion factors):
-processLandingsAllAdjustmentsAFWG("~/temp/coastalAreasCodSeasonalCF2018.xml",
+processLandingsAllAdjustmentsAFWG("~/temp/coastalAreasCodCF2018.xml",
                                   "~/workspace/stox/ECA_prosjekter/Kysttorsk_AFWG_2018/input/landing/torsk_2018_2020_03_23.xml",
                                   "~/logbooks/FDIR_HI_ERS_2018_PR_2019-03-04.psv",
                                   seasonalConversionFactor=F)
