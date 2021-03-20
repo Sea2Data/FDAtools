@@ -9,11 +9,22 @@
 #' @export
 readLandings <- function(landingsXML){
   landings <- data.table::data.table(Rstox::readXMLfiles(files=list(landing=landingsXML)))
-  landings$updatedTime <- NULL
-  landings$updatedBy <- NULL
-  landings$insertedTime <- NULL
-  landings$insertedBy <- NULL
-  landings[["fart\u00F8ynasjonalitetKode.1"]] <- NULL
+  if (!is.null(landings$updatedTime)){
+    landings$updatedTime <- NULL
+  }
+  if (!is.null(landings$updatedBy)){
+    landings$updatedBy <- NULL
+  }
+  if (!is.null(landings$insertedTime)){
+    landings$insertedTime <- NULL
+  }
+  if (!is.null(landings$insertedBy)){
+    landings$insertedBy <- NULL
+  }
+  if (!is.null(landings[["fart\u00F8ynasjonalitetKode.1"]])){
+    landings[["fart\u00F8ynasjonalitetKode.1"]] <- NULL
+  }
+
   landings$sisteFangstdato <- strftime(landings$sisteFangstdato, format="%d.%m.%Y")
   landings$landingsdato[landings$landingsdato!=""] <- strftime(landings$landingsdato[landings$landingsdato!=""], format="%d.%m.%Y")
 

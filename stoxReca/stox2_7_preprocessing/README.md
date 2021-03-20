@@ -7,10 +7,16 @@ It will take some time before logbook-adjustments can be included in StoX. As a 
 * encodeCostalCodArea: encodes area definiton for coastal cod analysis in the column for area in sales notes (hovedområde)
 * adjustWithLogbook: adjusts landings with spatial and temporal information from logbooks.
 
-An example of how these functions can be applied is provided in stox2.7preprocessing/inst/examplescript/example.R
+Data preparation agreed on WKBarFar 2021 is encoded in the function processLandingsAllAdjustmentsAFWG.
+An example of how this function can be applied is provided in stox2.7preprocessing/inst/examplescript/example.R
+
+## Logbooks
+The function uses the VMS-merged logbook format (.psv-files), which requires priviled access.
 
 ## coastal cod strata files
 The coastal-cod estimate has been using a custom area-definition. These area definitions are stored in this package and functions for export Stox-stratafiles and Stox2.7 area-position resources are offered.
+
+An example of how these functions can be applied is provided in stox2.7preprocessing/inst/examplescript/example.R
 
 ## File writing
 This package offers a function (writeStox27LandingXML) that writes landings data to the XML-format accepted by StoX. For NEA cod and coastal cod, this is a large volume and writeStox27LandingXML performs poorly. A full year of adjusted landings may need several hours to complete and produce files that are several gigabytes large.

@@ -2,14 +2,18 @@
 % Please edit documentation in R/factorAdjustment.R
 \name{adjustConversionFactor}
 \alias{adjustConversionFactor}
-\title{Recalculates live weight (round weight) for processed products}
+\title{Adjust conversion factor}
 \usage{
 adjustConversionFactor(
   landings,
   conversionfactor,
+  productTypes,
   FAOspecies = "COD",
   vesselRange = c(0, 28),
-  months = c(1, 2, 3, 4)
+  missingLengths = T,
+  months = c(1, 2, 3, 4),
+  onlyNorth62 = T,
+  vesselNationalities = c("NOR")
 )
 }
 \arguments{
@@ -17,15 +21,42 @@ adjustConversionFactor(
 
 \item{conversionfactor}{conversion factor to apply.}
 
+\item{productTypes}{product types (Produkttilstand NS9400) that the conversion should be applied}
+
 \item{FAOspecies}{specification of the species to apply factor to. FAO 3-alpha species code}
 
 \item{vesselRange}{vector of two numeric values denoting the lower range (inclusive) and the upper range (exclusive) of vessel lengths that factor should be applied for. If NULL the factor is applied to all vessel lengths}
 
+\item{missingLengths}{if TRUE, apply conversion for vessels with missing lengths}
+
 \item{months}{vector of month indecies (1 for january) that the conversion factor should be applied for. If NULL the factor is applied to all months}
+
+\item{onlyNorth62}{if TRUE, conversion is only applied north of 62nd longitude}
+
+\item{vesselNationalities}{vector of 3-alpha nationality codes specifying which vessels the conversion should be applied for. If NULL it is applied to all vessels}
+}
+\value{
+landings with the column 'RUNDVEKT' modified for selected lines, so that RUNDVEKT = PRODUKTVEKT * conversionfactor
 }
 \description{
-Recalculates live weight (round weight) for processed products
+Recalculates live weight (round weight) in landings for processed (gutted) fish-products
 }
 \details{
-Live weight is obtained by applying a scalar conversion factor to weights of partially proceesed product
+Live weight is obtained by applying a scalar conversion factor to weights of partially proceesed product,
+ such as 'gutted fish with head' or 'gutted fish without head'.
+
+ This function supports applying a conversion factor to only part of the landings based on a range of
+ selection criteria specified as arguments to this function.
+
+ Missing lengths typically reflect unregistered vessels, which are typically small vessels.
+ Conversion factors can be applied to these with the option 'missingLengths'
+}
+\examples{
+ landingsfile <- system.file("testresources", "codLandings.rda", package="stox2.7preprocessing")
+ landings <- readRDS(landingsfile)
+
+ # convert gutted without head (SLUH), codes 211 and 214
+ adjustedLandingsSLUH <- adjustConversionFactor(landings, 1.671, c(211, 214))
+ # convert also for gutted with head (SLMH), code 210
+ adjustedLandingsSL <- adjustConversionFactor(adjustedLandingsSLUH, 1.311, 210)
 }
