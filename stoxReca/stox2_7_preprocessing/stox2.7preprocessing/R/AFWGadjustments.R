@@ -28,8 +28,11 @@
 #' @param coastalCod if TRUE only the Norwegain coast AFWG areas are saved, otherwise all other areas are saved.
 #' @export
 processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seasonalConversionFactor=T, coastalCod=T){
-  landings <- readLandings(landings)
-  logbooks <- RstoxData::readErsFile(logbooks)
+
+  if (file.exists(fileName)){
+    stop(paste("The file", fileName, "already exists."))
+  }
+
   message("Read landings ...")
   originalLandings <- readLandings(landings)
   message("Read logbooks ...")
