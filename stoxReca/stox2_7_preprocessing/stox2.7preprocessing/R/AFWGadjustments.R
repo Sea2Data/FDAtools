@@ -38,20 +38,23 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
   message("Read logbooks ...")
   logbooks <- RstoxData::readErsFile(logbooks)
 
+  message("Encode coastal cod area ...")
+  areaEncodedLandings <- encodeCostalCodArea(originalLandings)
+
+  adjustedLandings <- areaEncodedLandings
+
   if (seasonalConversionFactor){
     factorSLUH=1.671
     factorSLMH=1.311
     message("Applying seasonal conversion factors to NOR vessels < 28 m, north of 62N for January through April.")
     message(paste("Applying seasonal conversion factor", factorSLUH, "for gutted fish without head."))
-    landings <- adjustConversionFactor(landings, factorSLUH, c(211, 214))
+    adjustedLandings <- adjustConversionFactor(adjustedLandings, factorSLUH, c(211, 214))
     message(paste("Applying seasonal conversion factor", factorSLMH, "for gutted fish with head."))
-    landings <- adjustConversionFactor(landings, factorSLMH, 210)
+    adjustedLandings <- adjustConversionFactor(adjustedLandings, factorSLMH, 210)
   }
 
-  message("Encode coastal cod area ...")
-  areaEncodedLandings <- encodeCostalCodArea(originalLandings)
   message("Adjust landings with logbooks for Trawls (gear 50-59)...")
-  adjustedLandings <- adjustWithLogbook(areaEncodedLandings, logbooks, speciesFAO = "COD", gearCodes = 50:59)
+  adjustedLandings <- adjustWithLogbook(adjustedLandings, logbooks, speciesFAO = "COD", gearCodes = 50:59)
   message("Re-Encode coastal cod area based on positions...")
   adjustedLandings <- encodeCostalCodArea(adjustedLandings)
 
@@ -72,13 +75,13 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
 
   if (coastalCod){
     message("NB: Keeping only coastal cod areas.")
-    coastalCodAdjustedLandings <- adjustedLandings[adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701"),]
+    coastalAreaAdjustedLandings <- adjustedLandings[adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701"),]
   }
   else{
     message("NB: Removing coastal cod areas.")
-    coastalCodAdjustedLandings <- adjustedLandings[!(adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")),]
+    coastalAreaAdjustedLandings <- adjustedLandings[!(adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")),]
   }
 
   message("Write adjusted landings. May take some hours.")
-  writeStox27LandingXML(fileName, coastalCodAdjustedLandings)
+  writeStox27LandingXML(fileName, coastalAreaAdjustedLandings)
 }
