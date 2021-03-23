@@ -16,6 +16,9 @@
 #'  \code{\link[stox2.7preprocessing]{adjustWithLogbook}} and
 #'  \code{\link[stox2.7preprocessing]{encodeCostalCodArea}}
 #'
+#'  To avoid encoding issues introduced earlier in the data-flow
+#'  four fields with names of 'kommune' is removed.
+#'
 #'  Default settings prepares coastal cod.
 #'  File writing is quite slow and make take several hours. Filtering on areas may speed this up a little bit.
 #'  Run with 'coastalCod' TRUE to save data only for the Norwegain coast AFWG areas
@@ -37,6 +40,25 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
   originalLandings <- readLandings(landings)
   message("Read logbooks ...")
   logbooks <- RstoxData::readErsFile(logbooks)
+
+  #
+  # remove columns with troublesome encoding.
+  # Some landings file have encoding not consitent with the XML declaration
+  # provide more permanent fix later
+  #
+
+  if (!is.null(originalLandings$Fiskerkommune)){
+    originalLandings$Fiskerkommune <- as.character(NA)
+  }
+  if (!is.null(originalLandings[["Fart\u00F8ykommune"]])){
+    originalLandings[["Fart\u00F8ykommune"]] <- as.character(NA)
+  }
+  if (!is.null(originalLandings$Landingskommune)){
+    originalLandings$Landingskommune <- as.character(NA)
+  }
+  if (!is.null(originalLandings$Produksjonskommune)){
+    originalLandings$Produksjonskommune <- as.character(NA)
+  }
 
   message("Encode coastal cod area ...")
   areaEncodedLandings <- encodeCostalCodArea(originalLandings)

@@ -41,6 +41,9 @@ This function adjust landings by applying seasonal conversion factors,
  \code{\link[stox2.7preprocessing]{adjustWithLogbook}} and
  \code{\link[stox2.7preprocessing]{encodeCostalCodArea}}
 
+ To avoid encoding issues introduced earlier in the data-flow
+ four fields with names of 'kommune' is removed.
+
  Default settings prepares coastal cod.
  File writing is quite slow and make take several hours. Filtering on areas may speed this up a little bit.
  Run with 'coastalCod' TRUE to save data only for the Norwegain coast AFWG areas
