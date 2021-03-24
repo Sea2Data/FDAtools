@@ -9,15 +9,15 @@
 #' @export
 compareLandings <- function(original, modified, includeGear=T){
   if (includeGear){
-    originalTab <- original[,.(original.weight=sum(get("Rundvekt"))), by=.(get("Redskap_bokm\u00E5l"), get("Redskap_kode"), get("Hovedomr\u00E5de_kode"))]
+    originalTab <- original[,.(original.weight=sum(get("Rundvekt"), na.rm=T)), by=.(get("Redskap_bokm\u00E5l"), get("Redskap_kode"), get("Hovedomr\u00E5de_kode"))]
     names(originalTab) <- c("Redskap_bokm\u00E5l", "Redskap_kode", "Hovedomr\u00E5de_kode", "original.weight")
-    modifiedTab <- modified[,.(modified.weight=sum(get("Rundvekt"))), by=.(get("Redskap_bokm\u00E5l"), get("Redskap_kode"), get("Hovedomr\u00E5de_kode"))]
+    modifiedTab <- modified[,.(modified.weight=sum(get("Rundvekt"), na.rm=T)), by=.(get("Redskap_bokm\u00E5l"), get("Redskap_kode"), get("Hovedomr\u00E5de_kode"))]
     names(modifiedTab) <- c("Redskap_bokm\u00E5l", "Redskap_kode", "Hovedomr\u00E5de_kode", "modified.weight")
   }
   else{
-    originalTab <- original[,.(original.weight=sum(get("Rundvekt"))), by=.(get("Hovedomr\u00E5de_kode"))]
+    originalTab <- original[,.(original.weight=sum(get("Rundvekt"), na.rm=T)), by=.(get("Hovedomr\u00E5de_kode"))]
     names(originalTab) <- c("Hovedomr\u00E5de_kode", "original.weight")
-    modifiedTab <- modified[,.(modified.weight=sum(get("Rundvekt"))), by=.(get("Hovedomr\u00E5de_kode"))]
+    modifiedTab <- modified[,.(modified.weight=sum(get("Rundvekt"), na.rm=T)), by=.(get("Hovedomr\u00E5de_kode"))]
     names(modifiedTab) <- c("Hovedomr\u00E5de_kode", "modified.weight")
   }
   tab <- merge(originalTab, modifiedTab)

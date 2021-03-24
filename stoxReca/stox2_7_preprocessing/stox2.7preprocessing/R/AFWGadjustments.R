@@ -64,7 +64,6 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
   areaEncodedLandings <- encodeCostalCodArea(originalLandings)
 
   adjustedLandings <- areaEncodedLandings
-
   if (seasonalConversionFactor){
     factorSLUH=1.671
     factorSLMH=1.311
@@ -82,7 +81,7 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
 
   comparison <- compareLandings(areaEncodedLandings, adjustedLandings)
 
-  message(paste("Total original landings:", sum(originalLandings$Rundvekt), "Total adjusted landings: ", sum(adjustedLandings$Rundvekt), "Difference:", sum(originalLandings$Rundvekt) - sum(adjustedLandings$Rundvekt)))
+  message(paste("Total original landings:", sum(originalLandings$Rundvekt, na.rm=T), "Total adjusted landings: ", sum(adjustedLandings$Rundvekt, na.rm=T), "Difference:", sum(originalLandings$Rundvekt, na.rm=T) - sum(adjustedLandings$Rundvekt, na.rm=T)))
   message(paste("Sum of absolute differences for gear/area combinations for trawls (gear 50-59):", format(sum(abs(comparison$difference[comparison$Redskap_kode %in% 50:59])), digits=2)))
   message(paste("Sum of absolute differences for gear/area combinations for non-trawls (gear not 50-59):", format(sum(abs(comparison$difference[!(comparison$Redskap_kode %in% 50:59)])), digits = 2)))
 
