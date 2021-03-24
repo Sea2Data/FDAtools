@@ -48,6 +48,10 @@ extractLandings <- function(stoxprojectname, process="prepareRECA", force=F){
   names(stoxLandings) <- tolower(names(stoxLandings))
   stoxLandings$sistefangstdato <- as.POSIXct(stoxLandings$sistefangstdato)
   
+  if (nrow(stoxLandings)==0){
+    stop("Empty table of landings extracted from StoX.")
+  }
+  
   return(stoxLandings)
   
 }
