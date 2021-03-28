@@ -74,16 +74,16 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
     adjustedLandings <- adjustConversionFactor(adjustedLandings, factorSLMH, 210)
   }
 
-  message("Adjust landings with logbooks for Trawls (gear 50-59)...")
-  adjustedLandings <- adjustWithLogbook(adjustedLandings, logbooks, speciesFAO = "COD", gearCodes = 50:59)
+  message("Adjust landings with logbooks for Trawls (gear 50-52)...")
+  adjustedLandings <- adjustWithLogbook(adjustedLandings, logbooks, speciesFAO = "COD", gearCodes = 50:52)
   message("Re-Encode coastal cod area based on positions...")
   adjustedLandings <- encodeCostalCodArea(adjustedLandings)
 
   comparison <- compareLandings(areaEncodedLandings, adjustedLandings)
 
   message(paste("Total original landings:", sum(originalLandings$Rundvekt, na.rm=T), "Total adjusted landings: ", sum(adjustedLandings$Rundvekt, na.rm=T), "Difference:", sum(originalLandings$Rundvekt, na.rm=T) - sum(adjustedLandings$Rundvekt, na.rm=T)))
-  message(paste("Sum of absolute differences for gear/area combinations for trawls (gear 50-59):", format(sum(abs(comparison$difference[comparison$Redskap_kode %in% 50:59])), digits=2)))
-  message(paste("Sum of absolute differences for gear/area combinations for non-trawls (gear not 50-59):", format(sum(abs(comparison$difference[!(comparison$Redskap_kode %in% 50:59)])), digits = 2)))
+  message(paste("Sum of absolute differences for gear/area combinations for trawls (gear 50-52):", format(sum(abs(comparison$difference[comparison$Redskap_kode %in% 50:52])), digits=2)))
+  message(paste("Sum of absolute differences for gear/area combinations for non-trawls (gear not 50-52):", format(sum(abs(comparison$difference[!(comparison$Redskap_kode %in% 50:52)])), digits = 2)))
 
   message(paste("Relative difference in coastal-cod region after adjustment:", format(sum(comparison$difference[startsWith(comparison[["Hovedomr\u00E5de_kode"]], "s")])/sum(comparison$original.weight[startsWith(comparison[["Hovedomr\u00E5de_kode"]], "s")]),digits=2)))
 
