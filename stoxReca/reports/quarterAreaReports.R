@@ -26,19 +26,19 @@ projectname <- "ECA_NSSK_sei_2018"
 # rapport på hovedområde og kvartal.
 # Merk at kolonnenavn er med små bokstaver, selv om de står som CamelCase i Stox (view output)
 #
-Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
+Rstox::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
 
 #
 # Tilsvarende funksjon finnes for å rapportere gjennomsnittslengde og vekt for hver aldersgruppe
 #
-Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
+Rstox::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("hovedområdekode"))
 
 #
 # Og for å rapportere fangst fordelt på lengdegrupper
 #
-Rstox:::saveDecomposedCatchAtLength(projectname, "testDefaultReportCatchAtLength.csv", addQuarterToDecomp = T, decomposition = c("hovedområdekode"))
-# rapporter vekt i stedet for antall, støttes også av Rstox:::saveDecomposedCatchMatrix
-Rstox:::saveDecomposedCatchAtLength(projectname, "testGearReportCatchAtLength.csv", addQuarterToDecomp = F, decomposition = c("gearfactor"), var="Weight", unit="tonnes")
+Rstox::saveDecomposedCatchAtLength(projectname, "testDefaultReportCatchAtLength.csv", addQuarterToDecomp = T, decomposition = c("hovedområdekode"))
+# rapporter vekt i stedet for antall, støttes også av Rstox::saveDecomposedCatchMatrix
+Rstox::saveDecomposedCatchAtLength(projectname, "testGearReportCatchAtLength.csv", addQuarterToDecomp = F, decomposition = c("gearfactor"), var="Weight", unit="tonnes")
 
 
 
@@ -47,8 +47,8 @@ Rstox:::saveDecomposedCatchAtLength(projectname, "testGearReportCatchAtLength.cs
 #
 #save default decomposition (mainarea and quarter)
 #
-Rstox:::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6)
-Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6)
+Rstox::saveDecomposedCatchMatrix(projectname, "testDefaultReport.csv", addQuarterToDecomp = T, plusgr=6)
+Rstox::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6)
 
 #
 #save custom decomposition based on grouping of main areas and quarter
@@ -58,8 +58,8 @@ Rstox:::saveDecomposedAgeGroupParameters(projectname, "testDefaultReportLengthWe
 customArea <- list(area1=c("08","09", "28"), area2=c("41","42","43"), area4="47")
 
 # run with parameter customMainAreaGrouping, note that the default decomposition is set to NULL
-Rstox:::saveDecomposedCatchMatrix(projectname, "testMainAreaGrouping.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
-Rstox:::saveDecomposedAgeGroupParameters(projectname, "testMainAreaGroupingLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
+Rstox::saveDecomposedCatchMatrix(projectname, "testMainAreaGrouping.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
+Rstox::saveDecomposedAgeGroupParameters(projectname, "testMainAreaGroupingLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, customMainAreaGrouping = customArea, decomposition = NULL)
 
 
 #
@@ -74,14 +74,14 @@ locationcodes <- sprintf("%02d-%02d", ldata[,"hovedomr\u00e5dekode"], ldata[,"lo
 # make two arbitrarily define areas based on these locations
 customlocation <- list(area1=locationcodes[1:100], area2=locationcodes[100:length(locationcodes)])
 
-Rstox:::saveDecomposedCatchMatrix(projectname, "testLocationGrouping.csv", addQuarterToDecomp = T, plusgr=6, customLocationGrouping = customlocation, decomposition = NULL)
+Rstox::saveDecomposedCatchMatrix(projectname, "testLocationGrouping.csv", addQuarterToDecomp = T, plusgr=6, customLocationGrouping = customlocation, decomposition = NULL)
 
 
 # All variables in the argument decomposition is included. One can for instance add gear, here represented by the covariate 'gearfactor' which is appended to the landings data
-Rstox:::saveDecomposedCatchMatrix(projectname, "testLocationGroupingWgear.csv", addQuarterToDecomp = T, plusgr=6, customLocationGrouping = customlocation, decomposition = c("gearfactor"))
+Rstox::saveDecomposedCatchMatrix(projectname, "testLocationGroupingWgear.csv", addQuarterToDecomp = T, plusgr=6, customLocationGrouping = customlocation, decomposition = c("gearfactor"))
 
 # One can also run for only gear
-Rstox:::saveDecomposedCatchMatrix(projectname, "testGear.csv", addQuarterToDecomp = F, plusgr=6, decomposition = c("gearfactor"))
+Rstox::saveDecomposedCatchMatrix(projectname, "testGear.csv", addQuarterToDecomp = F, plusgr=6, decomposition = c("gearfactor"))
 
 
 #
@@ -94,5 +94,16 @@ Rstox:::saveDecomposedCatchMatrix(projectname, "testGear.csv", addQuarterToDecom
 customArea <- list(a27.4=c("08","28", "40", "41", "42"), a.27.3.a.20="09", a27.7.d="46", a27.6.a=c("43","47"))
 
 # run with parameter customMainAreaGrouping
-Rstox:::saveDecomposedCatchMatrix(projectname, "testNSSKcaaReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"), unit = "thousands")
-Rstox:::saveDecomposedAgeGroupParameters(projectname, "testNSSKagparamReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"))
+Rstox::saveDecomposedCatchMatrix(projectname, "testNSSKcaaReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"), unit = "thousands")
+Rstox::saveDecomposedAgeGroupParameters(projectname, "testNSSKagparamReport.csv", addQuarterToDecomp = T, plusgr=10, customMainAreaGrouping = customArea, decomposition = c("gearfactor"))
+
+
+
+#
+# If stock splitting (CC) is used. The desired stock must be specified
+#
+projectname <- "Kysttorsk_AFWG_2018"
+Rstox::saveDecomposedCatchMatrix(projectname, "testcoastalReportByGear.csv", plusgr=6, decomposition = c("gearfactor"), main = "coastal COD", stock="coastal")
+Rstox::saveDecomposedCatchAtLength(projectname, "testAtlanticByQuarter.csv", decomposition=c(), addQuarterToDecomp = T, main = "NEA COD", stock="atlantic")
+Rstox::saveDecomposedAgeGroupParameters(projectname, "testCoastalReportLengthWeight.csv", addQuarterToDecomp = T, plusgr=6, decomposition = c("gearfactor"), main = "coastal COD", stock="coastal")
+
