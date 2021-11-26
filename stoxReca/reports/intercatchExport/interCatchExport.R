@@ -218,11 +218,11 @@ annotateMetierMeshSize <- function(stoxLandings, metierfileMeshed, metierfileUnm
 #' @param ICESpolygons polygons (\code{\link[sp]{SpatialPolygonsDataFrame}}) for ICES areas.
 #' @param ICESareaCol name of column in 'ICESpolygons' that contain the name of the polygons in full area name notation.
 #' @return 'stoxLandings' with columns 'Area' and 'AreaType' appended.
-annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=RstoxFDA::mainareaFdir2018, mainareaCol="polygonName", ICESpolygons=RstoxFDA::ICESareas, ICESareaCol="Area_Full"){
+annotateAreaFromLandings <- function(stoxLandings, areas=NULL, mainareaPolygons=RstoxFDA::mainareaFdir2018, mainareaCol="StratumName", ICESpolygons=RstoxFDA::ICESareas, ICESareaCol="Area_Full"){
   stoxLandings$areaCode <- sprintf("%02d", stoxLandings$hovedområdekode)
-  stoxLandings <- RstoxFDA::appendPosition(stoxLandings, mainareaPolygons, "areaCode", latColName = "lat", lonColName = "lon", polygonName = mainareaCol)
+  stoxLandings <- RstoxFDA::appendPosition(stoxLandings, mainareaPolygons, "areaCode", latColName = "lat", lonColName = "lon", StratumName = mainareaCol)
   
-  stoxLandings <- RstoxFDA::appendAreaCode(data.table::as.data.table(stoxLandings), areaPolygons = ICESpolygons, latName = "lat", lonName = "lon", colName = "Area", polygonName = "Area_Full")
+  stoxLandings <- RstoxFDA::appendAreaCode(data.table::as.data.table(stoxLandings), areaPolygons = ICESpolygons, latName = "lat", lonName = "lon", colName = "Area", StratumName = "Area_Full")
   stoxLandings <- as.data.frame(stoxLandings)
   
   if (!is.null(areas)){
@@ -603,4 +603,28 @@ runExampleHIandSL <- function(stoxprojectname, logbook, exportfile, metierconfig
   landings <- annotateMetierMeshSize(landings, metierconfigMeshed, metierconfigUnmeshed)
   Sys.sleep(5) #give some time to notice warnings and messages
   exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = NA, plusGroup=NULL, unitCANUM=unitCANUM, force=force)
+}
+
+#' Example of intercatch workflow that does not require logbook data (less detailed metier)
+#' @param stoxprojectname name of or path to StoX-Reca project
+#' @param exportfile file to write intercatch export to
+#' @param metierconfigUnmeshed path to file with metierconfiguration when mesh-size is not available
+#' @param SDfleets fleets / metier that SD lines should be exported for. NULL means all fleets, NA no fleets.
+#' @param plusGroup plus group for the SD lines (NULL means no plus group)
+#' @param unitCANUM unit for catch at age in numbers, may be k,m or n for thosuands, millions or unit (ones) respectively
+#' @param force force re-run of stox project before exporting
+#' @examples 
+#'  runExampleWoLogbooks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", 
+#'             metierconfigUnmeshed="intercatchExport/metiertable_unmeshed.txt", 
+#'             exportfile = "test.csv", 
+#'             plusGroup = 10, 
+#'             SDfleets = c("OTB_DEF_>=120_0_0_all", "GNS_DEF_all_0_0_all"))
+#'  checks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", "test.csv")
+runExampleWoLogbooks <- function(stoxprojectname, exportfile, metierconfigUnmeshed, SDfleets=NULL, plusGroup=NULL, unitCANUM="k", force=F){
+  landings <- extractLandings(stoxprojectname)
+  landings <- annotateFromLandings(landings)
+  landings <- annotateAreaFromLandings(landings)
+  landings <- annotateMetierFromLandings(landings, metierconfigUnmeshed)
+  Sys.sleep(5) #give some time to notice warnings and messages
+  exportIntercatch(stoxprojectname, landings, exportfile, SDfleets = SDfleets, plusGroup=plusGroup, unitCANUM=unitCANUM, force=force)
 }
