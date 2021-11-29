@@ -614,9 +614,9 @@ runExampleHIandSL <- function(stoxprojectname, logbook, exportfile, metierconfig
 #' @param unitCANUM unit for catch at age in numbers, may be k,m or n for thosuands, millions or unit (ones) respectively
 #' @param force force re-run of stox project before exporting
 #' @examples 
-#'  runExampleWoLogbooks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", 
+#'  runExampleWoLogbooks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019",
+#'             exportfile = "test.csv",  
 #'             metierconfigUnmeshed="intercatchExport/metiertable_unmeshed.txt", 
-#'             exportfile = "test.csv", 
 #'             plusGroup = 10, 
 #'             SDfleets = c("OTB_DEF_>=120_0_0_all", "GNS_DEF_all_0_0_all"))
 #'  checks("~/workspace/stox/ECA_prosjekter/NSSK/ECA_NSSK_sei_2019", "test.csv")
