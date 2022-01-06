@@ -371,7 +371,7 @@ writeStox27LandingXML <- function(fileName, landings){
 #' @param output filename to save output to
 #' @export
 writeSpDataFrameAsWKT <- function(shape, output){
-  namecol="polygonName"
+  namecol="StratumName"
   requireNamespace("rgeos", quietly = TRUE)
   requireNamespace("sp", quietly = TRUE)
   if (file.exists(output)){
