@@ -1,8 +1,8 @@
 library(stox2.7preprocessing)
 
-fileName <- "~/temp/torsk_adjusted_coastalCod_2020_mini.xml"
-logbooks <- "~/logbooks/FDIR_HI_ERS_2020_PR_2021-03-03.psv"
-landings <- "~/landingsets/xml/filtered/torsk_2020.xml"
+fileName <- "~/temp/torsk_adjusted_coastalCod_2021_mini.xml"
+logbooks <- "~/logbooks/FDIR_HI_ERS_2021_PR_2021-12-02.psv"
+landings <- "~/landingsets/xml/filtered/landing-year-2021-species-1022.xml"
 
 if (file.exists(fileName)){
   stop(paste("The file", fileName, "already exists."))
@@ -75,14 +75,6 @@ adjustedLandings$Linjenummer <- 1:nrow(adjustedLandings)
 #
 # filter
 #
-
-
-
-message("NB: Keeping only example areas, gear, and season.")
-coastalAreaAdjustedLandings <- adjustedLandings[adjustedLandings[["Hovedomr\u00E5de_kode"]] %in% c("s400", "s500", "s401", "s501"),]
-coastalAreaAdjustedLandings <- coastalAreaAdjustedLandings[coastalAreaAdjustedLandings$Redskap_kode %in% c(33,22,61),]
-coastalAreaAdjustedLandings <- coastalAreaAdjustedLandings[substr(coastalAreaAdjustedLandings$SisteFangstdato,4,5) %in% c("01","02","03","04","05","06"),]
-
 
 message("Write adjusted landings. ")
 writeStox27LandingXML(fileName, coastalAreaAdjustedLandings)
