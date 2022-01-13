@@ -67,12 +67,6 @@ message(paste("Change in coastal cod aras outside 12 nm:",
               format(sum(comparisonArea$difference[comparisonArea[["Hovedomr\u00E5de_kode"]] %in% c("s300", "s400", "s500", "s600", "s700")]), digits=1), "kg"))
 
 #
-# fix keys (linjenummer)
-#
-
-adjustedLandings$Linjenummer <- 1:nrow(adjustedLandings)
-
-#
 # filter
 #
 

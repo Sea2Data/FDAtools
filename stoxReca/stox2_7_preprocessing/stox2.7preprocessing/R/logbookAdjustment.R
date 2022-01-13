@@ -128,5 +128,10 @@ adjustWithLogbook <- function(landings, logbooks, speciesFAO, gearCodes=NULL, ve
   hasLogb <- hasLogb[,names(hasLogb) %in% names(rest), with=F]
 
   landings <- rbind(rest, hasLogb)
+  #
+  # fix keys (linjenummer)
+  #
+
+  landings$Linjenummer <- 1:nrow(landings)
   return(landings)
 }
