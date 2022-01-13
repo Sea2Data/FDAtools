@@ -338,7 +338,11 @@ writeXmlFile <- function(fileName, dataTables, xsdObject, namespace, encoding="U
 writeLandingXml <- function(fileName, LandingData, namespace="http://www.imr.no/formats/landinger/v2"){
 
   if (namespace == "http://www.imr.no/formats/landinger/v2"){
-    writeXmlFile(fileName, LandingData, RstoxData::xsdObjects$landingerv2.xsd, namespace)
+    l <- list()
+    l$landings <- LandingData
+    l$landings$metadata <- data.table::data.table(useXsd="landingerv2", file="f")
+
+    RstoxData:::WriteLanding(l,fileName, encoding = "UTF-8")
   }
   else {
     stop(paste("Namespace", namespace, "not supported."))

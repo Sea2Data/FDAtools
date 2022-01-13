@@ -101,7 +101,8 @@ adjustWithLogbook <- function(landings, logbooks, speciesFAO, gearCodes=NULL, ve
   # calculate fraction of trip catch of species for each haul
   # add fishin operation parameters (FO)
   tripartitions <- RstoxFDA::calculateLogbookPartitionByTrip(logbooks, groupCols = c("FOtime", "FOarea", "FOloc", "FOlat", "FOlon", "FANGSTART_FAO"))
-  tripartitions <- merge(tripartitions$fractions, tripartitions$groupDefinition)
+
+  tripartitions <- merge(tripartitions$fractions, tripartitions$groupDefinition, by="groupid")
   tripartitions$FOlat <- as.numeric(tripartitions$FOlat)
   tripartitions$FOlon <- as.numeric(tripartitions$FOlon)
 

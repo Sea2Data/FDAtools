@@ -1,6 +1,6 @@
 library(stox2.7preprocessing)
 
-fileName <- "~/landingsets/xml/filtered/torsk_adjusted_coastalCod_2020_mini.xml"
+fileName <- "~/temp/torsk_adjusted_coastalCod_2020_mini.xml"
 logbooks <- "~/logbooks/FDIR_HI_ERS_2020_PR_2021-03-03.psv"
 landings <- "~/landingsets/xml/filtered/torsk_2020.xml"
 
