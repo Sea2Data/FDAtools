@@ -59,6 +59,9 @@ processLandingsAllAdjustmentsAFWG <- function(fileName, landings, logbooks, seas
   if (!is.null(originalLandings$Produksjonskommune)){
     originalLandings$Produksjonskommune <- as.character(NA)
   }
+  if (!is.null(originalLandings[["Fart\u00F8ynavn"]])){
+    originalLandings[["Fart\u00F8ynavn"]] <- as.character(NA)
+  }
 
   message("Encode coastal cod area ...")
   areaEncodedLandings <- encodeCostalCodArea(originalLandings)
