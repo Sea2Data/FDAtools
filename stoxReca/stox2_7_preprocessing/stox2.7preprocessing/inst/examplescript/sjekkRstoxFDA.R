@@ -33,9 +33,19 @@ logb <- logb[!is.na(logb$RUNDVEKT),]
 logb <- logb[!is.na(logb$FANGSTART_FAO),]
 logb <- logb[logb$FANGSTART_FAO=="COD",]
 
+#use same polygons for reencoding
+area <- stox2.7preprocessing::coastalCodAreas
+area$StratumName <- area$polygonName
+area$StratumName[startsWith(area$StratumName, "s0")] <- "00"
+area$StratumName[startsWith(area$StratumName, "s3")] <- "03"
+area$StratumName[startsWith(area$StratumName, "s4")] <- "04"
+area$StratumName[startsWith(area$StratumName, "s5")] <- "05"
+area$StratumName[startsWith(area$StratumName, "s6")] <- "06"
+area$StratumName[startsWith(area$StratumName, "s7")] <- "07"
+
 #clean with RstoxFDA
-landAdj <- RstoxFDA:::logbookAdjustment(land, logb, gearCodes = c("50","51", "52"))
-landAdj <- landAdj[!(landAdj$`Hovedområde (kode)` %in% c("00", "03", "04", "05", "06", "07")),]
+landAdjPrefilt <- RstoxFDA:::logbookAdjustment(land, logb, gearCodes = c("50","51", "52"), polygons = area)
+landAdj <- landAdjPrefilt[!(landAdjPrefilt$`Hovedområde (kode)` %in% c("00", "03", "04", "05", "06", "07")),]
 
 #convert to same format as vasket_torsk_comp
 landAdjLD <- RstoxData::convertToLandingData(landAdj)
