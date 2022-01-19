@@ -1,5 +1,6 @@
 # comapares logbook cleaning implementation in RstoxFDA with the one used in this package (st27p)
 
+
 if (file.exists("~/temp/land_h_vasket.xml")){
   stop("Clean up temp files first: ~/temp/land_h_vasket.xml")
 }
