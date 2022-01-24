@@ -18,9 +18,10 @@ land <- land[!is.na(land$Rundvekt),]
 #convert landings to format known by st27p
 land_h <- RstoxData::convertToLandingData(land)
 RstoxData:::WriteLanding(land_h, FileNames = "~/temp/land_h.xml", namespaces = "http://www.imr.no/formats/landinger/v2")
-stox2.7preprocessing::processLandingsAllAdjustmentsAFWG("~/temp/land_h_vasket.xml",
-                                  "~/temp/land_h.xml",
-                                  "~/logbooks/FDIR_HI_ERS_2021_PR_2021-12-02.psv", seasonalConversionFactor=F, coastalCod=F)
+land_sp27 <- stox2.7preprocessing::readLandings("~/temp/land_h.xml")
+vasket <- stox2.7preprocessing::adjustWithLogbook(land_sp27, logb, "COD", c(50:52))
+stox2.7preprocessing::writeStox27LandingXML("~/temp/land_h_vasket.xml", vasket)
+
 #clean with st27p routine
 vasket_torsk <- RstoxData::readXmlFile("~/temp/land_h_vasket.xml")
 
@@ -33,19 +34,14 @@ logb <- logb[!is.na(logb$RUNDVEKT),]
 logb <- logb[!is.na(logb$FANGSTART_FAO),]
 logb <- logb[logb$FANGSTART_FAO=="COD",]
 
-#use same polygons for reencoding
-area <- stox2.7preprocessing::coastalCodAreas
-area$StratumName <- area$polygonName
-area$StratumName[startsWith(area$StratumName, "s0")] <- "00"
-area$StratumName[startsWith(area$StratumName, "s3")] <- "03"
-area$StratumName[startsWith(area$StratumName, "s4")] <- "04"
-area$StratumName[startsWith(area$StratumName, "s5")] <- "05"
-area$StratumName[startsWith(area$StratumName, "s6")] <- "06"
-area$StratumName[startsWith(area$StratumName, "s7")] <- "07"
 
 #clean with RstoxFDA
-landAdjPrefilt <- RstoxFDA:::logbookAdjustment(land, logb, gearCodes = c("50","51", "52"), polygons = area)
-landAdj <- landAdjPrefilt[!(landAdjPrefilt$`Hovedområde (kode)` %in% c("00", "03", "04", "05", "06", "07")),]
+landAdjPrefilt <- RstoxFDA:::logbookAdjustment(land, logb, gearCodes = c("50","51", "52"), polygons = NULL)
+landAdj <- landAdjPrefilt
+
+landAdjPrefiltWPos <- RstoxFDA:::logbookAdjustment(land, logb, gearCodes = c("50","51", "52"))
+landAdjWPos <- landAdjPrefiltWPos
+
 
 #convert to same format as vasket_torsk_comp
 landAdjLD <- RstoxData::convertToLandingData(landAdj)
