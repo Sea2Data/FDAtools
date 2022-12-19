@@ -36,7 +36,7 @@ encodeCostalCodArea <- function(landings){
 
   if (!is.null(landings$FOlat)){
     # set area from position when available
-    landingsWpos <- RstoxFDA::appendAreaCode(landingsWpos, stox2.7preprocessing::coastalCodAreas, "FOlat", "FOlon", "areaFromPos", StratumName = "polygonName")
+    landingsWpos <- RstoxFDA::appendAreaCode(landingsWpos, stox2.7preprocessing::coastalCodAreas, "FOlat", "FOlon", "areaFromPos", StratumName = "polygonName", strict = F)
     landingsWpos[["Hovedomr\u00E5de_kode"]][landingsWpos$areaFromPos %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")] <- landingsWpos$areaFromPos[landingsWpos$areaFromPos %in% c("s300", "s400", "s500", "s600", "s700", "s000", "s301", "s401", "s501", "s601", "s701")]
     landingsWpos$areaFromPos <- NULL
     landings <- rbind(landings, landingsWpos)
