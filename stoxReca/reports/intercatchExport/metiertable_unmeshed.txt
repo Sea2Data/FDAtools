@@ -3,6 +3,8 @@ metier	gearcode
 LLS_FIF_0_0_0_all	32
 GNS_DEF_all_0_0_all	22
 GNS_DEF_all_0_0_all	20
+#putting undefined hooked gear with LLS
+LLS_FIF_0_0_0_all	30
 #putting floating lines with LLS
 LLS_FIF_0_0_0_all	31
 #putting jig with LLS
@@ -16,15 +18,19 @@ OTB_DEF_>=120_0_0_all	51
 OTB_DEF_>=120_0_0_all	52
 OTB_DEF_>=120_0_0_all	55
 OTB_DEF_>=120_0_0_all	57
+# putting beam trawl with OTB
+OTB_DEF_>=120_0_0_all	56
 
 
 MIS_MIS_0_0_0_HC	
 
 #pelagic trawl
 MIS_MIS_0_0_0_HC	53
+MIS_MIS_0_0_0_HC	54
 
-# purse seines and undefined seines
+# purse seines, land seinses and undefined seines
 MIS_MIS_0_0_0_HC	10
+MIS_MIS_0_0_0_HC	12
 MIS_MIS_0_0_0_HC	11
 MIS_MIS_0_0_0_HC	14
 
@@ -34,8 +40,10 @@ MIS_MIS_0_0_0_HC	21
 # pots / traps
 MIS_MIS_0_0_0_HC	41
 MIS_MIS_0_0_0_HC	42
+MIS_MIS_0_0_0_HC	44
 
 #other
 MIS_MIS_0_0_0_HC	80
+MIS_MIS_0_0_0_HC	81
 MIS_MIS_0_0_0_HC	83
 MIS_MIS_0_0_0_HC	90
