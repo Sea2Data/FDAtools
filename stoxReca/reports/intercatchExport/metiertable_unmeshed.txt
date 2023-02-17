@@ -13,6 +13,9 @@ LLS_FIF_0_0_0_all	34
 LLS_FIF_0_0_0_all	35
 # SSC without mesh size assumed to be >120
 SSC_DEF_>=120_0_0_all	61
+
+#putting undefined trawltypes into OTB
+OTB_DEF_>=120_0_0_all	50
 #OTB without mesh size is assumed to be > 120
 OTB_DEF_>=120_0_0_all	51
 OTB_DEF_>=120_0_0_all	52
@@ -43,7 +46,11 @@ MIS_MIS_0_0_0_HC	42
 MIS_MIS_0_0_0_HC	44
 
 #other
+MIS_MIS_0_0_0_HC	71
+MIS_MIS_0_0_0_HC	73
 MIS_MIS_0_0_0_HC	80
 MIS_MIS_0_0_0_HC	81
 MIS_MIS_0_0_0_HC	83
+MIS_MIS_0_0_0_HC	84
+MIS_MIS_0_0_0_HC	85
 MIS_MIS_0_0_0_HC	90

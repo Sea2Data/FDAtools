@@ -69,7 +69,7 @@ writeSD <- function(stream,
 #' @param StoxLandingData 
 #' @param intercatchfile path to file with data in intercatch exchange format
 checks <- function(StoxLandingData, intercatchfile){
-  browser()
+
   intercatchdata <- RstoxData::parseInterCatch(intercatchfile)
   
   #compare species
@@ -145,6 +145,8 @@ exportIntercatch <- function(StoxLandingData, RecaParameterData, exportfile, sea
   StoxLandingData$Landing$AreaType[sapply(strsplit(StoxLandingData$Landing$Area, "\\."), FUN=function(x){length(x)})==2] <- "SubArea"
   StoxLandingData$Landing$AreaType[sapply(strsplit(StoxLandingData$Landing$Area, "\\."), FUN=function(x){length(x)})==3] <- "Div"
   StoxLandingData$Landing$AreaType[sapply(strsplit(StoxLandingData$Landing$Area, "\\."), FUN=function(x){length(x)})==4] <- "SubDiv"
+  StoxLandingData$Landing$AreaType[sapply(strsplit(StoxLandingData$Landing$Area, "\\."), FUN=function(x){length(x)})==5] <- "Unit"
+  
   if (any(is.na(StoxLandingData$Landing$AreaType))){
     stop("AreaType could not be deduced for all Areas.")
   }
@@ -320,9 +322,9 @@ exportIntercatch <- function(StoxLandingData, RecaParameterData, exportfile, sea
   close(stream)
 }
 
-#stoxCalculations <- RstoxFramework::runProject("~/stoxprosjekter/testing/reca_neasaithe_2021/")
-landings <- readRDS("landings_example.rds") #stoxCalculations$landings_FilterFishery
-parameterization <- readRDS("parameterization.rds") #stoxCalculations$ParameterizeReca
+stoxCalculations <- RstoxFramework::runProject("~/stoxprosjekter/testing/reca_neasaithe_2021/")
+landings <- stoxCalculations$landings_FilterFishery #readRDS("landings_example.rds")
+parameterization <- stoxCalculations$ParameterizeReca #readRDS("parameterization.rds")
 
 speciesConversion <- readRDS("speciesConversion.rds")
 usageConversion <- readRDS("usageConversion.rds")
