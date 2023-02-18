@@ -1,3 +1,10 @@
+#
+# For preporcessing landing files for StoX 3.
+# Adds metiers into custom columns either from gear codes, or by pulling in information from logbooks
+# saves landings in formats acceptable by stox. Continue analysis in StoX and use 'interCatchExportStox3.R' to generate InterCatch reports.
+#
+#
+
 
 #' annotate metier
 #' @description 
