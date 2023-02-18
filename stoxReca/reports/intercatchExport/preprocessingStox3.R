@@ -116,6 +116,9 @@ annotateMeshSize <- function(landings, logbooks){
 
 
 annotateMetier <- function(landings, metierUnMeshed="./metiertable_unmeshed.txt", metierMeshed=NULL, logbooks=NULL, metiercolumn="Mottaksstasjon"){
+  
+  colnames <- names(landings)
+  
   if (is.null(logbooks)){
     return(annotateMetierFromLandings(landings))
   }
@@ -127,15 +130,21 @@ annotateMetier <- function(landings, metierUnMeshed="./metiertable_unmeshed.txt"
   landings <- annotateMeshSize(landings, logbooks)
   landings <- annotateMetierMeshSize(landings, metierMeshed, metierUnMeshed, metiercolumn)
   
-  landings$tripid <- NULL
-  landings$MASKEVIDDE <- NULL
+  landings <- landings[,.SD,.SDcols=colnames]
   
   return(landings)
 }
 
-saveLandingsLSS <- function(landings, filename){
-  stop("Implement properlyy")
-  data.table::fwrite(landings, filename, sep="|")
+saveLandingsLSS <- function(landings, filename, encoding="latin1"){
+  
+  #considering implementing in RstoxFDA or RstoxData. Keep in mind that column order must be enforced as in the parsing function.
+  
+  colnames <- names(landings)
+  dates <- format(landings$`Siste fangstdato`, format="%d.%m.%Y")
+  landings$`Siste fangstdato` <- NULL
+  landings$`Siste fangstdato` <- dates
+  landings <- landings[,.SD, .SDcols=colnames]
+  write.table(landings, filename, sep="|", dec=",", na = "", col.names = T, fileEncoding=encoding, quote = F, row.names = F)
 }
 
 saveLandingsXML <- function(landings, filename){
@@ -158,4 +167,4 @@ landings <- landings[landings$`Nord/sør for 62 grader nord`!="Sør for 62°N",]
 
 # annotate metier into landingsite-column
 landings <- annotateMetier(landings, "./metiertable_unmeshed.txt", "metiertable_meshed.txt", logbooks)
-saveLandingsXML(landings, "test.xml")
+saveLandingsLSS(landings, "test.psv")
