@@ -118,8 +118,8 @@ checks <- function(StoxLandingData, intercatchfile){
 #'  Need metier annotations hacked into StoxLandingData somehow. Provide the column containint metiers in 'metierColumn'.
 #' @details
 #'   Consult the InterCatch exchange format definitions when necessary: https://www.ices.dk/data/Documents/Intercatch/IC-ExchangeFormat1-0.pdf
-#' @param StoxLandingData
-#' @param RecaParameterData
+#' @param StoxLandingData StoxLandingData
+#' @param RecaParameterData Reca parameterizattion data.
 #' @param exportfile file to write intercatc data to
 #' @param seasonType the temporal resolution for the intercatc export, may be 'Month', 'Quarter' or 'Year'
 #' @param country ISO 3166 2-alpha code for country submitting data
@@ -130,7 +130,7 @@ checks <- function(StoxLandingData, intercatchfile){
 #' @param metierColumn the column in StoxLandingData containing metier (fleet) category for landings
 #' @param icesAreaColumn column where ices areas are annotated to the desired resolution. area type will be inferred
 #' @param SDfleets fleets / metier that SD lines should be exported for. NULL means all fleets, NA no fleets.
-exportIntercatch <- function(StoxLandingData, RecaParameterData, exportfile, seasonType="Quarter", country="NO", unitCATON="kg", unitCANUM="n", samplesOrigin="U", plusGroup=9, metierColumn="LandingSite", icesAreaColumn="IcesArea", SDfleets=NULL){
+exportIntercatch <- function(StoxLandingData, RecaParameterData, exportfile, seasonType="Quarter", country="NO", unitCATON="kg", unitCANUM="n", samplesOrigin="U", plusGroup=NULL, metierColumn="LandingSite", icesAreaColumn="IcesArea", SDfleets=NULL){
 
   if (!all(nchar(StoxLandingData$Landing$Species)==3)){
     stop("species must be provided as FAO three letter species-code")
@@ -331,6 +331,6 @@ usageConversion <- readRDS("usageConversion.rds")
 landings$Landing$Species <- RstoxFDA::convertCodes(landings$Landing$Species, speciesConversion)
 landings$Landing$Usage <- RstoxFDA::convertCodes(landings$Landing$Usage, usageConversion, strict = F)
 
-exportIntercatch(landings, parameterization, "test.csv")
+exportIntercatch(landings, parameterization, "test.csv", plusGroup = 12)
 
 checks(landings, "test.csv")
