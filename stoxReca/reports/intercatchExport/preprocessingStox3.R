@@ -88,7 +88,7 @@ annotateMeshSize <- function(landings, logbooks){
     stop(paste("Vessels not found in logbooks:", paste(unique(logb$RC), collapse=",")))
   }
   logb <- logb[logb$RC %in% unique(landings$`Radiokallesignal (seddel)`),]
-  logb <- logb[as.integer(substring(logb$LOKASJON_START,1,2)) %in% as.integer(landings$`Hovedområde (kode)`),]
+  logb <- logb[as.integer(substring(logb$LOKASJON_START,1,2)) %in% as.integer(landings[["Hovedomr\u00E5de (kode)"]]),]
   
   if (nrow(logb)==0){
     stop("No logbook entries matched criteria")
@@ -162,7 +162,7 @@ logbooks <- RstoxData::readErsFile("~/logbooks/ers_detaljert/FDIR_HI_ERS_2021_PR
 
 # filter
 # it is not neceesary to filter completely. The specifics is handled in stox, but it makes it easier to annotate metiers if we get rid of some stuff
-landings <- landings[landings$`Art FAO (kode)`=="POK",]
+landings <- landings[landings$`Art FAO (kode)`=="LEM",]
 landings <- landings[landings$`Nord/sør for 62 grader nord`!="Sør for 62°N",]
 
 # annotate metier into landingsite-column
